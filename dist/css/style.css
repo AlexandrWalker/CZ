@@ -705,7 +705,7 @@ a {
 }
 
 .hero {
-  background-image: url(./images/main/hero-1.png);
+  background-image: url(./../images/main/hero-1.png);
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center bottom;
@@ -761,7 +761,7 @@ a {
 .feat__item:first-child {
   color: var(--white);
   background-color: var(--primary-accent);
-  background-image: url(./images/main/feat-bg-1.png);
+  background-image: url(./../images/main/feat-bg-1.png);
 }
 .feat__item:last-child {
   background-color: var(--white);
