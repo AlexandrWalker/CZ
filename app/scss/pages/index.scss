@@ -1,5 +1,5 @@
 .hero {
-  background-image: url(./images/main/hero-1.png);
+  background-image: url(./../images/main/hero-1.png);
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center bottom;
@@ -66,7 +66,7 @@
     &:first-child {
       color: var(--white);
       background-color: var(--primary-accent);
-      background-image: url(./images/main/feat-bg-1.png);
+      background-image: url(./../images/main/feat-bg-1.png);
     }
 
     &:last-child {
