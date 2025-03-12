@@ -140,7 +140,6 @@ a {
 
 .btn:hover {
   --button-bgcolor: var(--primary-yellow);
-  background-color: var(--button-bgcolor);
 }
 
 .btn:disabled {
@@ -187,7 +186,10 @@ a {
 }
 
 .btn-outline:hover {
-  --button-bgcolor: var(--primary-accent);
+  --button-bgcolor: var(--white);
+  --button-color: var(--primary-black);
+
+  border: 0;
 }
 
 .link {
@@ -247,4 +249,30 @@ input {
   border-bottom: 0.1rem solid var(--primary-black-30);
   background: transparent;
   margin-bottom: 4rem;
+}
+
+.breadcrumb {
+  background-color: var(--white);
+  margin-bottom: 0;
+
+  &__inner {
+    padding: 1.5rem 0;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 142.9%;
+  }
+
+  li:last-child a {
+    pointer-events: none;
+  }
+
+  a {
+    color: inherit;
+  }
 }

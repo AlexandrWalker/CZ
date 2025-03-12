@@ -139,6 +139,7 @@
 }
 
 .worth {
+  margin: 0;
 
   &__items {
     display: flex;
@@ -214,8 +215,19 @@
         padding: 4rem;
         max-width: 100%;
         opacity: 1;
-        transition: opacity 0.3s ease, max-width 0.3s ease;
-        transition-delay: 0.2s;
+        transition: max-width 0.3s ease;
+      }
+
+      .worth__body-title {
+        opacity: 1;
+      }
+
+      .worth__body-text {
+        opacity: 1;
+      }
+
+      .worth__body-link {
+        opacity: 1;
       }
     }
   }
@@ -268,11 +280,17 @@
 
     &-title {
       margin-bottom: 2rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      transition-delay: 0.3s;
     }
 
     &-text {
       max-width: 40.4rem;
       margin-bottom: 4rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      transition-delay: 0.3s;
     }
 
     &-link {
@@ -283,6 +301,9 @@
       height: 6rem;
       border-radius: 50%;
       border: 0.1rem solid var(--white-30);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      transition-delay: 0.3s;
 
       i {
         font-size: 1.44rem;

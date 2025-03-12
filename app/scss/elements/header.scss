@@ -66,24 +66,13 @@
       align-items: flex-start;
       gap: 1rem;
       max-width: 24rem;
-      min-height: 4rem;
+      min-height: 4.4rem;
+      position: relative;
 
-      i {
-        display: flex;
+      img {
         width: 2rem;
         height: 2rem;
-        font-size: 2rem;
-        text-align: center;
-
-        .path1::before {}
-
-        .path2::before {
-          margin-left: -0.9em;
-        }
-
-        .path3::before {}
-
-        .path4::before {}
+        object-fit: cover;
       }
     }
 
@@ -118,21 +107,13 @@
         text-decoration: underline;
       }
 
-      i {
-        display: flex;
-        width: 2rem;
-        height: 2rem;
-        font-size: 2rem;
-        text-align: center;
+      img {
         position: absolute;
         top: 0;
         left: -3rem;
-
-        .path1::before {}
-
-        .path2::before {
-          margin-left: -0.9em;
-        }
+        width: 2rem;
+        height: 2rem;
+        object-fit: cover;
       }
     }
 
@@ -195,17 +176,17 @@
 
         i {
           color: var(--primary-accent);
-        }
 
-        &::before {
-          content: "";
-          display: block;
-          height: 3.3rem;
-          position: absolute;
-          top: 100%;
-          right: -1rem;
-          border: 1.65rem solid transparent;
-          border-bottom: 1.65rem solid var(--white);
+          &::after {
+            content: "";
+            display: block;
+            height: 3.3rem;
+            position: absolute;
+            top: 100%;
+            right: -1rem;
+            border: 1.65rem solid transparent;
+            border-bottom: 1.65rem solid var(--white);
+          }
         }
       }
     }
