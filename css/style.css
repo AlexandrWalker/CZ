@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   /* color */
   --primary-color: #164194;
@@ -230,6 +229,10 @@ section {
 }
 
 .hidden {
+  display: none !important;
+}
+
+.mob-block {
   display: none !important;
 }
 
@@ -918,7 +921,7 @@ a {
 .partner__item-img.lenta {
   height: 6.4rem;
 }
-.partner__item-img.yarcge {
+.partner__item-img.yarche {
   height: 5.2rem;
 }
 .partner__item-img.spar {
@@ -1097,9 +1100,32 @@ a {
   .geo__item-img {
     height: 3.2rem;
   }
-  /* ащщеук */
+  /* partner */
+  .partner__container {
+    padding: 0;
+  }
   .partner__item {
-    height: 9rem;
+    max-height: 12.7rem;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+  .partner__item-img.lenta {
+    height: 2.56rem;
+  }
+  .partner__item-img.yarche {
+    height: 2.08rem;
+  }
+  .partner__item-img.spar {
+    height: 1.4rem;
+  }
+  .partner__item-img.magnit {
+    height: 1.4rem;
+  }
+  .partner__item-img.mariara {
+    height: 1.72rem;
+  }
+  .partner__item-img.auchan {
+    height: 1.8rem;
   }
   .footer__inner {
     padding: 3rem 0;
@@ -1136,6 +1162,10 @@ a {
   .container {
     padding: 0 2rem;
   }
+  /* partner */
+  .partner__container {
+    padding: 0;
+  }
 }
 @media (max-width: 520px) {
   .header__inner {
@@ -1144,6 +1174,93 @@ a {
   }
   .header__logo {
     width: 5.4rem;
+  }
+  /* feat */
+  .feat__item {
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+  .feat__item-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .feat__item-text {
+    font-size: 1rem;
+    margin: 0;
+  }
+  .feat__item-btn {
+    display: none;
+  }
+  /* geo */
+  .geo__head {
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  .geo__head-title {
+    font-size: 2rem;
+    width: 100%;
+  }
+  .geo__head-text {
+    font-size: 1rem;
+    width: 100%;
+  }
+  .geo__body-count {
+    width: 100%;
+    height: auto;
+  }
+  .geo__body-count img {
+    max-width: 28.4rem;
+    width: 100%;
+  }
+  .geo__body-img {
+    margin-bottom: 2rem;
+  }
+  .geo__item {
+    width: 100%;
+    gap: 2rem;
+  }
+  .geo__item-wrap {
+    justify-content: center;
+  }
+  /* partner */
+  .mob-block {
+    display: flex !important;
+  }
+  .partner__items {
+    transition: all 0.5s ease;
+    animation: scroll 10s linear infinite;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-150%);
+    }
+  }
+  .partner__item {
+    min-width: 25%;
+    height: 9rem;
+    aspect-ratio: unset;
+  }
+  .partner__item-img.lenta {
+    height: 1.8rem;
+  }
+  .partner__item-img.yarche {
+    height: 1.5rem;
+  }
+  .partner__item-img.spar {
+    height: 1rem;
+  }
+  .partner__item-img.magnit {
+    height: 1.1rem;
+  }
+  .partner__item-img.mariara {
+    height: 1rem;
+  }
+  .partner__item-img.auchan {
+    height: 1.2rem;
   }
   .footer__inner {
     grid-template-columns: 1fr 1fr;
