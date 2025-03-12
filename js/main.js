@@ -2,8 +2,8 @@
   document.addEventListener('DOMContentLoaded', () => {
 
     var product__slider = new Swiper(".product__slider-init", {
-      spaceBetween: 30,
-      slidesPerView: 3,
+      slidesPerView: 1,
+      spaceBetween: 10,
       // slidesPerGroup: 1,
       speed: 600,
       mousewheel: {
@@ -13,20 +13,16 @@
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-      // breakpoints: {
-      //   601: {
-      //     slidesPerView: 2,
-      //     spaceBetween: 10,
-      //   },
-      //   769: {
-      //     slidesPerView: 3,
-      //     spaceBetween: 20,
-      //   },
-      //   992: {
-      //     slidesPerView: 4,
-      //     spaceBetween: 20,
-      //   },
-      // },
+      breakpoints: {
+        521: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        769: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
     });
 
     function accordionFunc() {
