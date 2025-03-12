@@ -167,6 +167,29 @@ a {
   --button-bgcolor: var(--primary-accent);
 }
 
+.btn-green {
+  --button-bgcolor: var(--primary-accent);
+  --button-color: var(--white);
+}
+
+.btn-green:hover {
+  --button-bgcolor: var(--primary-color);
+  --button-color: var(--white);
+}
+
+.btn-outline {
+  --button-color: var(--white);
+  --button-bgcolor: transparent;
+  --button-border-color: var(--white);
+
+  min-width: 19.4rem;
+  border: 0.1rem solid var(--button-border-color);
+}
+
+.btn-outline:hover {
+  --button-bgcolor: var(--primary-accent);
+}
+
 .link {
   display: flex;
   align-items: center;
@@ -197,4 +220,31 @@ a {
       color: var(--primary-color);
     }
   }
+}
+
+.form-group {
+  position: relative;
+
+
+  &::before {
+    position: absolute;
+    top: 0.4rem;
+    left: 0.4rem;
+    font-size: 1.6rem;
+    line-height: 100%;
+  }
+}
+
+input {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 125%;
+  width: 100%;
+  padding: 0 2rem 2rem 3.9rem;
+  border: 0;
+  border-bottom: 0.1rem solid var(--primary-black-30);
+  background: transparent;
+  margin-bottom: 4rem;
 }

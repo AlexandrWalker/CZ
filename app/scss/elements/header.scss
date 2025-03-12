@@ -66,6 +66,7 @@
       align-items: flex-start;
       gap: 1rem;
       max-width: 24rem;
+      min-height: 4rem;
 
       i {
         display: flex;
@@ -109,6 +110,13 @@
       font-size: 2rem;
       text-transform: uppercase;
       color: inherit;
+      position: relative;
+      margin-left: 3rem;
+
+      &:hover {
+        color: var(--primary-color);
+        text-decoration: underline;
+      }
 
       i {
         display: flex;
@@ -116,6 +124,9 @@
         height: 2rem;
         font-size: 2rem;
         text-align: center;
+        position: absolute;
+        top: 0;
+        left: -3rem;
 
         .path1::before {}
 

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'BY';
-  src:  url('./../fonts/icomoon/BY.eot?voes83');
-  src:  url('./../fonts/icomoon/BY.eot?voes83#iefix') format('embedded-opentype'),
-    url('./../fonts/icomoon/BY.ttf?voes83') format('truetype'),
-    url('./../fonts/icomoon/BY.woff?voes83') format('woff'),
-    url('./../fonts/icomoon/BY.svg?voes83#BY') format('svg');
+  src:  url('./../fonts/icomoon/BY.eot?u1rx0m');
+  src:  url('./../fonts/icomoon/BY.eot?u1rx0m#iefix') format('embedded-opentype'),
+    url('./../fonts/icomoon/BY.ttf?u1rx0m') format('truetype'),
+    url('./../fonts/icomoon/BY.woff?u1rx0m') format('woff'),
+    url('./../fonts/icomoon/BY.svg?u1rx0m#BY') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -31,34 +31,12 @@
 .icon-chevron-circle:before {
   content: "\e901";
 }
-.icon-icon-geo .path1:before {
+.icon-search:before {
   content: "\e902";
-  color: rgb(230, 105, 105);
 }
-.icon-icon-geo .path2:before {
+.icon-mail:before {
   content: "\e903";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
 }
-.icon-icon-geo .path3:before {
+.icon-person:before {
   content: "\e904";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-icon-geo .path4:before {
-  content: "\e905";
-  margin-left: -1em;
-  color: rgb(230, 105, 105);
-}
-.icon-icon-phone .path1:before {
-  content: "\e906";
-  color: rgb(46, 172, 106);
-}
-.icon-icon-phone .path2:before {
-  content: "\e907";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-icon-search:before {
-  content: "\e908";
 }
