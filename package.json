@@ -28,6 +28,7 @@
     "sass": "^1.55.0"
   },
   "dependencies": {
-    "gsap-trial": "^3.12.7"
+    "gsap-trial": "^3.12.7",
+    "lenis": "^1.2.3"
   }
 }

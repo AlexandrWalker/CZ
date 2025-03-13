@@ -65,6 +65,114 @@
       });
     }
 
+    /**
+     * Управляет переключением вкладок на странице.
+     * Добавляет и удаляет классы активности для кнопок и панелей вкладок.
+     * Поддерживает вложенные табы любой глубины и сохраняет активное состояние у вложенных табов при переключении внешних.
+     */
+    function tabsFunc() {
+      document.querySelectorAll('.tabs').forEach((tabsContainer) => {
+        tabsContainer.addEventListener('click', (event) => {
+          const tabsBtn = event.target.closest('.tabs__btn');
+          if (!tabsBtn || !tabsContainer.contains(tabsBtn)) return;
+
+          // Останавливаем всплытие, чтобы вложенные табы не влияли на родительские
+          event.stopPropagation();
+
+          // Ищем ближайший контейнер, к которому принадлежит нажатая кнопка
+          const currentTabsContainer = tabsBtn.closest('.tabs');
+          if (!currentTabsContainer) return;
+
+          // Сбрасываем активные состояния кнопок и панелей только внутри текущего уровня
+          const tabsBtns = Array.from(currentTabsContainer.querySelectorAll('.tabs__btn'));
+          const tabsPanels = Array.from(currentTabsContainer.querySelectorAll('.tabs__panel'));
+
+          tabsBtns.forEach((btn) => {
+            if (btn.closest('.tabs') === currentTabsContainer) {
+              btn.classList.remove('tabs__btn--active');
+            }
+          });
+
+          tabsPanels.forEach((panel) => {
+            if (panel.closest('.tabs') === currentTabsContainer) {
+              panel.classList.remove('tabs__panel--active');
+            }
+          });
+
+          // Устанавливаем активное состояние для выбранной вкладки
+          tabsBtn.classList.add('tabs__btn--active');
+          const targetPanel = currentTabsContainer.querySelector(
+            `.tabs__panel[data-tab="${tabsBtn.dataset.tab}"]`,
+          );
+          if (targetPanel) {
+            /* HACK */
+            targetPanel.classList.add('tabs__panel--active');
+          }
+        });
+      });
+    };
+
+
+    /**
+     * Инициализация Lenis и ScrollTrigger
+     */
+    // Initialize a new Lenis instance for smooth scrolling
+    const lenis = new Lenis();
+
+    // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
+    lenis.on('scroll', ScrollTrigger.update);
+
+    // Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
+    // This ensures Lenis's smooth scroll animation updates on each GSAP tick
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+    });
+
+    // Disable lag smoothing in GSAP to prevent any delay in scroll animations
+    gsap.ticker.lagSmoothing(0);
+
+    /**
+     * dropdown
+     */
+    if (document.querySelectorAll('.dropdown')) {
+      document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
+        const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
+        const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
+        const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
+        const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
+
+        dropDownBtn.addEventListener('click', function (e) {
+          dropDownList.classList.toggle('dropdown__list--visible');
+          this.classList.add('dropdown__button--active');
+        });
+
+        dropDownListItems.forEach(function (listItem) {
+          listItem.addEventListener('click', function (e) {
+            e.stopPropagation();
+            dropDownBtn.innerHTML = this.innerHTML;
+            dropDownBtn.focus();
+            dropDownInput.value = this.dataset.value;
+            dropDownList.classList.remove('dropdown__list--visible');
+          });
+        });
+
+        document.addEventListener('click', function (e) {
+          if (e.target !== dropDownBtn) {
+            dropDownBtn.classList.remove('dropdown__button--active');
+            dropDownList.classList.remove('dropdown__list--visible');
+          }
+        });
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Tab' || e.key === 'Escape') {
+            dropDownBtn.classList.remove('dropdown__button--active');
+            dropDownList.classList.remove('dropdown__list--visible');
+          }
+        });
+      });
+    }
+
     accordionFunc();
+    tabsFunc();
   });
 })();

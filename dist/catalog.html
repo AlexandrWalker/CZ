@@ -13,6 +13,7 @@
   <!-- title -->
   <title>Чановский завод</title>
   <!-- styles -->
+  <link rel="stylesheet" href="./libs/lenis/lenis.min.css">
   <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/icomoon-style.css">
   <link rel="stylesheet" href="./css/style.css">
@@ -154,7 +155,7 @@
   <!-- Главный блок -->
   <section class="catalog">
     <div class="container catalog__container">
-      <div class="catalog__inner">
+      <div class="catalog__inner tabs">
         <h2 class="catalog__title block-title">
           Продукция
         </h2>
@@ -164,31 +165,51 @@
               Жирность:
             </p>
             <div class="filter__items">
-              <div class="filter__item active">
-                2,5%
+              <div class="filter__item">
+                <input id="filter_1" type="radio" name="filter" checked>
+                <label for="filter_1">
+                  2,5%
+                </label>
               </div>
               <div class="filter__item">
-                3,5%
+                <input id="filter_2" type="radio" name="filter">
+                <label for="filter_2">
+                  3,5%
+                </label>
               </div>
               <div class="filter__item">
-                1,8%
+                <input id="filter_3" type="radio" name="filter">
+                <label for="filter_3">
+                  1,8%
+                </label>
               </div>
             </div>
           </div>
           <div class="tabs__btns">
-            <div class="tabs__btn active">
+            <div class="tabs__btn tabs__btn--active" data-tab="milk">
               Молоко
             </div>
-            <div class="tabs__btn">
+            <div class="tabs__btn" data-tab="cream">
               Сметана
             </div>
-            <div class="tabs__btn">
+            <div class="tabs__btn" data-tab="butter">
               Масло
             </div>
           </div>
+          <div class="dropdown">
+            <button class="dropdown__button icon-chevron-arrow" data-value="Молоко">
+              Молоко
+            </button>
+            <ul class="dropdown__list dropdown__list-border">
+              <li class="dropdown__list-item" data-value="Молоко">Молоко</li>
+              <li class="dropdown__list-item" data-value="Сметана">Сметана</li>
+              <li class="dropdown__list-item" data-value="Масло">Масло</li>
+            </ul>
+            <input type="text" name="select-category" value="all" class="dropdown__input-hidden">
+          </div>
         </div>
         <div class="catalog__body">
-          <div class="catalog__items">
+          <div data-tab="milk" class="catalog__items tabs__panel tabs__panel--active">
             <div class="catalog__item">
               <div class="product__item">
                 <img class="product__item-img" src="./images/main/product-1.png" alt="">
@@ -222,6 +243,190 @@
             <div class="catalog__item">
               <div class="product__item">
                 <img class="product__item-img" src="./images/main/product-3.png" alt="">
+                <span class="product__item-name">
+                  Молоко Молодчинка 3,2 %
+                </span>
+                <p class="product__item-desc">
+                  Произведено у побережья Белорусского моря в Новосибирске
+                </p>
+                <a class="product__item-link link" href="/">
+                  <i class="icon-chevron-circle"></i>
+                  Подробнее
+                </a>
+              </div>
+            </div>
+            <div class="catalog__item">
+              <div class="product__item">
+                <img class="product__item-img" src="./images/main/product-2.png" alt="">
+                <span class="product__item-name">
+                  Молоко Молодчинка 3,2 %
+                </span>
+                <p class="product__item-desc">
+                  Произведено у побережья Белорусского моря в Новосибирске
+                </p>
+                <a class="product__item-link link" href="/">
+                  <i class="icon-chevron-circle"></i>
+                  Подробнее
+                </a>
+              </div>
+            </div>
+            <div class="catalog__item">
+              <div class="product__item">
+                <img class="product__item-img" src="./images/main/product-3.png" alt="">
+                <span class="product__item-name">
+                  Молоко Молодчинка 3,2 %
+                </span>
+                <p class="product__item-desc">
+                  Произведено у побережья Белорусского моря в Новосибирске
+                </p>
+                <a class="product__item-link link" href="/">
+                  <i class="icon-chevron-circle"></i>
+                  Подробнее
+                </a>
+              </div>
+            </div>
+            <div class="catalog__item">
+              <div class="product__item">
+                <img class="product__item-img" src="./images/main/product-1.png" alt="">
+                <span class="product__item-name">
+                  Молоко Молодчинка 3,2 %
+                </span>
+                <p class="product__item-desc">
+                  Произведено у побережья Белорусского моря в Новосибирске
+                </p>
+                <a class="product__item-link link" href="/">
+                  <i class="icon-chevron-circle"></i>
+                  Подробнее
+                </a>
+              </div>
+            </div>
+          </div>
+          <div data-tab="cream" class="catalog__items tabs__panel">
+            <div class="catalog__item">
+              <div class="product__item">
+                <img class="product__item-img" src="./images/main/product-3.png" alt="">
+                <span class="product__item-name">
+                  Молоко Молодчинка 3,2 %
+                </span>
+                <p class="product__item-desc">
+                  Произведено у побережья Белорусского моря в Новосибирске
+                </p>
+                <a class="product__item-link link" href="/">
+                  <i class="icon-chevron-circle"></i>
+                  Подробнее
+                </a>
+              </div>
+            </div>
+            <div class="catalog__item">
+              <div class="product__item">
+                <img class="product__item-img" src="./images/main/product-1.png" alt="">
+                <span class="product__item-name">
+                  Молоко Молодчинка 3,2 %
+                </span>
+                <p class="product__item-desc">
+                  Произведено у побережья Белорусского моря в Новосибирске
+                </p>
+                <a class="product__item-link link" href="/">
+                  <i class="icon-chevron-circle"></i>
+                  Подробнее
+                </a>
+              </div>
+            </div>
+            <div class="catalog__item">
+              <div class="product__item">
+                <img class="product__item-img" src="./images/main/product-2.png" alt="">
+                <span class="product__item-name">
+                  Молоко Молодчинка 3,2 %
+                </span>
+                <p class="product__item-desc">
+                  Произведено у побережья Белорусского моря в Новосибирске
+                </p>
+                <a class="product__item-link link" href="/">
+                  <i class="icon-chevron-circle"></i>
+                  Подробнее
+                </a>
+              </div>
+            </div>
+            <div class="catalog__item">
+              <div class="product__item">
+                <img class="product__item-img" src="./images/main/product-2.png" alt="">
+                <span class="product__item-name">
+                  Молоко Молодчинка 3,2 %
+                </span>
+                <p class="product__item-desc">
+                  Произведено у побережья Белорусского моря в Новосибирске
+                </p>
+                <a class="product__item-link link" href="/">
+                  <i class="icon-chevron-circle"></i>
+                  Подробнее
+                </a>
+              </div>
+            </div>
+            <div class="catalog__item">
+              <div class="product__item">
+                <img class="product__item-img" src="./images/main/product-3.png" alt="">
+                <span class="product__item-name">
+                  Молоко Молодчинка 3,2 %
+                </span>
+                <p class="product__item-desc">
+                  Произведено у побережья Белорусского моря в Новосибирске
+                </p>
+                <a class="product__item-link link" href="/">
+                  <i class="icon-chevron-circle"></i>
+                  Подробнее
+                </a>
+              </div>
+            </div>
+            <div class="catalog__item">
+              <div class="product__item">
+                <img class="product__item-img" src="./images/main/product-1.png" alt="">
+                <span class="product__item-name">
+                  Молоко Молодчинка 3,2 %
+                </span>
+                <p class="product__item-desc">
+                  Произведено у побережья Белорусского моря в Новосибирске
+                </p>
+                <a class="product__item-link link" href="/">
+                  <i class="icon-chevron-circle"></i>
+                  Подробнее
+                </a>
+              </div>
+            </div>
+          </div>
+          <div data-tab="butter" class="catalog__items tabs__panel">
+            <div class="catalog__item">
+              <div class="product__item">
+                <img class="product__item-img" src="./images/main/product-1.png" alt="">
+                <span class="product__item-name">
+                  Молоко Молодчинка 3,2 %
+                </span>
+                <p class="product__item-desc">
+                  Произведено у побережья Белорусского моря в Новосибирске
+                </p>
+                <a class="product__item-link link" href="/">
+                  <i class="icon-chevron-circle"></i>
+                  Подробнее
+                </a>
+              </div>
+            </div>
+            <div class="catalog__item">
+              <div class="product__item">
+                <img class="product__item-img" src="./images/main/product-3.png" alt="">
+                <span class="product__item-name">
+                  Молоко Молодчинка 3,2 %
+                </span>
+                <p class="product__item-desc">
+                  Произведено у побережья Белорусского моря в Новосибирске
+                </p>
+                <a class="product__item-link link" href="/">
+                  <i class="icon-chevron-circle"></i>
+                  Подробнее
+                </a>
+              </div>
+            </div>
+            <div class="catalog__item">
+              <div class="product__item">
+                <img class="product__item-img" src="./images/main/product-2.png" alt="">
                 <span class="product__item-name">
                   Молоко Молодчинка 3,2 %
                 </span>
@@ -432,6 +637,10 @@
 <!--=include modal.html-->
 
 <!-- scipts -->
+<script src="./libs/gsap/gsap.min.js" defer></script>
+<script src="./libs/gsap/ScrollSmoother.min.js" defer></script>
+<script src="./libs/gsap/ScrollTrigger.min.js" defer></script>
+<script src="./libs/lenis/lenis.min.js" defer></script>
 <script src="./libs/swiper/swiper-bundle.min.js" defer></script>
 <script src="./js/main.js" defer></script>
 </body>

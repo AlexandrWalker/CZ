@@ -31,10 +31,16 @@
 
     &-link {
       font-weight: 400;
-      color: var(--primary-white);
+      color: var(--primary-white-50);
 
       &:hover {
-        color: var(--white);
+        color: var(--primary-white);
+      }
+    }
+
+    a.footer__list-title {
+
+      &:hover {
         text-decoration: underline;
       }
     }

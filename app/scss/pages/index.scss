@@ -155,6 +155,7 @@
     background-position: center;
     background-color: var(--primary-color-30);
     position: relative;
+    transition: all 0.5s ease;
 
     &:not(.active):hover .worth__head {
       background-color: var(--primary-accent) !important;
@@ -209,13 +210,12 @@
 
       .worth__body {
         grid-template-columns: 1fr;
+        width: 100%;
       }
 
       .worth__body-content {
         padding: 4rem;
-        max-width: 100%;
         opacity: 1;
-        transition: max-width 0.3s ease;
       }
 
       .worth__body-title {
@@ -241,7 +241,7 @@
     height: 100%;
     padding: 3rem 0 4rem;
     color: var(--white);
-    transition: background-color 0.3s ease;
+    transition: background-color 0s ease;
     z-index: 1;
 
     &-title {
@@ -263,8 +263,8 @@
   &__body {
     display: grid;
     grid-template-columns: 0fr;
-    transition: grid-template-columns 0.5s ease;
-    width: 100%;
+    width: 0;
+    transition: all 0.5s ease;
 
     &-content {
       display: flex;
@@ -275,7 +275,6 @@
       color: var(--white);
       opacity: 0;
       z-index: 1;
-      max-width: 0;
     }
 
     &-title {
