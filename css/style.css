@@ -1077,8 +1077,10 @@ html.lenis body {
   background-size: cover;
   background-position: center;
   background-color: var(--primary-color-30);
+  background-image: none;
   position: relative;
-  transition: all 0.5s ease;
+  transition: all 0.5s linear;
+  width: 11.7rem;
 }
 .worth__item:not(.active):hover .worth__head {
   background-color: var(--primary-accent) !important;
@@ -1145,8 +1147,10 @@ html.lenis body {
   height: 100%;
   padding: 3rem 0 4rem;
   color: var(--white);
-  transition: background-color 0s ease;
-  z-index: 1;
+  transition: background-color 0.3s ease;
+  transition-delay: 0.2s;
+  z-index: 2;
+  position: relative;
 }
 .worth__head-title {
   font-weight: 700;
@@ -1959,6 +1963,9 @@ html.lenis body {
   .worth__items {
     height: 28.4rem;
   }
+  .worth__item {
+    width: 4.9rem;
+  }
   .worth__item.active::before {
     content: "";
     display: block;
@@ -2373,6 +2380,11 @@ html.lenis body {
   }
   .worth__item {
     flex-direction: column-reverse;
+    width: 100%;
+    height: 4.9rem;
+  }
+  .worth__item.active {
+    height: 100%;
   }
   .worth__head {
     flex-direction: row;
