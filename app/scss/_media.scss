@@ -541,7 +541,7 @@
     min-width: 7rem;
   }
 
-  .tabs__btns {
+  .catalog .tabs__btns {
     display: none;
   }
 
@@ -659,6 +659,72 @@
 
   .card__btn {
     max-width: 20.1rem;
+  }
+
+  /* certificates */
+  .certif {
+    padding-top: 2rem;
+  }
+
+  .certif__head {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .certif__items {
+    gap: 2rem;
+  }
+
+  .certif__item {
+    width: calc(50% - 1rem);
+    height: 34.6rem;
+    padding: 2rem;
+  }
+
+  .certif__item-title {
+    font-size: 1.6rem;
+  }
+
+  .certif__item-img {
+    width: 11.4rem;
+    height: 11.4rem;
+  }
+
+  .tabs__btns {
+    gap: 1rem;
+  }
+
+  .tabs__btn {
+    height: 4rem;
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+  }
+
+  /* news page */
+  .innerPage .news__item:nth-child(1) {
+    grid-column: 1/3;
+    height: 25.7rem;
+    padding: 2rem;
+  }
+
+  .innerPage .news__item:nth-child(1) .news__item-title {
+    font-size: 1.6rem;
+  }
+
+  .innerPage .news__item:nth-child(1) .news__item-date {
+    font-size: 1.2rem;
+  }
+
+  .innerPage .news__item:nth-child(1) .news__item-count {
+    font-size: 3rem;
+  }
+
+  .innerPage .news__item:not(:first-child) {
+    width: 100%;
+  }
+
+  .innerPage .news__item {
+    display: flex;
   }
 }
 
@@ -1088,6 +1154,70 @@
 
   .card__btn {
     max-width: 100%;
+  }
+
+  /* certificates */
+  .certif__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .tabs__btns {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .tabs__btn {
+    width: calc(50% - 0.5rem);
+  }
+
+  .certif__item {
+    height: 21.5rem;
+    padding: 2rem 1rem;
+  }
+
+  .certif__item-title {
+    font-size: 1rem;
+  }
+
+  .certif__item-img {
+    width: 7.1rem;
+    height: 7.1rem;
+  }
+
+  .certif__item-text {
+    font-size: 1rem;
+  }
+
+  /* news page */
+  .innerPage .news__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .innerPage .news__item:nth-child(1) {
+    height: 15.9rem;
+  }
+
+  .innerPage .news__item:nth-child(1) .news__item-date,
+  .innerPage .news__item .news__item-date {
+    font-size: 1.2rem;
+  }
+
+  .innerPage .news__item:nth-child(1) .news__item-date,
+  .innerPage .news__item .news__item-date {
+    font-size: 1rem;
+  }
+
+  .innerPage .news__item:nth-child(1) .news__item-count,
+  .innerPage .news__item .news__item-count {
+    font-size: 2rem;
+  }
+
+  .innerPage .news__item-title {
+    width: 100%;
   }
 }
 

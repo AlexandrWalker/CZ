@@ -31,6 +31,21 @@
   &__item {
     width: calc(33.33333% - 2rem);
   }
+
+  .tabs__btns {
+    gap: 1rem;
+  }
+
+  .tabs__btn {
+    background-color: var(--white);
+    border: unset;
+    padding: 0;
+
+    &.tabs__btn--active {
+      background-color: var(--primary-color);
+      color: var(--white);
+    }
+  }
 }
 
 .filter {
@@ -93,36 +108,6 @@
 
     input:checked+label {
       background-color: var(--primary-accent);
-      color: var(--white);
-    }
-  }
-}
-
-.tabs {
-
-  &__btns {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  &__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 12.4rem;
-    height: 5rem;
-    border-radius: 2.5rem;
-    background-color: var(--white);
-    transition: all 0.3s ease;
-    font-weight: 700;
-    font-size: 1.6rem;
-    line-height: 125%;
-    text-align: center;
-    cursor: pointer;
-
-    &.tabs__btn--active {
-      background-color: var(--primary-color);
       color: var(--white);
     }
   }

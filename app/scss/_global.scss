@@ -422,3 +422,52 @@ html.lenis body {
     display: none;
   }
 }
+
+.tabs {
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 12.4rem;
+    padding: 1.5rem 3.5rem;
+    height: 5rem;
+    border: 0.1rem solid var(--primary-color-30);
+    border-radius: 2.5rem;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 125%;
+    text-align: center;
+    cursor: pointer;
+
+    &.tabs__btn--active {
+      color: var(--white);
+      background-color: var(--primary-accent);
+      border-color: var(--primary-accent);
+    }
+  }
+
+  &__panel {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+
+    &--active {
+      opacity: 1;
+      pointer-events: all;
+      visibility: visible;
+      height: auto;
+      transition: opacity 0.3s ease;
+    }
+  }
+}
