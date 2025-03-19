@@ -1,8 +1,8 @@
 :root {
   /* color */
   --primary-color: #164194;
-  --primary-color-30: #1641944d;
-  --primary-color-70: #164194b3;
+  --primary-color-30: #8094C4;
+  --primary-color-70: #3B5CA4;
   --primary-accent: #2EAC6A;
   --primary-white: #F2F3FA;
   --primary-white-50: #f2f3fa80;
@@ -1077,7 +1077,6 @@ html.lenis body {
   background-size: cover;
   background-position: center;
   background-color: var(--primary-color-30);
-  background-image: none;
   position: relative;
   transition: all 0.5s linear;
   width: 11.7rem;
@@ -1100,16 +1099,16 @@ html.lenis body {
 .worth__item.re-prev .worth__head {
   background-color: var(--primary-color-70);
 }
-.worth__item.active:nth-child(1) {
+.worth__item:nth-child(1) {
   background-image: url(./../images/main/technology.png);
 }
-.worth__item.active:nth-child(2) {
+.worth__item:nth-child(2) {
   background-image: url(./../images/main/technology.png);
 }
-.worth__item.active:nth-child(3) {
+.worth__item:nth-child(3) {
   background-image: url(./../images/main/technology.png);
 }
-.worth__item.active:nth-child(4) {
+.worth__item:nth-child(4) {
   background-image: url(./../images/main/technology.png);
 }
 .worth__item.active {
@@ -1151,6 +1150,7 @@ html.lenis body {
   transition-delay: 0.2s;
   z-index: 2;
   position: relative;
+  background-color: var(--primary-color-30);
 }
 .worth__head-title {
   font-weight: 700;

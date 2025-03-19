@@ -86,6 +86,8 @@ function cleanDist() {
 
 function building() {
   return src([
+    'app/CNAME',
+
     'app/*.html',
     '!app/pages/*.html',
 

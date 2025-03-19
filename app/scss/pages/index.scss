@@ -154,7 +154,6 @@
     background-size: cover;
     background-position: center;
     background-color: var(--primary-color-30);
-    background-image: none;
     position: relative;
     transition: all 0.5s linear;
     width: 11.7rem;
@@ -183,19 +182,19 @@
       background-color: var(--primary-color-70);
     }
 
-    &.active:nth-child(1) {
+    &:nth-child(1) {
       background-image: url(./../images/main/technology.png);
     }
 
-    &.active:nth-child(2) {
+    &:nth-child(2) {
       background-image: url(./../images/main/technology.png);
     }
 
-    &.active:nth-child(3) {
+    &:nth-child(3) {
       background-image: url(./../images/main/technology.png);
     }
 
-    &.active:nth-child(4) {
+    &:nth-child(4) {
       background-image: url(./../images/main/technology.png);
     }
 
@@ -247,6 +246,7 @@
     transition-delay: 0.2s;
     z-index: 2;
     position: relative;
+    background-color: var(--primary-color-30);
 
     &-title {
       font-weight: 700;
