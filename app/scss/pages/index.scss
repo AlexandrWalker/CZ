@@ -154,8 +154,10 @@
     background-size: cover;
     background-position: center;
     background-color: var(--primary-color-30);
+    background-image: none;
     position: relative;
-    transition: all 0.5s ease;
+    transition: all 0.5s linear;
+    width: 11.7rem;
 
     &:not(.active):hover .worth__head {
       background-color: var(--primary-accent) !important;
@@ -241,8 +243,10 @@
     height: 100%;
     padding: 3rem 0 4rem;
     color: var(--white);
-    transition: background-color 0s ease;
-    z-index: 1;
+    transition: background-color 0.3s ease;
+    transition-delay: 0.2s;
+    z-index: 2;
+    position: relative;
 
     &-title {
       font-weight: 700;
