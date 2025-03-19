@@ -491,6 +491,7 @@ input {
 .breadcrumb .tabs__btn {
   border-radius: 0;
   min-width: 11.2rem;
+  border: 0;
 }
 .breadcrumb .tabs__btn.active {
   background-color: var(--primary-accent);
@@ -632,6 +633,10 @@ html.lenis body {
   visibility: visible;
   height: auto;
   transition: opacity 0.3s ease;
+}
+
+.accordion {
+  cursor: pointer;
 }
 
 .head {
