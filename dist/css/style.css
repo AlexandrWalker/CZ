@@ -1438,6 +1438,11 @@ html.lenis body {
   flex-direction: column;
   gap: 0.7rem;
 }
+.geo__item-text {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 125%;
+}
 .geo__item-title {
   font-size: 4rem;
   font-weight: 700;
@@ -2741,6 +2746,7 @@ html.lenis body {
   /* hero */
   .hero {
     height: 33.1rem;
+    background-image: url(./../images/main/hero-1.png);
   }
   .hero__inner {
     padding: 2.3rem 0 0;

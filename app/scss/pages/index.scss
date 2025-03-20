@@ -499,7 +499,11 @@
       gap: 0.7rem;
     }
 
-    &-text {}
+    &-text {
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 125%;
+    }
 
     &-title {
       font-size: 4rem;
