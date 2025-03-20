@@ -20,499 +20,504 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <!-- Шапка сайта -->
-    <header class="header">
-      <div class="container header__container">
-        <div class="header__inner">
-          <a class="header__logo" href="/">
-            <picture class="header__logo-pic">
-              <source media="(min-width: 769px)" srcset="./images/logo/logo.svg" type="image/png">
-              <source media="(max-width: 768px)" srcset="./images/logo/logo-blue.svg" type="image/png">
-              <img class="header__logo-img" src="./images/logo/logo.svg" alt="">
-            </picture>
-          </a>
-          <div class="header__info">
-            <div class="header__info-item">
-              <img src="./images/icon/icon-geo.svg" alt="">
-              <p class="header__info-text">
-                Новосибирская область,
-                р. п. Чаны, ул. Ленина, 260.
+<div class="wrapper innerPage">
+  <!-- Шапка сайта -->
+  <header class="header">
+    <div class="container header__container">
+      <div class="header__inner">
+        <a class="header__logo" href="/">
+          <picture class="header__logo-pic">
+            <source media="(min-width: 769px)" srcset="./images/logo/logo.svg" type="image/png">
+            <source media="(max-width: 768px)" srcset="./images/logo/logo-blue.svg" type="image/png">
+            <img class="header__logo-img" src="./images/logo/logo.svg" alt="">
+          </picture>
+          <picture class="header__logo-pic innerPage__logo">
+            <source media="(min-width: 769px)" srcset="./images/logo/logo-blue.svg" type="image/png">
+            <source media="(max-width: 768px)" srcset="./images/logo/logo.svg" type="image/png">
+            <img class="header__logo-img" src="./images/logo/logo-blue.svg" alt="">
+          </picture>
+        </a>
+        <div class="header__info">
+          <div class="header__info-item">
+            <img src="./images/icon/icon-geo.svg" alt="">
+            <p class="header__info-text">
+              Новосибирская область,
+              р. п. Чаны, ул. Ленина, 260.
+            </p>
+          </div>
+          <div class="header__contact">
+            <div class="header__contact-wrap">
+              <a class="header__contact-phone" href="tel:+73832045980">
+                <img src="./images/icon/icon-phone.svg" alt="">
+                8 (383) 204-59-80
+              </a>
+              <p class="header__contact-text">
+                пн-пт с 8:00 до 19:00
               </p>
             </div>
-            <div class="header__contact">
-              <div class="header__contact-wrap">
-                <a class="header__contact-phone" href="tel:+73832045980">
-                  <img src="./images/icon/icon-phone.svg" alt="">
-                  8 (383) 204-59-80
-                </a>
-                <p class="header__contact-text">
-                  пн-пт с 8:00 до 19:00
-                </p>
-              </div>
-              <a class="header__contact-btn btn btn-yellow" href="/">
-                Связаться с нами
+            <a class="header__contact-btn btn btn-yellow" href="/">
+              Связаться с нами
+            </a>
+          </div>
+        </div>
+        <nav class="nav">
+          <button class="search">
+            <i class="icon-search"></i>
+          </button>
+          <div class="nav__items">
+            <div class="nav__item">
+              <span class="nav__item-link">
+                Продукция
+                <i class="icon-chevron-circle"></i>
+              </span>
+              <ul class="nav__list">
+                <li>
+                  <a class="nav__list-link" href="">
+                    Раздел меню
+                  </a>
+                </li>
+                <li>
+                  <a class="nav__list-link" href="">
+                    Пункт меню
+                  </a>
+                </li>
+                <li>
+                  <a class="nav__list-link" href="">
+                    Подраздел меню
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav__item">
+              <span class="nav__item-link">
+                О заводе
+                <i class="icon-chevron-circle"></i>
+              </span>
+              <ul class="nav__list">
+                <li>
+                  <a class="nav__list-link" href="">
+                    Раздел меню
+                  </a>
+                </li>
+                <li>
+                  <a class="nav__list-link" href="">
+                    Пункт меню
+                  </a>
+                </li>
+                <li>
+                  <a class="nav__list-link" href="">
+                    Подраздел меню
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav__item">
+              <a class="nav__item-link" href="/partners">
+                Партнерам
+              </a>
+            </div>
+            <div class="nav__item">
+              <a class="nav__item-link" href="/">
+                Где купить
+              </a>
+            </div>
+            <div class="nav__item">
+              <a class="nav__item-link" href="/contacts">
+                Контакты
               </a>
             </div>
           </div>
-          <nav class="nav">
-            <button class="search">
-              <i class="icon-icon-search"></i>
-            </button>
-            <div class="nav__items">
-              <div class="nav__item">
-                <span class="nav__item-link">
-                  Продукция
-                  <i class="icon-chevron-circle"></i>
-                </span>
-                <ul class="nav__list">
-                  <li>
-                    <a class="nav__list-link" href="">
-                      Раздел меню
-                    </a>
-                  </li>
-                  <li>
-                    <a class="nav__list-link" href="">
-                      Пункт меню
-                    </a>
-                  </li>
-                  <li>
-                    <a class="nav__list-link" href="">
-                      Подраздел меню
-                    </a>
-                  </li>
-                </ul>
+        </nav>
+        <button class="burger">
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- Содержимое сайта -->
+  <main class="main">
+    <!-- Хлебные крошки -->
+    <section class="breadcrumb">
+      <div class="container breadcrumb__container">
+        <div class="breadcrumb__inner">
+          <ul>
+            <li>
+              <a href="/">
+                Главная
+              </a>
+            </li>
+            <li>
+              <span>/</span>
+            </li>
+            <li>
+              <a href="">
+                Пресс-центр
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Главный блок -->
+    <section class="news press tabs">
+      <div class="container">
+        <div class="news__inner">
+          <div class="news__head">
+            <h2 class="news__head-title block-title">
+              Пресс-центр
+            </h2>
+            <div class="tabs__btns">
+              <div class="tabs__btn tabs__btn--active" data-tab="news">
+                Новости
               </div>
-              <div class="nav__item">
-                <span class="nav__item-link">
-                  О заводе
-                  <i class="icon-chevron-circle"></i>
-                </span>
-                <ul class="nav__list">
-                  <li>
-                    <a class="nav__list-link" href="">
-                      Раздел меню
-                    </a>
-                  </li>
-                  <li>
-                    <a class="nav__list-link" href="">
-                      Пункт меню
-                    </a>
-                  </li>
-                  <li>
-                    <a class="nav__list-link" href="">
-                      Подраздел меню
-                    </a>
-                  </li>
-                </ul>
+              <div class="tabs__btn" data-tab="articles">
+                Статьи
               </div>
-              <div class="nav__item">
-                <a class="nav__item-link" href="/partners">
-                  Партнерам
+            </div>
+          </div>
+          <div class="news__body">
+            <div class="tabs__panels">
+              <div class="news__items tabs__panel tabs__panel--active" data-tab="news">
+                <a class="news__item" href="/">
+                  <h6 class="news__item-title">
+                    Блок с главной новостью
+                  </h6>
+                  <div class="news__item-bottom">
+                    <span class="news__item-date">
+                      cен
+                      2024
+                    </span>
+                    <span class="news__item-count">
+                      07
+                    </span>
+                  </div>
+                </a>
+                <a class="news__item" href="/">
+                  <h6 class="news__item-title">
+                    Первая новость компании
+                  </h6>
+                  <div class="news__item-bottom">
+                    <span class="news__item-date">
+                      cен
+                      2024
+                    </span>
+                    <span class="news__item-count">
+                      10
+                    </span>
+                  </div>
+                </a>
+                <a class="news__item" href="/">
+                  <h6 class="news__item-title">
+                    Первая новость
+                    компании
+                  </h6>
+                  <div class="news__item-bottom">
+                    <span class="news__item-date">
+                      cен
+                      2024
+                    </span>
+                    <span class="news__item-count">
+                      12
+                    </span>
+                  </div>
+                </a>
+                <a class="news__item" href="/">
+                  <h6 class="news__item-title">
+                    Первая новость
+                    компании
+                  </h6>
+                  <div class="news__item-bottom">
+                    <span class="news__item-date">
+                      cен
+                      2024
+                    </span>
+                    <span class="news__item-count">
+                      14
+                    </span>
+                  </div>
+                </a>
+                <a class="news__item" href="/">
+                  <h6 class="news__item-title">
+                    Первая новость
+                    компании
+                  </h6>
+                  <div class="news__item-bottom">
+                    <span class="news__item-date">
+                      cен
+                      2024
+                    </span>
+                    <span class="news__item-count">
+                      15
+                    </span>
+                  </div>
+                </a>
+                <a class="news__item" href="/">
+                  <h6 class="news__item-title">
+                    Первая новость
+                    компании
+                  </h6>
+                  <div class="news__item-bottom">
+                    <span class="news__item-date">
+                      cен
+                      2024
+                    </span>
+                    <span class="news__item-count">
+                      18
+                    </span>
+                  </div>
+                </a>
+                <a class="news__item" href="/">
+                  <h6 class="news__item-title">
+                    Первая новость
+                    компании
+                  </h6>
+                  <div class="news__item-bottom">
+                    <span class="news__item-date">
+                      cен
+                      2024
+                    </span>
+                    <span class="news__item-count">
+                      23
+                    </span>
+                  </div>
                 </a>
               </div>
-              <div class="nav__item">
-                <a class="nav__item-link" href="/">
-                  Где купить
+              <div class="news__items tabs__panel" data-tab="articles">
+                <a class="news__item" href="/">
+                  <h6 class="news__item-title">
+                    Блок с главной статьей
+                  </h6>
+                  <div class="news__item-bottom">
+                    <span class="news__item-date">
+                      cен
+                      2024
+                    </span>
+                    <span class="news__item-count">
+                      07
+                    </span>
+                  </div>
                 </a>
-              </div>
-              <div class="nav__item">
-                <a class="nav__item-link" href="/contacts">
-                  Контакты
+                <a class="news__item" href="/">
+                  <h6 class="news__item-title">
+                    Первая новость компании
+                  </h6>
+                  <div class="news__item-bottom">
+                    <span class="news__item-date">
+                      cен
+                      2024
+                    </span>
+                    <span class="news__item-count">
+                      10
+                    </span>
+                  </div>
+                </a>
+                <a class="news__item" href="/">
+                  <h6 class="news__item-title">
+                    Первая новость
+                    компании
+                  </h6>
+                  <div class="news__item-bottom">
+                    <span class="news__item-date">
+                      cен
+                      2024
+                    </span>
+                    <span class="news__item-count">
+                      12
+                    </span>
+                  </div>
+                </a>
+                <a class="news__item" href="/">
+                  <h6 class="news__item-title">
+                    Первая новость
+                    компании
+                  </h6>
+                  <div class="news__item-bottom">
+                    <span class="news__item-date">
+                      cен
+                      2024
+                    </span>
+                    <span class="news__item-count">
+                      14
+                    </span>
+                  </div>
+                </a>
+                <a class="news__item" href="/">
+                  <h6 class="news__item-title">
+                    Первая новость
+                    компании
+                  </h6>
+                  <div class="news__item-bottom">
+                    <span class="news__item-date">
+                      cен
+                      2024
+                    </span>
+                    <span class="news__item-count">
+                      15
+                    </span>
+                  </div>
+                </a>
+                <a class="news__item" href="/">
+                  <h6 class="news__item-title">
+                    Первая новость
+                    компании
+                  </h6>
+                  <div class="news__item-bottom">
+                    <span class="news__item-date">
+                      cен
+                      2024
+                    </span>
+                    <span class="news__item-count">
+                      18
+                    </span>
+                  </div>
+                </a>
+                <a class="news__item" href="/">
+                  <h6 class="news__item-title">
+                    Первая новость
+                    компании
+                  </h6>
+                  <div class="news__item-bottom">
+                    <span class="news__item-date">
+                      cен
+                      2024
+                    </span>
+                    <span class="news__item-count">
+                      23
+                    </span>
+                  </div>
                 </a>
               </div>
             </div>
-          </nav>
-          <button class="burger">
-          </button>
+          </div>
         </div>
       </div>
-    </header>
-<!-- Содержимое сайта -->
-<main class="main innerPage">
-  <!-- Хлебные крошки -->
-  <section class="breadcrumb">
-    <div class="container breadcrumb__container">
-      <div class="breadcrumb__inner">
-        <ul>
-          <li>
-            <a href="/">
-              Главная
+    </section>
+  </main>
+  <!-- Подвал сайта -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <ul class="footer__list">
+          <li class="footer__list-item">
+            <a class="footer__list-title" href="/catalog">
+              Продукция
             </a>
           </li>
-          <li>
-            <span>/</span>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="/">
+              Раздел меню
+            </a>
           </li>
-          <li>
-            <a href="">
-              Пресс-центр
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="/">
+              Подраздел меню еще один
+            </a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="/">
+              Длинный раздел в две строки
             </a>
           </li>
         </ul>
-      </div>
-    </div>
-  </section>
-  <!-- Главный блок -->
-  <section class="news tabs">
-    <div class="container">
-      <div class="news__inner">
-        <div class="news__head">
-          <h2 class="news__head-title block-title">
-            Пресс-центр
-          </h2>
-          <div class="tabs__btns">
-            <div class="tabs__btn tabs__btn--active" data-tab="news">
+        <ul class="footer__list">
+          <li class="footer__list-item">
+            <a class="footer__list-title" href="/">
+              О заводе
+            </a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="/vacancy">
+              Вакансии
+            </a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="/news">
               Новости
-            </div>
-            <div class="tabs__btn" data-tab="articles">
-              Статьи
-            </div>
+            </a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="/certificates">
+              Сертификаты и лицензии
+            </a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="/">
+              Подраздел меню еще один
+            </a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="/">
+              Очень длинный раздел
+              в две строки
+            </a>
+          </li>
+        </ul>
+        <ul class="footer__list">
+          <li class="footer__list-item">
+            <a class="footer__list-title" href="/partners">
+              Партнерам
+            </a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-title" href="/">
+              Где купить
+            </a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-title" href="/contacts">
+              Контакты
+            </a>
+          </li>
+        </ul>
+        <div class="footer__contact">
+          <div class="footer__contact-wrap">
+            <a class="footer__contact-phone" href="">
+              8 (383) 204-59-80
+            </a>
+            <p class="footer__contact-text">
+              пн-пт с 8:00 до 19:00
+            </p>
           </div>
-        </div>
-        <div class="news__body">
-          <div class="tabs__panels">
-            <div class="news__items tabs__panel tabs__panel--active" data-tab="news">
-              <a class="news__item" href="/">
-                <h6 class="news__item-title">
-                  Блок с главной новостью
-                </h6>
-                <div class="news__item-bottom">
-                  <span class="news__item-date">
-                    cен
-                    2024
-                  </span>
-                  <span class="news__item-count">
-                    07
-                  </span>
-                </div>
-              </a>
-              <a class="news__item" href="/">
-                <h6 class="news__item-title">
-                  Первая новость компании
-                </h6>
-                <div class="news__item-bottom">
-                  <span class="news__item-date">
-                    cен
-                    2024
-                  </span>
-                  <span class="news__item-count">
-                    10
-                  </span>
-                </div>
-              </a>
-              <a class="news__item" href="/">
-                <h6 class="news__item-title">
-                  Первая новость
-                  компании
-                </h6>
-                <div class="news__item-bottom">
-                  <span class="news__item-date">
-                    cен
-                    2024
-                  </span>
-                  <span class="news__item-count">
-                    12
-                  </span>
-                </div>
-              </a>
-              <a class="news__item" href="/">
-                <h6 class="news__item-title">
-                  Первая новость
-                  компании
-                </h6>
-                <div class="news__item-bottom">
-                  <span class="news__item-date">
-                    cен
-                    2024
-                  </span>
-                  <span class="news__item-count">
-                    14
-                  </span>
-                </div>
-              </a>
-              <a class="news__item" href="/">
-                <h6 class="news__item-title">
-                  Первая новость
-                  компании
-                </h6>
-                <div class="news__item-bottom">
-                  <span class="news__item-date">
-                    cен
-                    2024
-                  </span>
-                  <span class="news__item-count">
-                    15
-                  </span>
-                </div>
-              </a>
-              <a class="news__item" href="/">
-                <h6 class="news__item-title">
-                  Первая новость
-                  компании
-                </h6>
-                <div class="news__item-bottom">
-                  <span class="news__item-date">
-                    cен
-                    2024
-                  </span>
-                  <span class="news__item-count">
-                    18
-                  </span>
-                </div>
-              </a>
-              <a class="news__item" href="/">
-                <h6 class="news__item-title">
-                  Первая новость
-                  компании
-                </h6>
-                <div class="news__item-bottom">
-                  <span class="news__item-date">
-                    cен
-                    2024
-                  </span>
-                  <span class="news__item-count">
-                    23
-                  </span>
-                </div>
-              </a>
-            </div>
-            <div class="news__items tabs__panel" data-tab="articles">
-              <a class="news__item" href="/">
-                <h6 class="news__item-title">
-                  Блок с главной статьей
-                </h6>
-                <div class="news__item-bottom">
-                  <span class="news__item-date">
-                    cен
-                    2024
-                  </span>
-                  <span class="news__item-count">
-                    07
-                  </span>
-                </div>
-              </a>
-              <a class="news__item" href="/">
-                <h6 class="news__item-title">
-                  Первая новость компании
-                </h6>
-                <div class="news__item-bottom">
-                  <span class="news__item-date">
-                    cен
-                    2024
-                  </span>
-                  <span class="news__item-count">
-                    10
-                  </span>
-                </div>
-              </a>
-              <a class="news__item" href="/">
-                <h6 class="news__item-title">
-                  Первая новость
-                  компании
-                </h6>
-                <div class="news__item-bottom">
-                  <span class="news__item-date">
-                    cен
-                    2024
-                  </span>
-                  <span class="news__item-count">
-                    12
-                  </span>
-                </div>
-              </a>
-              <a class="news__item" href="/">
-                <h6 class="news__item-title">
-                  Первая новость
-                  компании
-                </h6>
-                <div class="news__item-bottom">
-                  <span class="news__item-date">
-                    cен
-                    2024
-                  </span>
-                  <span class="news__item-count">
-                    14
-                  </span>
-                </div>
-              </a>
-              <a class="news__item" href="/">
-                <h6 class="news__item-title">
-                  Первая новость
-                  компании
-                </h6>
-                <div class="news__item-bottom">
-                  <span class="news__item-date">
-                    cен
-                    2024
-                  </span>
-                  <span class="news__item-count">
-                    15
-                  </span>
-                </div>
-              </a>
-              <a class="news__item" href="/">
-                <h6 class="news__item-title">
-                  Первая новость
-                  компании
-                </h6>
-                <div class="news__item-bottom">
-                  <span class="news__item-date">
-                    cен
-                    2024
-                  </span>
-                  <span class="news__item-count">
-                    18
-                  </span>
-                </div>
-              </a>
-              <a class="news__item" href="/">
-                <h6 class="news__item-title">
-                  Первая новость
-                  компании
-                </h6>
-                <div class="news__item-bottom">
-                  <span class="news__item-date">
-                    cен
-                    2024
-                  </span>
-                  <span class="news__item-count">
-                    23
-                  </span>
-                </div>
-              </a>
-            </div>
+          <div class="footer__contact-wrap">
+            <h6 class="footer__contact-title">
+              Адрес:
+            </h6>
+            <p class="footer__contact-text">
+              Новосибирская область, р. п. Чаны, ул. Ленина, 260.
+            </p>
           </div>
+          <img class="footer__contact-img" src="./images/main/logo-roskachestvo.svg" alt="">
         </div>
       </div>
     </div>
-  </section>
-</main>
-<!-- Подвал сайта -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer__inner">
-      <ul class="footer__list">
-        <li class="footer__list-item">
-          <a class="footer__list-title" href="/catalog">
-            Продукция
+    <div class="footer__bottom">
+      <div class="container">
+        <div class="footer__bottom-inner">
+          <span class="footer__bottom-text">
+            © 2024 Маслодельный комбинат Чановский
+          </span>
+  
+          <a class="footer__bottom-logo" href="/">
+            <img src="./images/logo/logo-grey.svg" alt="">
           </a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="/">
-            Раздел меню
-          </a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="/">
-            Подраздел меню еще один
-          </a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="/">
-            Длинный раздел в две строки
-          </a>
-        </li>
-      </ul>
-      <ul class="footer__list">
-        <li class="footer__list-item">
-          <a class="footer__list-title" href="/about">
-            О заводе
-          </a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="/vacancy">
-            Вакансии
-          </a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="/news">
-            Новости
-          </a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="/certificates">
-            Сертификаты и лицензии
-          </a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="/">
-            Подраздел меню еще один
-          </a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="/">
-            Очень длинный раздел
-            в две строки
-          </a>
-        </li>
-      </ul>
-      <ul class="footer__list">
-        <li class="footer__list-item">
-          <a class="footer__list-title" href="/partners">
-            Партнерам
-          </a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-title" href="/">
-            Где купить
-          </a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-title" href="/contacts">
-            Контакты
-          </a>
-        </li>
-      </ul>
-      <div class="footer__contact">
-        <div class="footer__contact-wrap">
-          <a class="footer__contact-phone" href="">
-            8 (383) 204-59-80
-          </a>
-          <p class="footer__contact-text">
-            пн-пт с 8:00 до 19:00
-          </p>
+  
+          <span class="footer__bottom-text">
+            Разработка сайта — <a href="/">Once&Twice</a>
+          </span>
         </div>
-        <div class="footer__contact-wrap">
-          <h6 class="footer__contact-title">
-            Адрес:
-          </h6>
-          <p class="footer__contact-text">
-            Новосибирская область, р. п. Чаны, ул. Ленина, 260.
-          </p>
-        </div>
-        <img class="footer__contact-img" src="./images/main/logo-roskachestvo.svg" alt="">
       </div>
     </div>
+  </footer>
   </div>
-  <div class="footer__bottom">
-    <div class="container">
-      <div class="footer__bottom-inner">
-        <span class="footer__bottom-text">
-          © 2024 Маслодельный комбинат Чановский
-        </span>
-
-        <a class="footer__bottom-logo" href="/">
-          <img src="./images/logo/logo-grey.svg" alt="">
-        </a>
-
-        <span class="footer__bottom-text">
-          Разработка сайта — <a href="/">Once&Twice</a>
-        </span>
-      </div>
-    </div>
-  </div>
-</footer>
-</div>
-
-
-
-<!-- scipts -->
-<script src="./libs/gsap/gsap.min.js" defer></script>
-<script src="./libs/gsap/ScrollSmoother.min.js" defer></script>
-<script src="./libs/gsap/ScrollTrigger.min.js" defer></script>
-<script src="./libs/lenis/lenis.min.js" defer></script>
-<script src="./libs/swiper/swiper-bundle.min.js" defer></script>
-<script src="./js/main.js" defer></script>
-</body>
-
-</html>
+  
+  <!--=include modal.html-->
+  
+  <!-- scipts -->
+  <script src="./libs/gsap/gsap.min.js" defer></script>
+  <script src="./libs/gsap/ScrollSmoother.min.js" defer></script>
+  <script src="./libs/gsap/ScrollTrigger.min.js" defer></script>
+  <script src="./libs/lenis/lenis.min.js" defer></script>
+  <script src="./libs/swiper/swiper-bundle.min.js" defer></script>
+  <script src="./js/main.js" defer></script>
+  </body>
+  
+  </html>
