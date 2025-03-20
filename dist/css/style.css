@@ -1032,7 +1032,7 @@ html.lenis body {
 }
 
 .hero {
-  background-image: url(./../images/main/hero-2.png);
+  background-image: url(./../images/main/hero-1.png);
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center bottom;
@@ -2746,7 +2746,6 @@ html.lenis body {
   /* hero */
   .hero {
     height: 33.1rem;
-    background-image: url(./../images/main/hero-1.png);
   }
   .hero__inner {
     padding: 2.3rem 0 0;
