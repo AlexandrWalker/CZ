@@ -1,130 +1,112 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="format-detection" content="date=no">
-  <meta name="format-detection" content="address=no">
-  <meta name="format-detection" content="email=no">
-  <!-- title -->
-  <title>Чановский завод</title>
-  <!-- styles -->
-  <link rel="stylesheet" href="./libs/lenis/lenis.min.css">
-  <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="./css/icomoon-style.css">
-  <link rel="stylesheet" href="./css/style.css">
-</head>
-
-<body>
-  <div class="wrapper">
-    <!-- Шапка сайта -->
-    <header class="header">
-      <div class="container header__container">
-        <div class="header__inner">
-          <a class="header__logo" href="/">
-            <picture class="header__logo-pic">
-              <source media="(min-width: 769px)" srcset="./images/logo/logo.svg" type="image/png">
-              <source media="(max-width: 768px)" srcset="./images/logo/logo-blue.svg" type="image/png">
-              <img class="header__logo-img" src="./images/logo/logo.svg" alt="">
-            </picture>
-          </a>
-          <div class="header__info">
-            <div class="header__info-item">
-              <img src="./images/icon/icon-geo.svg" alt="">
-              <p class="header__info-text">
-                Новосибирская область,
-                р. п. Чаны, ул. Ленина, 260.
-              </p>
-            </div>
-            <div class="header__contact">
-              <div class="header__contact-wrap">
-                <a class="header__contact-phone" href="tel:+73832045980">
-                  <img src="./images/icon/icon-phone.svg" alt="">
-                  8 (383) 204-59-80
-                </a>
-                <p class="header__contact-text">
-                  пн-пт с 8:00 до 19:00
-                </p>
-              </div>
-              <a class="header__contact-btn btn btn-yellow" href="/">
-                Связаться с нами
-              </a>
-            </div>
+<!-- Шапка сайта -->
+<header class="header">
+  <div class="container header__container">
+    <div class="header__inner">
+      <a class="header__logo" href="/">
+        <picture class="header__logo-pic">
+          <source media="(min-width: 769px)" srcset="./images/logo/logo.svg" type="image/png">
+          <source media="(max-width: 768px)" srcset="./images/logo/logo-blue.svg" type="image/png">
+          <img class="header__logo-img" src="./images/logo/logo.svg" alt="">
+        </picture>
+        <picture class="header__logo-pic innerPage__logo">
+          <source media="(min-width: 769px)" srcset="./images/logo/logo-blue.svg" type="image/png">
+          <source media="(max-width: 768px)" srcset="./images/logo/logo.svg" type="image/png">
+          <img class="header__logo-img" src="./images/logo/logo-blue.svg" alt="">
+        </picture>
+      </a>
+      <div class="header__info">
+        <div class="header__info-item">
+          <img src="./images/icon/icon-geo.svg" alt="">
+          <p class="header__info-text">
+            Новосибирская область,
+            р. п. Чаны, ул. Ленина, 260.
+          </p>
+        </div>
+        <div class="header__contact">
+          <div class="header__contact-wrap">
+            <a class="header__contact-phone" href="tel:+73832045980">
+              <img src="./images/icon/icon-phone.svg" alt="">
+              8 (383) 204-59-80
+            </a>
+            <p class="header__contact-text">
+              пн-пт с 8:00 до 19:00
+            </p>
           </div>
-          <nav class="nav">
-            <button class="search">
-              <i class="icon-icon-search"></i>
-            </button>
-            <div class="nav__items">
-              <div class="nav__item">
-                <span class="nav__item-link">
-                  Продукция
-                  <i class="icon-chevron-circle"></i>
-                </span>
-                <ul class="nav__list">
-                  <li>
-                    <a class="nav__list-link" href="">
-                      Раздел меню
-                    </a>
-                  </li>
-                  <li>
-                    <a class="nav__list-link" href="">
-                      Пункт меню
-                    </a>
-                  </li>
-                  <li>
-                    <a class="nav__list-link" href="">
-                      Подраздел меню
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="nav__item">
-                <span class="nav__item-link">
-                  О заводе
-                  <i class="icon-chevron-circle"></i>
-                </span>
-                <ul class="nav__list">
-                  <li>
-                    <a class="nav__list-link" href="">
-                      Раздел меню
-                    </a>
-                  </li>
-                  <li>
-                    <a class="nav__list-link" href="">
-                      Пункт меню
-                    </a>
-                  </li>
-                  <li>
-                    <a class="nav__list-link" href="">
-                      Подраздел меню
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="nav__item">
-                <a class="nav__item-link" href="/partners">
-                  Партнерам
-                </a>
-              </div>
-              <div class="nav__item">
-                <a class="nav__item-link" href="/">
-                  Где купить
-                </a>
-              </div>
-              <div class="nav__item">
-                <a class="nav__item-link" href="/contacts">
-                  Контакты
-                </a>
-              </div>
-            </div>
-          </nav>
-          <button class="burger">
-          </button>
+          <a class="header__contact-btn btn btn-yellow" href="/">
+            Связаться с нами
+          </a>
         </div>
       </div>
-    </header>
+      <nav class="nav">
+        <button class="search">
+          <i class="icon-search"></i>
+        </button>
+        <div class="nav__items">
+          <div class="nav__item">
+            <span class="nav__item-link">
+              Продукция
+              <i class="icon-chevron-circle"></i>
+            </span>
+            <ul class="nav__list">
+              <li>
+                <a class="nav__list-link" href="">
+                  Раздел меню
+                </a>
+              </li>
+              <li>
+                <a class="nav__list-link" href="">
+                  Пункт меню
+                </a>
+              </li>
+              <li>
+                <a class="nav__list-link" href="">
+                  Подраздел меню
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav__item">
+            <span class="nav__item-link">
+              О заводе
+              <i class="icon-chevron-circle"></i>
+            </span>
+            <ul class="nav__list">
+              <li>
+                <a class="nav__list-link" href="">
+                  Раздел меню
+                </a>
+              </li>
+              <li>
+                <a class="nav__list-link" href="">
+                  Пункт меню
+                </a>
+              </li>
+              <li>
+                <a class="nav__list-link" href="">
+                  Подраздел меню
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav__item">
+            <a class="nav__item-link" href="/partners">
+              Партнерам
+            </a>
+          </div>
+          <div class="nav__item">
+            <a class="nav__item-link" href="/">
+              Где купить
+            </a>
+          </div>
+          <div class="nav__item">
+            <a class="nav__item-link" href="/contacts">
+              Контакты
+            </a>
+          </div>
+        </div>
+      </nav>
+      <button class="burger">
+      </button>
+    </div>
+  </div>
+</header>

@@ -1,9 +1,11 @@
 .innerPage {
 
   .news {
-    padding-top: 4rem;
+    padding-top: 5rem;
   }
+}
 
+.press {
   .news__item:nth-child(1) {
     grid-column: 1 / 4;
     height: 63.9rem;

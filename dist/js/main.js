@@ -25,6 +25,74 @@
       },
     });
 
+    var history__slider = new Swiper(".history__slider-init", {
+      slidesPerView: "auto",
+      spaceBetween: 0,
+      slidesPerGroup: 1,
+      watchSlidesProgress: true,
+      speed: 600,
+      mousewheel: {
+        forceToAxis: true,
+      },
+      on: {
+        slideChange: () => updateLineFills(history__slider),
+      },
+    });
+    
+    updateLineFills(history__slider);
+
+    /**
+     * Обновление состояния линий в слайдере.
+     * Активные линии соответствуют текущему слайду и всем предыдущим.
+     *
+     * @param {Swiper} history__slider - Экземпляр слайдера Swiper.
+     */
+    function updateLineFills(history__slider) {
+      const { slides, activeIndex } = history__slider;
+
+      slides.forEach((slide, index) => {
+        const lineSpan = slide.querySelector('.history__slider-line span');
+        lineSpan?.classList.toggle('active', index <= activeIndex);
+      });
+    }
+
+    var values__thumbs = new Swiper(".values__thumbs-init", {
+      spaceBetween: 30,
+      speed: 600,
+      loop: true,
+      mousewheel: false,
+      allowTouchMove: true,
+      noSwiping: true,
+      watchSlidesProgress: true,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      effect: "creative",
+      creativeEffect: {
+        prev: {
+          shadow: true,
+          translate: [0, 0, -400],
+        },
+        next: {
+          translate: ["100%", 0, 0],
+        },
+      },
+    });
+
+    var values__slider = new Swiper(".values__slider-init", {
+      spaceBetween: 30,
+      speed: 600,
+      loop: true,
+      grabCursor: true,
+      thumbs: {
+        swiper: values__thumbs,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+      },
+    });
+
     function harmonicFunc() {
       var worthHead = document.querySelectorAll('.worth__item'),
         worthActive = document.getElementsByClassName('active'),
@@ -67,7 +135,7 @@
 
     function accordionFunc() {
       var accordionHead = document.querySelectorAll('.accordion'),
-      accordionActive = document.getElementsByClassName('active');
+        accordionActive = document.getElementsByClassName('active');
 
       Array.from(accordionHead).forEach(function (accordionItem, i, accordionHead) {
         accordionItem.addEventListener('click', function (e) {

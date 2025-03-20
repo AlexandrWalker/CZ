@@ -71,6 +71,43 @@ section {
   }
 }
 
+.innerPage {
+  overflow: hidden;
+
+  .header {
+    background-color: var(--primary-color);
+    color: var(--primary-bg);
+
+    &__logo {
+      background-color: var(--primary-bg);
+
+      &-pic {
+        display: none;
+      }
+    }
+
+    &__contact-phone:hover {
+      color: var(--primary-bg);
+    }
+  }
+
+  .header__logo-pic.innerPage__logo {
+    display: block;
+  }
+
+  .nav__list-link {
+    color: var(--primary-black);
+  }
+
+  .search i {
+    color: var(--primary-bg);
+  }
+
+  .title {
+    font-size: 6rem;
+  }
+}
+
 .hidden {
   display: none !important;
 }

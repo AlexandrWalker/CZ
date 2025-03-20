@@ -1,390 +1,392 @@
-<!--=include header.html-->
-<!-- Содержимое сайта -->
-<main class="main">
-  <!-- Хлебные крошки -->
-  <section class="breadcrumb">
-    <div class="container">
-      <div class="breadcrumb__inner">
-        <ul>
-          <li>
-            <a href="/">
-              Главная
-            </a>
-          </li>
-          <li>
-            <span>/</span>
-          </li>
-          <li>
-            <a href="">
-              Продукция
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  <!-- Главный блок -->
-  <section class="catalog">
-    <div class="container catalog__container">
-      <div class="catalog__inner tabs">
-        <h2 class="catalog__title block-title">
-          Продукция
-        </h2>
-        <div class="catalog__head">
-          <div class="filter">
-            <p class="filter__text">
-              Жирность:
-            </p>
-            <div class="filter__items">
-              <div class="filter__item">
-                <input id="filter_1" type="radio" name="filter" checked>
-                <label for="filter_1">
-                  2,5%
-                </label>
-              </div>
-              <div class="filter__item">
-                <input id="filter_2" type="radio" name="filter">
-                <label for="filter_2">
-                  3,5%
-                </label>
-              </div>
-              <div class="filter__item">
-                <input id="filter_3" type="radio" name="filter">
-                <label for="filter_3">
-                  1,8%
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="tabs__btns">
-            <div class="tabs__btn tabs__btn--active" data-tab="milk">
-              Молоко
-            </div>
-            <div class="tabs__btn" data-tab="cream">
-              Сметана
-            </div>
-            <div class="tabs__btn" data-tab="butter">
-              Масло
-            </div>
-          </div>
-          <div class="dropdown">
-            <button class="dropdown__button icon-chevron-arrow" data-value="Молоко">
-              Молоко
-            </button>
-            <ul class="dropdown__list dropdown__list-border">
-              <li class="dropdown__list-item" data-value="Молоко">Молоко</li>
-              <li class="dropdown__list-item" data-value="Сметана">Сметана</li>
-              <li class="dropdown__list-item" data-value="Масло">Масло</li>
-            </ul>
-            <input type="text" name="select-category" value="all" class="dropdown__input-hidden">
-          </div>
-        </div>
-        <div class="catalog__body">
-          <div data-tab="milk" class="catalog__items tabs__panel tabs__panel--active">
-            <div class="catalog__item">
-              <div class="product__item">
-                <img class="product__item-img" src="./images/main/product-1.png" alt="">
-                <span class="product__item-name">
-                  Молоко Молодчинка 3,2 %
-                </span>
-                <p class="product__item-desc">
-                  Произведено у побережья Белорусского моря в Новосибирске
-                </p>
-                <a class="product__item-link link" href="/">
-                  <i class="icon-chevron-circle"></i>
-                  Подробнее
-                </a>
-              </div>
-            </div>
-            <div class="catalog__item">
-              <div class="product__item">
-                <img class="product__item-img" src="./images/main/product-2.png" alt="">
-                <span class="product__item-name">
-                  Молоко Молодчинка 3,2 %
-                </span>
-                <p class="product__item-desc">
-                  Произведено у побережья Белорусского моря в Новосибирске
-                </p>
-                <a class="product__item-link link" href="/">
-                  <i class="icon-chevron-circle"></i>
-                  Подробнее
-                </a>
-              </div>
-            </div>
-            <div class="catalog__item">
-              <div class="product__item">
-                <img class="product__item-img" src="./images/main/product-3.png" alt="">
-                <span class="product__item-name">
-                  Молоко Молодчинка 3,2 %
-                </span>
-                <p class="product__item-desc">
-                  Произведено у побережья Белорусского моря в Новосибирске
-                </p>
-                <a class="product__item-link link" href="/">
-                  <i class="icon-chevron-circle"></i>
-                  Подробнее
-                </a>
-              </div>
-            </div>
-            <div class="catalog__item">
-              <div class="product__item">
-                <img class="product__item-img" src="./images/main/product-2.png" alt="">
-                <span class="product__item-name">
-                  Молоко Молодчинка 3,2 %
-                </span>
-                <p class="product__item-desc">
-                  Произведено у побережья Белорусского моря в Новосибирске
-                </p>
-                <a class="product__item-link link" href="/">
-                  <i class="icon-chevron-circle"></i>
-                  Подробнее
-                </a>
-              </div>
-            </div>
-            <div class="catalog__item">
-              <div class="product__item">
-                <img class="product__item-img" src="./images/main/product-3.png" alt="">
-                <span class="product__item-name">
-                  Молоко Молодчинка 3,2 %
-                </span>
-                <p class="product__item-desc">
-                  Произведено у побережья Белорусского моря в Новосибирске
-                </p>
-                <a class="product__item-link link" href="/">
-                  <i class="icon-chevron-circle"></i>
-                  Подробнее
-                </a>
-              </div>
-            </div>
-            <div class="catalog__item">
-              <div class="product__item">
-                <img class="product__item-img" src="./images/main/product-1.png" alt="">
-                <span class="product__item-name">
-                  Молоко Молодчинка 3,2 %
-                </span>
-                <p class="product__item-desc">
-                  Произведено у побережья Белорусского моря в Новосибирске
-                </p>
-                <a class="product__item-link link" href="/">
-                  <i class="icon-chevron-circle"></i>
-                  Подробнее
-                </a>
-              </div>
-            </div>
-          </div>
-          <div data-tab="cream" class="catalog__items tabs__panel">
-            <div class="catalog__item">
-              <div class="product__item">
-                <img class="product__item-img" src="./images/main/product-3.png" alt="">
-                <span class="product__item-name">
-                  Молоко Молодчинка 3,2 %
-                </span>
-                <p class="product__item-desc">
-                  Произведено у побережья Белорусского моря в Новосибирске
-                </p>
-                <a class="product__item-link link" href="/">
-                  <i class="icon-chevron-circle"></i>
-                  Подробнее
-                </a>
-              </div>
-            </div>
-            <div class="catalog__item">
-              <div class="product__item">
-                <img class="product__item-img" src="./images/main/product-1.png" alt="">
-                <span class="product__item-name">
-                  Молоко Молодчинка 3,2 %
-                </span>
-                <p class="product__item-desc">
-                  Произведено у побережья Белорусского моря в Новосибирске
-                </p>
-                <a class="product__item-link link" href="/">
-                  <i class="icon-chevron-circle"></i>
-                  Подробнее
-                </a>
-              </div>
-            </div>
-            <div class="catalog__item">
-              <div class="product__item">
-                <img class="product__item-img" src="./images/main/product-2.png" alt="">
-                <span class="product__item-name">
-                  Молоко Молодчинка 3,2 %
-                </span>
-                <p class="product__item-desc">
-                  Произведено у побережья Белорусского моря в Новосибирске
-                </p>
-                <a class="product__item-link link" href="/">
-                  <i class="icon-chevron-circle"></i>
-                  Подробнее
-                </a>
-              </div>
-            </div>
-            <div class="catalog__item">
-              <div class="product__item">
-                <img class="product__item-img" src="./images/main/product-2.png" alt="">
-                <span class="product__item-name">
-                  Молоко Молодчинка 3,2 %
-                </span>
-                <p class="product__item-desc">
-                  Произведено у побережья Белорусского моря в Новосибирске
-                </p>
-                <a class="product__item-link link" href="/">
-                  <i class="icon-chevron-circle"></i>
-                  Подробнее
-                </a>
-              </div>
-            </div>
-            <div class="catalog__item">
-              <div class="product__item">
-                <img class="product__item-img" src="./images/main/product-3.png" alt="">
-                <span class="product__item-name">
-                  Молоко Молодчинка 3,2 %
-                </span>
-                <p class="product__item-desc">
-                  Произведено у побережья Белорусского моря в Новосибирске
-                </p>
-                <a class="product__item-link link" href="/">
-                  <i class="icon-chevron-circle"></i>
-                  Подробнее
-                </a>
-              </div>
-            </div>
-            <div class="catalog__item">
-              <div class="product__item">
-                <img class="product__item-img" src="./images/main/product-1.png" alt="">
-                <span class="product__item-name">
-                  Молоко Молодчинка 3,2 %
-                </span>
-                <p class="product__item-desc">
-                  Произведено у побережья Белорусского моря в Новосибирске
-                </p>
-                <a class="product__item-link link" href="/">
-                  <i class="icon-chevron-circle"></i>
-                  Подробнее
-                </a>
-              </div>
-            </div>
-          </div>
-          <div data-tab="butter" class="catalog__items tabs__panel">
-            <div class="catalog__item">
-              <div class="product__item">
-                <img class="product__item-img" src="./images/main/product-1.png" alt="">
-                <span class="product__item-name">
-                  Молоко Молодчинка 3,2 %
-                </span>
-                <p class="product__item-desc">
-                  Произведено у побережья Белорусского моря в Новосибирске
-                </p>
-                <a class="product__item-link link" href="/">
-                  <i class="icon-chevron-circle"></i>
-                  Подробнее
-                </a>
-              </div>
-            </div>
-            <div class="catalog__item">
-              <div class="product__item">
-                <img class="product__item-img" src="./images/main/product-3.png" alt="">
-                <span class="product__item-name">
-                  Молоко Молодчинка 3,2 %
-                </span>
-                <p class="product__item-desc">
-                  Произведено у побережья Белорусского моря в Новосибирске
-                </p>
-                <a class="product__item-link link" href="/">
-                  <i class="icon-chevron-circle"></i>
-                  Подробнее
-                </a>
-              </div>
-            </div>
-            <div class="catalog__item">
-              <div class="product__item">
-                <img class="product__item-img" src="./images/main/product-2.png" alt="">
-                <span class="product__item-name">
-                  Молоко Молодчинка 3,2 %
-                </span>
-                <p class="product__item-desc">
-                  Произведено у побережья Белорусского моря в Новосибирске
-                </p>
-                <a class="product__item-link link" href="/">
-                  <i class="icon-chevron-circle"></i>
-                  Подробнее
-                </a>
-              </div>
-            </div>
-            <div class="catalog__item">
-              <div class="product__item">
-                <img class="product__item-img" src="./images/main/product-2.png" alt="">
-                <span class="product__item-name">
-                  Молоко Молодчинка 3,2 %
-                </span>
-                <p class="product__item-desc">
-                  Произведено у побережья Белорусского моря в Новосибирске
-                </p>
-                <a class="product__item-link link" href="/">
-                  <i class="icon-chevron-circle"></i>
-                  Подробнее
-                </a>
-              </div>
-            </div>
-            <div class="catalog__item">
-              <div class="product__item">
-                <img class="product__item-img" src="./images/main/product-3.png" alt="">
-                <span class="product__item-name">
-                  Молоко Молодчинка 3,2 %
-                </span>
-                <p class="product__item-desc">
-                  Произведено у побережья Белорусского моря в Новосибирске
-                </p>
-                <a class="product__item-link link" href="/">
-                  <i class="icon-chevron-circle"></i>
-                  Подробнее
-                </a>
-              </div>
-            </div>
-            <div class="catalog__item">
-              <div class="product__item">
-                <img class="product__item-img" src="./images/main/product-1.png" alt="">
-                <span class="product__item-name">
-                  Молоко Молодчинка 3,2 %
-                </span>
-                <p class="product__item-desc">
-                  Произведено у побережья Белорусского моря в Новосибирске
-                </p>
-                <a class="product__item-link link" href="/">
-                  <i class="icon-chevron-circle"></i>
-                  Подробнее
-                </a>
-              </div>
-            </div>
-          </div>
+<!--=include head.html-->
+<div class="wrapper innerPage">
+  <!--=include header.html-->
+  <!-- Содержимое сайта -->
+  <main class="main">
+    <!-- Хлебные крошки -->
+    <section class="breadcrumb">
+      <div class="container">
+        <div class="breadcrumb__inner">
+          <ul>
+            <li>
+              <a href="/">
+                Главная
+              </a>
+            </li>
+            <li>
+              <span>/</span>
+            </li>
+            <li>
+              <a href="">
+                Продукция
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="callback">
-    <div class="container">
-      <div class="callback__inner">
-        <form class="callback__form" action="#" method="get">
-          <h2 class="callback__title block-title">
-            Свяжитесь с нами
+    </section>
+    <!-- Главный блок -->
+    <section class="catalog">
+      <div class="container catalog__container">
+        <div class="catalog__inner tabs">
+          <h2 class="catalog__title block-title">
+            Продукция
           </h2>
-          <div class="form-group icon-person">
-            <input type="text" placeholder="Ваше имя">
+          <div class="catalog__head">
+            <div class="filter">
+              <p class="filter__text">
+                Жирность:
+              </p>
+              <div class="filter__items">
+                <div class="filter__item">
+                  <input id="filter_1" type="radio" name="filter" checked>
+                  <label for="filter_1">
+                    2,5%
+                  </label>
+                </div>
+                <div class="filter__item">
+                  <input id="filter_2" type="radio" name="filter">
+                  <label for="filter_2">
+                    3,5%
+                  </label>
+                </div>
+                <div class="filter__item">
+                  <input id="filter_3" type="radio" name="filter">
+                  <label for="filter_3">
+                    1,8%
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="tabs__btns">
+              <div class="tabs__btn tabs__btn--active" data-tab="milk">
+                Молоко
+              </div>
+              <div class="tabs__btn" data-tab="cream">
+                Сметана
+              </div>
+              <div class="tabs__btn" data-tab="butter">
+                Масло
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropdown__button icon-chevron-arrow" data-value="Молоко">
+                Молоко
+              </button>
+              <ul class="dropdown__list dropdown__list-border">
+                <li class="dropdown__list-item" data-value="Молоко">Молоко</li>
+                <li class="dropdown__list-item" data-value="Сметана">Сметана</li>
+                <li class="dropdown__list-item" data-value="Масло">Масло</li>
+              </ul>
+              <input type="text" name="select-category" value="all" class="dropdown__input-hidden">
+            </div>
           </div>
-          <div class="form-group icon-mail">
-            <input type="email" placeholder="Эл. почта">
+          <div class="catalog__body">
+            <div data-tab="milk" class="catalog__items tabs__panel tabs__panel--active">
+              <div class="catalog__item">
+                <div class="product__item">
+                  <img class="product__item-img" src="./images/main/product-1.png" alt="">
+                  <span class="product__item-name">
+                    Молоко Молодчинка 3,2 %
+                  </span>
+                  <p class="product__item-desc">
+                    Произведено у побережья Белорусского моря в Новосибирске
+                  </p>
+                  <a class="product__item-link link" href="/">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </a>
+                </div>
+              </div>
+              <div class="catalog__item">
+                <div class="product__item">
+                  <img class="product__item-img" src="./images/main/product-2.png" alt="">
+                  <span class="product__item-name">
+                    Молоко Молодчинка 3,2 %
+                  </span>
+                  <p class="product__item-desc">
+                    Произведено у побережья Белорусского моря в Новосибирске
+                  </p>
+                  <a class="product__item-link link" href="/">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </a>
+                </div>
+              </div>
+              <div class="catalog__item">
+                <div class="product__item">
+                  <img class="product__item-img" src="./images/main/product-3.png" alt="">
+                  <span class="product__item-name">
+                    Молоко Молодчинка 3,2 %
+                  </span>
+                  <p class="product__item-desc">
+                    Произведено у побережья Белорусского моря в Новосибирске
+                  </p>
+                  <a class="product__item-link link" href="/">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </a>
+                </div>
+              </div>
+              <div class="catalog__item">
+                <div class="product__item">
+                  <img class="product__item-img" src="./images/main/product-2.png" alt="">
+                  <span class="product__item-name">
+                    Молоко Молодчинка 3,2 %
+                  </span>
+                  <p class="product__item-desc">
+                    Произведено у побережья Белорусского моря в Новосибирске
+                  </p>
+                  <a class="product__item-link link" href="/">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </a>
+                </div>
+              </div>
+              <div class="catalog__item">
+                <div class="product__item">
+                  <img class="product__item-img" src="./images/main/product-3.png" alt="">
+                  <span class="product__item-name">
+                    Молоко Молодчинка 3,2 %
+                  </span>
+                  <p class="product__item-desc">
+                    Произведено у побережья Белорусского моря в Новосибирске
+                  </p>
+                  <a class="product__item-link link" href="/">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </a>
+                </div>
+              </div>
+              <div class="catalog__item">
+                <div class="product__item">
+                  <img class="product__item-img" src="./images/main/product-1.png" alt="">
+                  <span class="product__item-name">
+                    Молоко Молодчинка 3,2 %
+                  </span>
+                  <p class="product__item-desc">
+                    Произведено у побережья Белорусского моря в Новосибирске
+                  </p>
+                  <a class="product__item-link link" href="/">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div data-tab="cream" class="catalog__items tabs__panel">
+              <div class="catalog__item">
+                <div class="product__item">
+                  <img class="product__item-img" src="./images/main/product-3.png" alt="">
+                  <span class="product__item-name">
+                    Молоко Молодчинка 3,2 %
+                  </span>
+                  <p class="product__item-desc">
+                    Произведено у побережья Белорусского моря в Новосибирске
+                  </p>
+                  <a class="product__item-link link" href="/">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </a>
+                </div>
+              </div>
+              <div class="catalog__item">
+                <div class="product__item">
+                  <img class="product__item-img" src="./images/main/product-1.png" alt="">
+                  <span class="product__item-name">
+                    Молоко Молодчинка 3,2 %
+                  </span>
+                  <p class="product__item-desc">
+                    Произведено у побережья Белорусского моря в Новосибирске
+                  </p>
+                  <a class="product__item-link link" href="/">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </a>
+                </div>
+              </div>
+              <div class="catalog__item">
+                <div class="product__item">
+                  <img class="product__item-img" src="./images/main/product-2.png" alt="">
+                  <span class="product__item-name">
+                    Молоко Молодчинка 3,2 %
+                  </span>
+                  <p class="product__item-desc">
+                    Произведено у побережья Белорусского моря в Новосибирске
+                  </p>
+                  <a class="product__item-link link" href="/">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </a>
+                </div>
+              </div>
+              <div class="catalog__item">
+                <div class="product__item">
+                  <img class="product__item-img" src="./images/main/product-2.png" alt="">
+                  <span class="product__item-name">
+                    Молоко Молодчинка 3,2 %
+                  </span>
+                  <p class="product__item-desc">
+                    Произведено у побережья Белорусского моря в Новосибирске
+                  </p>
+                  <a class="product__item-link link" href="/">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </a>
+                </div>
+              </div>
+              <div class="catalog__item">
+                <div class="product__item">
+                  <img class="product__item-img" src="./images/main/product-3.png" alt="">
+                  <span class="product__item-name">
+                    Молоко Молодчинка 3,2 %
+                  </span>
+                  <p class="product__item-desc">
+                    Произведено у побережья Белорусского моря в Новосибирске
+                  </p>
+                  <a class="product__item-link link" href="/">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </a>
+                </div>
+              </div>
+              <div class="catalog__item">
+                <div class="product__item">
+                  <img class="product__item-img" src="./images/main/product-1.png" alt="">
+                  <span class="product__item-name">
+                    Молоко Молодчинка 3,2 %
+                  </span>
+                  <p class="product__item-desc">
+                    Произведено у побережья Белорусского моря в Новосибирске
+                  </p>
+                  <a class="product__item-link link" href="/">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div data-tab="butter" class="catalog__items tabs__panel">
+              <div class="catalog__item">
+                <div class="product__item">
+                  <img class="product__item-img" src="./images/main/product-1.png" alt="">
+                  <span class="product__item-name">
+                    Молоко Молодчинка 3,2 %
+                  </span>
+                  <p class="product__item-desc">
+                    Произведено у побережья Белорусского моря в Новосибирске
+                  </p>
+                  <a class="product__item-link link" href="/">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </a>
+                </div>
+              </div>
+              <div class="catalog__item">
+                <div class="product__item">
+                  <img class="product__item-img" src="./images/main/product-3.png" alt="">
+                  <span class="product__item-name">
+                    Молоко Молодчинка 3,2 %
+                  </span>
+                  <p class="product__item-desc">
+                    Произведено у побережья Белорусского моря в Новосибирске
+                  </p>
+                  <a class="product__item-link link" href="/">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </a>
+                </div>
+              </div>
+              <div class="catalog__item">
+                <div class="product__item">
+                  <img class="product__item-img" src="./images/main/product-2.png" alt="">
+                  <span class="product__item-name">
+                    Молоко Молодчинка 3,2 %
+                  </span>
+                  <p class="product__item-desc">
+                    Произведено у побережья Белорусского моря в Новосибирске
+                  </p>
+                  <a class="product__item-link link" href="/">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </a>
+                </div>
+              </div>
+              <div class="catalog__item">
+                <div class="product__item">
+                  <img class="product__item-img" src="./images/main/product-2.png" alt="">
+                  <span class="product__item-name">
+                    Молоко Молодчинка 3,2 %
+                  </span>
+                  <p class="product__item-desc">
+                    Произведено у побережья Белорусского моря в Новосибирске
+                  </p>
+                  <a class="product__item-link link" href="/">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </a>
+                </div>
+              </div>
+              <div class="catalog__item">
+                <div class="product__item">
+                  <img class="product__item-img" src="./images/main/product-3.png" alt="">
+                  <span class="product__item-name">
+                    Молоко Молодчинка 3,2 %
+                  </span>
+                  <p class="product__item-desc">
+                    Произведено у побережья Белорусского моря в Новосибирске
+                  </p>
+                  <a class="product__item-link link" href="/">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </a>
+                </div>
+              </div>
+              <div class="catalog__item">
+                <div class="product__item">
+                  <img class="product__item-img" src="./images/main/product-1.png" alt="">
+                  <span class="product__item-name">
+                    Молоко Молодчинка 3,2 %
+                  </span>
+                  <p class="product__item-desc">
+                    Произведено у побережья Белорусского моря в Новосибирске
+                  </p>
+                  <a class="product__item-link link" href="/">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="form-group icon-person">
-            <input type="text" placeholder="Название компании">
-          </div>
-          <button class="callback__btn btn btn-yellow">
-            Отправить
-          </button>
-          <p class="callback__text">Нажимая кнопку, вы даёте <a href="/">согласие на обработку ваших персональных
-              данных</a></p>
-        </form>
-        <img class="callback__img" src="./images/main/contact.png" alt="">
+        </div>
       </div>
-    </div>
-  </section>
-</main>
-<!--=include footer.html-->
+    </section>
+    <section class="callback">
+      <div class="container">
+        <div class="callback__inner">
+          <form class="callback__form" action="#" method="get">
+            <h2 class="callback__title block-title">
+              Свяжитесь с нами
+            </h2>
+            <div class="form-group icon-person">
+              <input type="text" placeholder="Ваше имя">
+            </div>
+            <div class="form-group icon-mail">
+              <input type="email" placeholder="Эл. почта">
+            </div>
+            <div class="form-group icon-person">
+              <input type="text" placeholder="Название компании">
+            </div>
+            <button class="callback__btn btn btn-yellow">
+              Отправить
+            </button>
+            <p class="callback__text">Нажимая кнопку, вы даёте <a href="/">согласие на обработку ваших персональных
+                данных</a></p>
+          </form>
+          <img class="callback__img" src="./images/main/contact.png" alt="">
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--=include footer.html-->

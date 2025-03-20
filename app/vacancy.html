@@ -20,745 +20,751 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <!-- Шапка сайта -->
-    <header class="header">
-      <div class="container header__container">
-        <div class="header__inner">
-          <a class="header__logo" href="/">
-            <picture class="header__logo-pic">
-              <source media="(min-width: 769px)" srcset="./images/logo/logo.svg" type="image/png">
-              <source media="(max-width: 768px)" srcset="./images/logo/logo-blue.svg" type="image/png">
-              <img class="header__logo-img" src="./images/logo/logo.svg" alt="">
-            </picture>
-          </a>
-          <div class="header__info">
-            <div class="header__info-item">
-              <img src="./images/icon/icon-geo.svg" alt="">
-              <p class="header__info-text">
-                Новосибирская область,
-                р. п. Чаны, ул. Ленина, 260.
+<div class="wrapper innerPage">
+  <!-- Шапка сайта -->
+  <header class="header">
+    <div class="container header__container">
+      <div class="header__inner">
+        <a class="header__logo" href="/">
+          <picture class="header__logo-pic">
+            <source media="(min-width: 769px)" srcset="./images/logo/logo.svg" type="image/png">
+            <source media="(max-width: 768px)" srcset="./images/logo/logo-blue.svg" type="image/png">
+            <img class="header__logo-img" src="./images/logo/logo.svg" alt="">
+          </picture>
+          <picture class="header__logo-pic innerPage__logo">
+            <source media="(min-width: 769px)" srcset="./images/logo/logo-blue.svg" type="image/png">
+            <source media="(max-width: 768px)" srcset="./images/logo/logo.svg" type="image/png">
+            <img class="header__logo-img" src="./images/logo/logo-blue.svg" alt="">
+          </picture>
+        </a>
+        <div class="header__info">
+          <div class="header__info-item">
+            <img src="./images/icon/icon-geo.svg" alt="">
+            <p class="header__info-text">
+              Новосибирская область,
+              р. п. Чаны, ул. Ленина, 260.
+            </p>
+          </div>
+          <div class="header__contact">
+            <div class="header__contact-wrap">
+              <a class="header__contact-phone" href="tel:+73832045980">
+                <img src="./images/icon/icon-phone.svg" alt="">
+                8 (383) 204-59-80
+              </a>
+              <p class="header__contact-text">
+                пн-пт с 8:00 до 19:00
               </p>
             </div>
-            <div class="header__contact">
-              <div class="header__contact-wrap">
-                <a class="header__contact-phone" href="tel:+73832045980">
-                  <img src="./images/icon/icon-phone.svg" alt="">
-                  8 (383) 204-59-80
-                </a>
-                <p class="header__contact-text">
-                  пн-пт с 8:00 до 19:00
-                </p>
-              </div>
-              <a class="header__contact-btn btn btn-yellow" href="/">
-                Связаться с нами
+            <a class="header__contact-btn btn btn-yellow" href="/">
+              Связаться с нами
+            </a>
+          </div>
+        </div>
+        <nav class="nav">
+          <button class="search">
+            <i class="icon-search"></i>
+          </button>
+          <div class="nav__items">
+            <div class="nav__item">
+              <span class="nav__item-link">
+                Продукция
+                <i class="icon-chevron-circle"></i>
+              </span>
+              <ul class="nav__list">
+                <li>
+                  <a class="nav__list-link" href="">
+                    Раздел меню
+                  </a>
+                </li>
+                <li>
+                  <a class="nav__list-link" href="">
+                    Пункт меню
+                  </a>
+                </li>
+                <li>
+                  <a class="nav__list-link" href="">
+                    Подраздел меню
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav__item">
+              <span class="nav__item-link">
+                О заводе
+                <i class="icon-chevron-circle"></i>
+              </span>
+              <ul class="nav__list">
+                <li>
+                  <a class="nav__list-link" href="">
+                    Раздел меню
+                  </a>
+                </li>
+                <li>
+                  <a class="nav__list-link" href="">
+                    Пункт меню
+                  </a>
+                </li>
+                <li>
+                  <a class="nav__list-link" href="">
+                    Подраздел меню
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav__item">
+              <a class="nav__item-link" href="/partners">
+                Партнерам
+              </a>
+            </div>
+            <div class="nav__item">
+              <a class="nav__item-link" href="/">
+                Где купить
+              </a>
+            </div>
+            <div class="nav__item">
+              <a class="nav__item-link" href="/contacts">
+                Контакты
               </a>
             </div>
           </div>
-          <nav class="nav">
-            <button class="search">
-              <i class="icon-icon-search"></i>
-            </button>
-            <div class="nav__items">
-              <div class="nav__item">
-                <span class="nav__item-link">
-                  Продукция
-                  <i class="icon-chevron-circle"></i>
-                </span>
-                <ul class="nav__list">
-                  <li>
-                    <a class="nav__list-link" href="">
-                      Раздел меню
-                    </a>
-                  </li>
-                  <li>
-                    <a class="nav__list-link" href="">
-                      Пункт меню
-                    </a>
-                  </li>
-                  <li>
-                    <a class="nav__list-link" href="">
-                      Подраздел меню
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="nav__item">
-                <span class="nav__item-link">
-                  О заводе
-                  <i class="icon-chevron-circle"></i>
-                </span>
-                <ul class="nav__list">
-                  <li>
-                    <a class="nav__list-link" href="">
-                      Раздел меню
-                    </a>
-                  </li>
-                  <li>
-                    <a class="nav__list-link" href="">
-                      Пункт меню
-                    </a>
-                  </li>
-                  <li>
-                    <a class="nav__list-link" href="">
-                      Подраздел меню
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="nav__item">
-                <a class="nav__item-link" href="/partners">
-                  Партнерам
-                </a>
-              </div>
-              <div class="nav__item">
-                <a class="nav__item-link" href="/">
-                  Где купить
-                </a>
-              </div>
-              <div class="nav__item">
-                <a class="nav__item-link" href="/contacts">
-                  Контакты
-                </a>
-              </div>
-            </div>
-          </nav>
-          <button class="burger">
-          </button>
-        </div>
-      </div>
-    </header>
-<!-- Содержимое сайта -->
-<main class="main innerPage">
-  <!-- Хлебные крошки -->
-  <section class="breadcrumb">
-    <div class="container breadcrumb__container">
-      <div class="breadcrumb__inner">
-        <ul>
-          <li>
-            <a href="/">
-              Главная
-            </a>
-          </li>
-          <li>
-            <span>/</span>
-          </li>
-          <li>
-            <a href="">
-              Вакансии
-            </a>
-          </li>
-        </ul>
+        </nav>
+        <button class="burger">
+        </button>
       </div>
     </div>
-  </section>
-  <!-- Главный блок -->
-  <section class="vacancy">
-    <div class="container">
-      <div class="vacancy__inner">
-        <h2 class="vacancy__title block-title">
-          Вакансии
-        </h2>
-        <div class="vacancy__body">
-          <p class="vacancy__text">
-            Разнообразный и богатый опыт консультация с широким активом требуют определения и уточнения дальнейших
-            направлений развития. Повседневная практика показывает, что начало повседневной работы по формированию
-            позиции
-            способствует подготовки и реализации направлений прогрессивного развития. Не следует, однако забывать, что
-            начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке модели
-            развития.
-          </p>
-          <img class="vacancy__img" src="./images/vacancy/cover.png" alt="">
-          <div class="vacancy__content">
-            <div class="vacancy__block">
-              <h3 class="vacancy__block-title">
-                Административный корпус
-              </h3>
-              <div class="vacancy__items">
-                <div class="vacancy__item accordion">
-                  <div class="vacancy__item-head">
-                    <h4 class="vacancy__item-title">
-                      Менеджер по продажам
-                    </h4>
-                    <i class="icon-chevron-arrow">
-                    </i>
-                  </div>
-                  <div class="vacancy__item-body">
-                    <div class="vacancy__item-content">
-                      <ul class="vacancy__item-list">
-                        <li>
-                          <h6>
-                            Требуемый опыт работы
-                          </h6>
-                        </li>
-                        <li>
-                          <p>
-                            От 3 до 6 лет
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Полная занятость
-                          </p>
-                        </li>
-                      </ul>
-                      <ul class="vacancy__item-list">
-                        <li>
-                          <h6>
-                            Обязанности
-                          </h6>
-                        </li>
-                        <li>
-                          <p>
-                            Составление графиков планово-предупредительного ремонта бурового оборудования
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Контроль своевременного и качественного выполнения технических обслуживаний,
-                            планово-предупредительных и профилактических ремонтов оборудования буровых установок
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Составление дефектных ведомостей на оборудование буровых установок закончивших бурение
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Контроль за содержанием в исправном состоянии грузоподъемных механизмов и другого
-                            инструмента
-                          </p>
-                        </li>
-                      </ul>
-                      <ul class="vacancy__item-list">
-                        <li>
-                          <h6>
-                            Требования
-                          </h6>
-                        </li>
-                        <li>
-                          <p>
-                            Составление графиков планово-предупредительного ремонта бурового оборудования
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Контроль своевременного и качественного выполнения технических обслуживаний,
-                            планово-предупредительных и профилактических ремонтов оборудования буровых установок
-                          </p>
-                        </li>
-                      </ul>
-                      <div class="vacancy__item-bottom">
-                        <a class="btn btn-green" href="/">
-                          Откликнуться на вакансию
-                        </a>
-                        <img class="vacancy__item-img" src="./images/vacancy/hh.svg" alt="HeadHunter">
+  </header>
+  <!-- Содержимое сайта -->
+  <main class="main">
+    <!-- Хлебные крошки -->
+    <section class="breadcrumb">
+      <div class="container breadcrumb__container">
+        <div class="breadcrumb__inner">
+          <ul>
+            <li>
+              <a href="/">
+                Главная
+              </a>
+            </li>
+            <li>
+              <span>/</span>
+            </li>
+            <li>
+              <a href="">
+                Вакансии
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Главный блок -->
+    <section class="vacancy">
+      <div class="container">
+        <div class="vacancy__inner">
+          <h2 class="vacancy__title block-title">
+            Вакансии
+          </h2>
+          <div class="vacancy__body">
+            <p class="vacancy__text">
+              Разнообразный и богатый опыт консультация с широким активом требуют определения и уточнения дальнейших
+              направлений развития. Повседневная практика показывает, что начало повседневной работы по формированию
+              позиции
+              способствует подготовки и реализации направлений прогрессивного развития. Не следует, однако забывать, что
+              начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке модели
+              развития.
+            </p>
+            <img class="vacancy__img" src="./images/vacancy/cover.png" alt="">
+            <div class="vacancy__content">
+              <div class="vacancy__block">
+                <h3 class="vacancy__block-title">
+                  Административный корпус
+                </h3>
+                <div class="vacancy__items">
+                  <div class="vacancy__item accordion">
+                    <div class="vacancy__item-head">
+                      <h4 class="vacancy__item-title">
+                        Менеджер по продажам
+                      </h4>
+                      <i class="icon-chevron-arrow">
+                      </i>
+                    </div>
+                    <div class="vacancy__item-body">
+                      <div class="vacancy__item-content">
+                        <ul class="vacancy__item-list">
+                          <li>
+                            <h6>
+                              Требуемый опыт работы
+                            </h6>
+                          </li>
+                          <li>
+                            <p>
+                              От 3 до 6 лет
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Полная занятость
+                            </p>
+                          </li>
+                        </ul>
+                        <ul class="vacancy__item-list">
+                          <li>
+                            <h6>
+                              Обязанности
+                            </h6>
+                          </li>
+                          <li>
+                            <p>
+                              Составление графиков планово-предупредительного ремонта бурового оборудования
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Контроль своевременного и качественного выполнения технических обслуживаний,
+                              планово-предупредительных и профилактических ремонтов оборудования буровых установок
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Составление дефектных ведомостей на оборудование буровых установок закончивших бурение
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Контроль за содержанием в исправном состоянии грузоподъемных механизмов и другого
+                              инструмента
+                            </p>
+                          </li>
+                        </ul>
+                        <ul class="vacancy__item-list">
+                          <li>
+                            <h6>
+                              Требования
+                            </h6>
+                          </li>
+                          <li>
+                            <p>
+                              Составление графиков планово-предупредительного ремонта бурового оборудования
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Контроль своевременного и качественного выполнения технических обслуживаний,
+                              планово-предупредительных и профилактических ремонтов оборудования буровых установок
+                            </p>
+                          </li>
+                        </ul>
+                        <div class="vacancy__item-bottom">
+                          <a class="btn btn-green" href="/">
+                            Откликнуться на вакансию
+                          </a>
+                          <img class="vacancy__item-img" src="./images/vacancy/hh.svg" alt="HeadHunter">
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="vacancy__item accordion">
-                  <div class="vacancy__item-head">
-                    <h4 class="vacancy__item-title">
-                      Главный бухгалтер
-                    </h4>
-                    <i class="icon-chevron-arrow">
-                    </i>
-                  </div>
-                  <div class="vacancy__item-body">
-                    <div class="vacancy__item-content">
-                      <ul class="vacancy__item-list">
-                        <li>
-                          <h6>
-                            Требуемый опыт работы
-                          </h6>
-                        </li>
-                        <li>
-                          <p>
-                            От 3 до 6 лет
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Полная занятость
-                          </p>
-                        </li>
-                      </ul>
-                      <ul class="vacancy__item-list">
-                        <li>
-                          <h6>
-                            Обязанности
-                          </h6>
-                        </li>
-                        <li>
-                          <p>
-                            Составление графиков планово-предупредительного ремонта бурового оборудования
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Контроль своевременного и качественного выполнения технических обслуживаний,
-                            планово-предупредительных и профилактических ремонтов оборудования буровых установок
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Составление дефектных ведомостей на оборудование буровых установок закончивших бурение
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Контроль за содержанием в исправном состоянии грузоподъемных механизмов и другого
-                            инструмента
-                          </p>
-                        </li>
-                      </ul>
-                      <ul class="vacancy__item-list">
-                        <li>
-                          <h6>
-                            Требования
-                          </h6>
-                        </li>
-                        <li>
-                          <p>
-                            Составление графиков планово-предупредительного ремонта бурового оборудования
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Контроль своевременного и качественного выполнения технических обслуживаний,
-                            планово-предупредительных и профилактических ремонтов оборудования буровых установок
-                          </p>
-                        </li>
-                      </ul>
-                      <div class="vacancy__item-bottom">
-                        <a class="btn btn-green" href="/">
-                          Откликнуться на вакансию
-                        </a>
-                        <img class="vacancy__item-img" src="./images/vacancy/hh.svg" alt="HeadHunter">
+                  <div class="vacancy__item accordion">
+                    <div class="vacancy__item-head">
+                      <h4 class="vacancy__item-title">
+                        Главный бухгалтер
+                      </h4>
+                      <i class="icon-chevron-arrow">
+                      </i>
+                    </div>
+                    <div class="vacancy__item-body">
+                      <div class="vacancy__item-content">
+                        <ul class="vacancy__item-list">
+                          <li>
+                            <h6>
+                              Требуемый опыт работы
+                            </h6>
+                          </li>
+                          <li>
+                            <p>
+                              От 3 до 6 лет
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Полная занятость
+                            </p>
+                          </li>
+                        </ul>
+                        <ul class="vacancy__item-list">
+                          <li>
+                            <h6>
+                              Обязанности
+                            </h6>
+                          </li>
+                          <li>
+                            <p>
+                              Составление графиков планово-предупредительного ремонта бурового оборудования
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Контроль своевременного и качественного выполнения технических обслуживаний,
+                              планово-предупредительных и профилактических ремонтов оборудования буровых установок
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Составление дефектных ведомостей на оборудование буровых установок закончивших бурение
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Контроль за содержанием в исправном состоянии грузоподъемных механизмов и другого
+                              инструмента
+                            </p>
+                          </li>
+                        </ul>
+                        <ul class="vacancy__item-list">
+                          <li>
+                            <h6>
+                              Требования
+                            </h6>
+                          </li>
+                          <li>
+                            <p>
+                              Составление графиков планово-предупредительного ремонта бурового оборудования
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Контроль своевременного и качественного выполнения технических обслуживаний,
+                              планово-предупредительных и профилактических ремонтов оборудования буровых установок
+                            </p>
+                          </li>
+                        </ul>
+                        <div class="vacancy__item-bottom">
+                          <a class="btn btn-green" href="/">
+                            Откликнуться на вакансию
+                          </a>
+                          <img class="vacancy__item-img" src="./images/vacancy/hh.svg" alt="HeadHunter">
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="vacancy__item accordion">
-                  <div class="vacancy__item-head">
-                    <h4 class="vacancy__item-title">
-                      Помощник руководителя
-                    </h4>
-                    <i class="icon-chevron-arrow">
-                    </i>
-                  </div>
-                  <div class="vacancy__item-body">
-                    <div class="vacancy__item-content">
-                      <ul class="vacancy__item-list">
-                        <li>
-                          <h6>
-                            Требуемый опыт работы
-                          </h6>
-                        </li>
-                        <li>
-                          <p>
-                            От 3 до 6 лет
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Полная занятость
-                          </p>
-                        </li>
-                      </ul>
-                      <ul class="vacancy__item-list">
-                        <li>
-                          <h6>
-                            Обязанности
-                          </h6>
-                        </li>
-                        <li>
-                          <p>
-                            Составление графиков планово-предупредительного ремонта бурового оборудования
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Контроль своевременного и качественного выполнения технических обслуживаний,
-                            планово-предупредительных и профилактических ремонтов оборудования буровых установок
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Составление дефектных ведомостей на оборудование буровых установок закончивших бурение
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Контроль за содержанием в исправном состоянии грузоподъемных механизмов и другого
-                            инструмента
-                          </p>
-                        </li>
-                      </ul>
-                      <ul class="vacancy__item-list">
-                        <li>
-                          <h6>
-                            Требования
-                          </h6>
-                        </li>
-                        <li>
-                          <p>
-                            Составление графиков планово-предупредительного ремонта бурового оборудования
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Контроль своевременного и качественного выполнения технических обслуживаний,
-                            планово-предупредительных и профилактических ремонтов оборудования буровых установок
-                          </p>
-                        </li>
-                      </ul>
-                      <div class="vacancy__item-bottom">
-                        <a class="btn btn-green" href="/">
-                          Откликнуться на вакансию
-                        </a>
-                        <img class="vacancy__item-img" src="./images/vacancy/hh.svg" alt="HeadHunter">
+                  <div class="vacancy__item accordion">
+                    <div class="vacancy__item-head">
+                      <h4 class="vacancy__item-title">
+                        Помощник руководителя
+                      </h4>
+                      <i class="icon-chevron-arrow">
+                      </i>
+                    </div>
+                    <div class="vacancy__item-body">
+                      <div class="vacancy__item-content">
+                        <ul class="vacancy__item-list">
+                          <li>
+                            <h6>
+                              Требуемый опыт работы
+                            </h6>
+                          </li>
+                          <li>
+                            <p>
+                              От 3 до 6 лет
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Полная занятость
+                            </p>
+                          </li>
+                        </ul>
+                        <ul class="vacancy__item-list">
+                          <li>
+                            <h6>
+                              Обязанности
+                            </h6>
+                          </li>
+                          <li>
+                            <p>
+                              Составление графиков планово-предупредительного ремонта бурового оборудования
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Контроль своевременного и качественного выполнения технических обслуживаний,
+                              планово-предупредительных и профилактических ремонтов оборудования буровых установок
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Составление дефектных ведомостей на оборудование буровых установок закончивших бурение
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Контроль за содержанием в исправном состоянии грузоподъемных механизмов и другого
+                              инструмента
+                            </p>
+                          </li>
+                        </ul>
+                        <ul class="vacancy__item-list">
+                          <li>
+                            <h6>
+                              Требования
+                            </h6>
+                          </li>
+                          <li>
+                            <p>
+                              Составление графиков планово-предупредительного ремонта бурового оборудования
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Контроль своевременного и качественного выполнения технических обслуживаний,
+                              планово-предупредительных и профилактических ремонтов оборудования буровых установок
+                            </p>
+                          </li>
+                        </ul>
+                        <div class="vacancy__item-bottom">
+                          <a class="btn btn-green" href="/">
+                            Откликнуться на вакансию
+                          </a>
+                          <img class="vacancy__item-img" src="./images/vacancy/hh.svg" alt="HeadHunter">
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="vacancy__block">
-              <h3 class="vacancy__block-title">
-                Работник производства
-              </h3>
-              <div class="vacancy__items">
-                <div class="vacancy__item accordion active">
-                  <div class="vacancy__item-head">
-                    <h4 class="vacancy__item-title">
-                      Менеджер по продажам
-                    </h4>
-                    <i class="icon-chevron-arrow">
-                    </i>
-                  </div>
-                  <div class="vacancy__item-body">
-                    <div class="vacancy__item-content">
-                      <ul class="vacancy__item-list">
-                        <li>
-                          <h6>
-                            Требуемый опыт работы
-                          </h6>
-                        </li>
-                        <li>
-                          <p>
-                            От 3 до 6 лет
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Полная занятость
-                          </p>
-                        </li>
-                      </ul>
-                      <ul class="vacancy__item-list">
-                        <li>
-                          <h6>
-                            Обязанности
-                          </h6>
-                        </li>
-                        <li>
-                          <p>
-                            Составление графиков планово-предупредительного ремонта бурового оборудования
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Контроль своевременного и качественного выполнения технических обслуживаний,
-                            планово-предупредительных и профилактических ремонтов оборудования буровых установок
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Составление дефектных ведомостей на оборудование буровых установок закончивших бурение
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Контроль за содержанием в исправном состоянии грузоподъемных механизмов и другого
-                            инструмента
-                          </p>
-                        </li>
-                      </ul>
-                      <ul class="vacancy__item-list">
-                        <li>
-                          <h6>
-                            Требования
-                          </h6>
-                        </li>
-                        <li>
-                          <p>
-                            Составление графиков планово-предупредительного ремонта бурового оборудования
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Контроль своевременного и качественного выполнения технических обслуживаний,
-                            планово-предупредительных и профилактических ремонтов оборудования буровых установок
-                          </p>
-                        </li>
-                      </ul>
-                      <div class="vacancy__item-bottom">
-                        <a class="btn btn-green" href="/">
-                          Откликнуться на вакансию
-                        </a>
-                        <img class="vacancy__item-img" src="./images/vacancy/hh.svg" alt="HeadHunter">
+              <div class="vacancy__block">
+                <h3 class="vacancy__block-title">
+                  Работник производства
+                </h3>
+                <div class="vacancy__items">
+                  <div class="vacancy__item accordion active">
+                    <div class="vacancy__item-head">
+                      <h4 class="vacancy__item-title">
+                        Менеджер по продажам
+                      </h4>
+                      <i class="icon-chevron-arrow">
+                      </i>
+                    </div>
+                    <div class="vacancy__item-body">
+                      <div class="vacancy__item-content">
+                        <ul class="vacancy__item-list">
+                          <li>
+                            <h6>
+                              Требуемый опыт работы
+                            </h6>
+                          </li>
+                          <li>
+                            <p>
+                              От 3 до 6 лет
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Полная занятость
+                            </p>
+                          </li>
+                        </ul>
+                        <ul class="vacancy__item-list">
+                          <li>
+                            <h6>
+                              Обязанности
+                            </h6>
+                          </li>
+                          <li>
+                            <p>
+                              Составление графиков планово-предупредительного ремонта бурового оборудования
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Контроль своевременного и качественного выполнения технических обслуживаний,
+                              планово-предупредительных и профилактических ремонтов оборудования буровых установок
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Составление дефектных ведомостей на оборудование буровых установок закончивших бурение
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Контроль за содержанием в исправном состоянии грузоподъемных механизмов и другого
+                              инструмента
+                            </p>
+                          </li>
+                        </ul>
+                        <ul class="vacancy__item-list">
+                          <li>
+                            <h6>
+                              Требования
+                            </h6>
+                          </li>
+                          <li>
+                            <p>
+                              Составление графиков планово-предупредительного ремонта бурового оборудования
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Контроль своевременного и качественного выполнения технических обслуживаний,
+                              планово-предупредительных и профилактических ремонтов оборудования буровых установок
+                            </p>
+                          </li>
+                        </ul>
+                        <div class="vacancy__item-bottom">
+                          <a class="btn btn-green" href="/">
+                            Откликнуться на вакансию
+                          </a>
+                          <img class="vacancy__item-img" src="./images/vacancy/hh.svg" alt="HeadHunter">
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="vacancy__item accordion">
-                  <div class="vacancy__item-head">
-                    <h4 class="vacancy__item-title">
-                      Менеджер по продажам
-                    </h4>
-                    <i class="icon-chevron-arrow">
-                    </i>
-                  </div>
-                  <div class="vacancy__item-body">
-                    <div class="vacancy__item-content">
-                      <ul class="vacancy__item-list">
-                        <li>
-                          <h6>
-                            Требуемый опыт работы
-                          </h6>
-                        </li>
-                        <li>
-                          <p>
-                            От 3 до 6 лет
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Полная занятость
-                          </p>
-                        </li>
-                      </ul>
-                      <ul class="vacancy__item-list">
-                        <li>
-                          <h6>
-                            Обязанности
-                          </h6>
-                        </li>
-                        <li>
-                          <p>
-                            Составление графиков планово-предупредительного ремонта бурового оборудования
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Контроль своевременного и качественного выполнения технических обслуживаний,
-                            планово-предупредительных и профилактических ремонтов оборудования буровых установок
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Составление дефектных ведомостей на оборудование буровых установок закончивших бурение
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Контроль за содержанием в исправном состоянии грузоподъемных механизмов и другого
-                            инструмента
-                          </p>
-                        </li>
-                      </ul>
-                      <ul class="vacancy__item-list">
-                        <li>
-                          <h6>
-                            Требования
-                          </h6>
-                        </li>
-                        <li>
-                          <p>
-                            Составление графиков планово-предупредительного ремонта бурового оборудования
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Контроль своевременного и качественного выполнения технических обслуживаний,
-                            планово-предупредительных и профилактических ремонтов оборудования буровых установок
-                          </p>
-                        </li>
-                      </ul>
-                      <div class="vacancy__item-bottom">
-                        <a class="btn btn-green" href="/">
-                          Откликнуться на вакансию
-                        </a>
-                        <img class="vacancy__item-img" src="./images/vacancy/hh.svg" alt="HeadHunter">
+                  <div class="vacancy__item accordion">
+                    <div class="vacancy__item-head">
+                      <h4 class="vacancy__item-title">
+                        Менеджер по продажам
+                      </h4>
+                      <i class="icon-chevron-arrow">
+                      </i>
+                    </div>
+                    <div class="vacancy__item-body">
+                      <div class="vacancy__item-content">
+                        <ul class="vacancy__item-list">
+                          <li>
+                            <h6>
+                              Требуемый опыт работы
+                            </h6>
+                          </li>
+                          <li>
+                            <p>
+                              От 3 до 6 лет
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Полная занятость
+                            </p>
+                          </li>
+                        </ul>
+                        <ul class="vacancy__item-list">
+                          <li>
+                            <h6>
+                              Обязанности
+                            </h6>
+                          </li>
+                          <li>
+                            <p>
+                              Составление графиков планово-предупредительного ремонта бурового оборудования
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Контроль своевременного и качественного выполнения технических обслуживаний,
+                              планово-предупредительных и профилактических ремонтов оборудования буровых установок
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Составление дефектных ведомостей на оборудование буровых установок закончивших бурение
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Контроль за содержанием в исправном состоянии грузоподъемных механизмов и другого
+                              инструмента
+                            </p>
+                          </li>
+                        </ul>
+                        <ul class="vacancy__item-list">
+                          <li>
+                            <h6>
+                              Требования
+                            </h6>
+                          </li>
+                          <li>
+                            <p>
+                              Составление графиков планово-предупредительного ремонта бурового оборудования
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Контроль своевременного и качественного выполнения технических обслуживаний,
+                              планово-предупредительных и профилактических ремонтов оборудования буровых установок
+                            </p>
+                          </li>
+                        </ul>
+                        <div class="vacancy__item-bottom">
+                          <a class="btn btn-green" href="/">
+                            Откликнуться на вакансию
+                          </a>
+                          <img class="vacancy__item-img" src="./images/vacancy/hh.svg" alt="HeadHunter">
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="vacancy__item accordion">
-                  <div class="vacancy__item-head">
-                    <h4 class="vacancy__item-title">
-                      Главный бухгалтер
-                    </h4>
-                    <i class="icon-chevron-arrow">
-                    </i>
-                  </div>
-                  <div class="vacancy__item-body">
-                    <div class="vacancy__item-content">
-                      <ul class="vacancy__item-list">
-                        <li>
-                          <h6>
-                            Требуемый опыт работы
-                          </h6>
-                        </li>
-                        <li>
-                          <p>
-                            От 3 до 6 лет
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Полная занятость
-                          </p>
-                        </li>
-                      </ul>
-                      <ul class="vacancy__item-list">
-                        <li>
-                          <h6>
-                            Обязанности
-                          </h6>
-                        </li>
-                        <li>
-                          <p>
-                            Составление графиков планово-предупредительного ремонта бурового оборудования
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Контроль своевременного и качественного выполнения технических обслуживаний,
-                            планово-предупредительных и профилактических ремонтов оборудования буровых установок
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Составление дефектных ведомостей на оборудование буровых установок закончивших бурение
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Контроль за содержанием в исправном состоянии грузоподъемных механизмов и другого
-                            инструмента
-                          </p>
-                        </li>
-                      </ul>
-                      <ul class="vacancy__item-list">
-                        <li>
-                          <h6>
-                            Требования
-                          </h6>
-                        </li>
-                        <li>
-                          <p>
-                            Составление графиков планово-предупредительного ремонта бурового оборудования
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Контроль своевременного и качественного выполнения технических обслуживаний,
-                            планово-предупредительных и профилактических ремонтов оборудования буровых установок
-                          </p>
-                        </li>
-                      </ul>
-                      <div class="vacancy__item-bottom">
-                        <a class="btn btn-green" href="/">
-                          Откликнуться на вакансию
-                        </a>
-                        <img class="vacancy__item-img" src="./images/vacancy/hh.svg" alt="HeadHunter">
+                  <div class="vacancy__item accordion">
+                    <div class="vacancy__item-head">
+                      <h4 class="vacancy__item-title">
+                        Главный бухгалтер
+                      </h4>
+                      <i class="icon-chevron-arrow">
+                      </i>
+                    </div>
+                    <div class="vacancy__item-body">
+                      <div class="vacancy__item-content">
+                        <ul class="vacancy__item-list">
+                          <li>
+                            <h6>
+                              Требуемый опыт работы
+                            </h6>
+                          </li>
+                          <li>
+                            <p>
+                              От 3 до 6 лет
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Полная занятость
+                            </p>
+                          </li>
+                        </ul>
+                        <ul class="vacancy__item-list">
+                          <li>
+                            <h6>
+                              Обязанности
+                            </h6>
+                          </li>
+                          <li>
+                            <p>
+                              Составление графиков планово-предупредительного ремонта бурового оборудования
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Контроль своевременного и качественного выполнения технических обслуживаний,
+                              планово-предупредительных и профилактических ремонтов оборудования буровых установок
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Составление дефектных ведомостей на оборудование буровых установок закончивших бурение
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Контроль за содержанием в исправном состоянии грузоподъемных механизмов и другого
+                              инструмента
+                            </p>
+                          </li>
+                        </ul>
+                        <ul class="vacancy__item-list">
+                          <li>
+                            <h6>
+                              Требования
+                            </h6>
+                          </li>
+                          <li>
+                            <p>
+                              Составление графиков планово-предупредительного ремонта бурового оборудования
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Контроль своевременного и качественного выполнения технических обслуживаний,
+                              планово-предупредительных и профилактических ремонтов оборудования буровых установок
+                            </p>
+                          </li>
+                        </ul>
+                        <div class="vacancy__item-bottom">
+                          <a class="btn btn-green" href="/">
+                            Откликнуться на вакансию
+                          </a>
+                          <img class="vacancy__item-img" src="./images/vacancy/hh.svg" alt="HeadHunter">
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="vacancy__item accordion">
-                  <div class="vacancy__item-head">
-                    <h4 class="vacancy__item-title">
-                      Помощник руководителя
-                    </h4>
-                    <i class="icon-chevron-arrow">
-                    </i>
-                  </div>
-                  <div class="vacancy__item-body">
-                    <div class="vacancy__item-content">
-                      <ul class="vacancy__item-list">
-                        <li>
-                          <h6>
-                            Требуемый опыт работы
-                          </h6>
-                        </li>
-                        <li>
-                          <p>
-                            От 3 до 6 лет
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Полная занятость
-                          </p>
-                        </li>
-                      </ul>
-                      <ul class="vacancy__item-list">
-                        <li>
-                          <h6>
-                            Обязанности
-                          </h6>
-                        </li>
-                        <li>
-                          <p>
-                            Составление графиков планово-предупредительного ремонта бурового оборудования
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Контроль своевременного и качественного выполнения технических обслуживаний,
-                            планово-предупредительных и профилактических ремонтов оборудования буровых установок
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Составление дефектных ведомостей на оборудование буровых установок закончивших бурение
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Контроль за содержанием в исправном состоянии грузоподъемных механизмов и другого
-                            инструмента
-                          </p>
-                        </li>
-                      </ul>
-                      <ul class="vacancy__item-list">
-                        <li>
-                          <h6>
-                            Требования
-                          </h6>
-                        </li>
-                        <li>
-                          <p>
-                            Составление графиков планово-предупредительного ремонта бурового оборудования
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Контроль своевременного и качественного выполнения технических обслуживаний,
-                            планово-предупредительных и профилактических ремонтов оборудования буровых установок
-                          </p>
-                        </li>
-                      </ul>
-                      <div class="vacancy__item-bottom">
-                        <a class="btn btn-green" href="/">
-                          Откликнуться на вакансию
-                        </a>
-                        <img class="vacancy__item-img" src="./images/vacancy/hh.svg" alt="HeadHunter">
+                  <div class="vacancy__item accordion">
+                    <div class="vacancy__item-head">
+                      <h4 class="vacancy__item-title">
+                        Помощник руководителя
+                      </h4>
+                      <i class="icon-chevron-arrow">
+                      </i>
+                    </div>
+                    <div class="vacancy__item-body">
+                      <div class="vacancy__item-content">
+                        <ul class="vacancy__item-list">
+                          <li>
+                            <h6>
+                              Требуемый опыт работы
+                            </h6>
+                          </li>
+                          <li>
+                            <p>
+                              От 3 до 6 лет
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Полная занятость
+                            </p>
+                          </li>
+                        </ul>
+                        <ul class="vacancy__item-list">
+                          <li>
+                            <h6>
+                              Обязанности
+                            </h6>
+                          </li>
+                          <li>
+                            <p>
+                              Составление графиков планово-предупредительного ремонта бурового оборудования
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Контроль своевременного и качественного выполнения технических обслуживаний,
+                              планово-предупредительных и профилактических ремонтов оборудования буровых установок
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Составление дефектных ведомостей на оборудование буровых установок закончивших бурение
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Контроль за содержанием в исправном состоянии грузоподъемных механизмов и другого
+                              инструмента
+                            </p>
+                          </li>
+                        </ul>
+                        <ul class="vacancy__item-list">
+                          <li>
+                            <h6>
+                              Требования
+                            </h6>
+                          </li>
+                          <li>
+                            <p>
+                              Составление графиков планово-предупредительного ремонта бурового оборудования
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Контроль своевременного и качественного выполнения технических обслуживаний,
+                              планово-предупредительных и профилактических ремонтов оборудования буровых установок
+                            </p>
+                          </li>
+                        </ul>
+                        <div class="vacancy__item-bottom">
+                          <a class="btn btn-green" href="/">
+                            Откликнуться на вакансию
+                          </a>
+                          <img class="vacancy__item-img" src="./images/vacancy/hh.svg" alt="HeadHunter">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -768,135 +774,134 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-</main>
-<!-- Подвал сайта -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer__inner">
-      <ul class="footer__list">
-        <li class="footer__list-item">
-          <a class="footer__list-title" href="/catalog">
-            Продукция
-          </a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="/">
-            Раздел меню
-          </a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="/">
-            Подраздел меню еще один
-          </a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="/">
-            Длинный раздел в две строки
-          </a>
-        </li>
-      </ul>
-      <ul class="footer__list">
-        <li class="footer__list-item">
-          <a class="footer__list-title" href="/about">
-            О заводе
-          </a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="/vacancy">
-            Вакансии
-          </a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="/news">
-            Новости
-          </a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="/certificates">
-            Сертификаты и лицензии
-          </a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="/">
-            Подраздел меню еще один
-          </a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="/">
-            Очень длинный раздел
-            в две строки
-          </a>
-        </li>
-      </ul>
-      <ul class="footer__list">
-        <li class="footer__list-item">
-          <a class="footer__list-title" href="/partners">
-            Партнерам
-          </a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-title" href="/">
-            Где купить
-          </a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-title" href="/contacts">
-            Контакты
-          </a>
-        </li>
-      </ul>
-      <div class="footer__contact">
-        <div class="footer__contact-wrap">
-          <a class="footer__contact-phone" href="">
-            8 (383) 204-59-80
-          </a>
-          <p class="footer__contact-text">
-            пн-пт с 8:00 до 19:00
-          </p>
-        </div>
-        <div class="footer__contact-wrap">
-          <h6 class="footer__contact-title">
-            Адрес:
-          </h6>
-          <p class="footer__contact-text">
-            Новосибирская область, р. п. Чаны, ул. Ленина, 260.
-          </p>
-        </div>
-        <img class="footer__contact-img" src="./images/main/logo-roskachestvo.svg" alt="">
-      </div>
-    </div>
-  </div>
-  <div class="footer__bottom">
+    </section>
+  </main>
+  <!-- Подвал сайта -->
+  <footer class="footer">
     <div class="container">
-      <div class="footer__bottom-inner">
-        <span class="footer__bottom-text">
-          © 2024 Маслодельный комбинат Чановский
-        </span>
-
-        <a class="footer__bottom-logo" href="/">
-          <img src="./images/logo/logo-grey.svg" alt="">
-        </a>
-
-        <span class="footer__bottom-text">
-          Разработка сайта — <a href="/">Once&Twice</a>
-        </span>
+      <div class="footer__inner">
+        <ul class="footer__list">
+          <li class="footer__list-item">
+            <a class="footer__list-title" href="/catalog">
+              Продукция
+            </a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="/">
+              Раздел меню
+            </a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="/">
+              Подраздел меню еще один
+            </a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="/">
+              Длинный раздел в две строки
+            </a>
+          </li>
+        </ul>
+        <ul class="footer__list">
+          <li class="footer__list-item">
+            <a class="footer__list-title" href="/">
+              О заводе
+            </a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="/vacancy">
+              Вакансии
+            </a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="/news">
+              Новости
+            </a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="/certificates">
+              Сертификаты и лицензии
+            </a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="/">
+              Подраздел меню еще один
+            </a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="/">
+              Очень длинный раздел
+              в две строки
+            </a>
+          </li>
+        </ul>
+        <ul class="footer__list">
+          <li class="footer__list-item">
+            <a class="footer__list-title" href="/partners">
+              Партнерам
+            </a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-title" href="/">
+              Где купить
+            </a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-title" href="/contacts">
+              Контакты
+            </a>
+          </li>
+        </ul>
+        <div class="footer__contact">
+          <div class="footer__contact-wrap">
+            <a class="footer__contact-phone" href="">
+              8 (383) 204-59-80
+            </a>
+            <p class="footer__contact-text">
+              пн-пт с 8:00 до 19:00
+            </p>
+          </div>
+          <div class="footer__contact-wrap">
+            <h6 class="footer__contact-title">
+              Адрес:
+            </h6>
+            <p class="footer__contact-text">
+              Новосибирская область, р. п. Чаны, ул. Ленина, 260.
+            </p>
+          </div>
+          <img class="footer__contact-img" src="./images/main/logo-roskachestvo.svg" alt="">
+        </div>
       </div>
     </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <div class="footer__bottom-inner">
+          <span class="footer__bottom-text">
+            © 2024 Маслодельный комбинат Чановский
+          </span>
+  
+          <a class="footer__bottom-logo" href="/">
+            <img src="./images/logo/logo-grey.svg" alt="">
+          </a>
+  
+          <span class="footer__bottom-text">
+            Разработка сайта — <a href="/">Once&Twice</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
   </div>
-</footer>
-</div>
-
-
-
-<!-- scipts -->
-<script src="./libs/gsap/gsap.min.js" defer></script>
-<script src="./libs/gsap/ScrollSmoother.min.js" defer></script>
-<script src="./libs/gsap/ScrollTrigger.min.js" defer></script>
-<script src="./libs/lenis/lenis.min.js" defer></script>
-<script src="./libs/swiper/swiper-bundle.min.js" defer></script>
-<script src="./js/main.js" defer></script>
-</body>
-
-</html>
+  
+  <!--=include modal.html-->
+  
+  <!-- scipts -->
+  <script src="./libs/gsap/gsap.min.js" defer></script>
+  <script src="./libs/gsap/ScrollSmoother.min.js" defer></script>
+  <script src="./libs/gsap/ScrollTrigger.min.js" defer></script>
+  <script src="./libs/lenis/lenis.min.js" defer></script>
+  <script src="./libs/swiper/swiper-bundle.min.js" defer></script>
+  <script src="./js/main.js" defer></script>
+  </body>
+  
+  </html>

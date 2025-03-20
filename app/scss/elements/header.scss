@@ -31,6 +31,10 @@
       width: 17rem;
       height: auto;
       flex-shrink: 0;
+
+      &.innerPage__logo {
+        display: none;
+      }
     }
 
     &-img {
@@ -38,6 +42,7 @@
       height: 100%;
       object-fit: cover;
     }
+
   }
 
   &__info {
