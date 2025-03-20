@@ -452,6 +452,14 @@
     aspect-ratio: 1/1;
   }
 
+  .partner__item-img.metro {
+    height: 2.56rem;
+  }
+
+  .partner__item-img.bystronom {
+    height: 1.2rem;
+  }
+
   .partner__item-img.lenta {
     height: 2.56rem;
   }
@@ -875,6 +883,10 @@
   }
 
   /* articles */
+  .articles {
+    padding-top: 3rem;
+  }
+
   .articles__container {
     flex-direction: column;
   }
@@ -895,6 +907,15 @@
 
   .sidebar {
     width: 100%;
+    padding: 2rem;
+  }
+
+  .sidebar__items {
+    gap: 2rem;
+  }
+
+  .sidebar__item-text {
+    margin-bottom: 2rem;
   }
 }
 
@@ -1482,6 +1503,28 @@
 
   .contacts-us__block-link {
     font-size: 2rem;
+  }
+
+  /* articles */
+  .articles__title {
+    margin-bottom: 2rem;
+  }
+
+  .articles__date {
+    margin-bottom: 1rem;
+  }
+
+  .articles__text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .articles__img {
+    margin-bottom: 1rem;
+  }
+
+  .articles__list {
+    font-size: 1rem;
   }
 }
 

@@ -1,5 +1,5 @@
 .hero {
-  background-image: url(./../images/main/hero-1.png);
+  background-image: url(./../images/main/hero-2.png);
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center bottom;
@@ -24,11 +24,12 @@
 
   &__title {
     color: var(--primary-black);
+    font-size: 5rem;
     max-width: 82rem;
   }
 
   &__text {
-    max-width: 56.7rem;
+    max-width: 42rem;
   }
 }
 
@@ -131,6 +132,7 @@
     }
 
     &-title {
+      font-weight: 700;
       margin-bottom: 2rem;
     }
   }
@@ -728,6 +730,14 @@
       width: auto;
       object-fit: cover;
       flex-shrink: 0;
+
+      &.metro {
+        height: 6.4rem;
+      }
+
+      &.bystronom {
+        height: 2.3rem;
+      }
 
       &.lenta {
         height: 6.4rem;

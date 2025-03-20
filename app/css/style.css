@@ -1032,7 +1032,7 @@ html.lenis body {
 }
 
 .hero {
-  background-image: url(./../images/main/hero-1.png);
+  background-image: url(./../images/main/hero-2.png);
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center bottom;
@@ -1053,10 +1053,11 @@ html.lenis body {
 }
 .hero__title {
   color: var(--primary-black);
+  font-size: 5rem;
   max-width: 82rem;
 }
 .hero__text {
-  max-width: 56.7rem;
+  max-width: 42rem;
 }
 
 .feat__items {
@@ -1140,6 +1141,7 @@ html.lenis body {
   margin-bottom: 3rem;
 }
 .adv__feat-title {
+  font-weight: 700;
   margin-bottom: 2rem;
 }
 .worth {
@@ -1614,6 +1616,12 @@ html.lenis body {
   width: auto;
   object-fit: cover;
   flex-shrink: 0;
+}
+.partner__item-img.metro {
+  height: 6.4rem;
+}
+.partner__item-img.bystronom {
+  height: 2.3rem;
 }
 .partner__item-img.lenta {
   height: 6.4rem;
@@ -2528,6 +2536,9 @@ html.lenis body {
   bottom: 0;
 }
 
+.articles {
+  padding-top: 5rem;
+}
 .articles__container {
   display: flex;
   flex-direction: row;
@@ -2623,6 +2634,7 @@ html.lenis body {
 .sidebar__item-count {
   font-weight: 700;
   font-size: 6rem;
+  line-height: 100%;
 }
 .sidebar__item-date {
   font-weight: 400;
@@ -2984,6 +2996,12 @@ html.lenis body {
     height: auto;
     aspect-ratio: 1/1;
   }
+  .partner__item-img.metro {
+    height: 2.56rem;
+  }
+  .partner__item-img.bystronom {
+    height: 1.2rem;
+  }
   .partner__item-img.lenta {
     height: 2.56rem;
   }
@@ -3313,6 +3331,9 @@ html.lenis body {
     font-size: 4rem;
   }
   /* articles */
+  .articles {
+    padding-top: 3rem;
+  }
   .articles__container {
     flex-direction: column;
   }
@@ -3329,6 +3350,13 @@ html.lenis body {
   }
   .sidebar {
     width: 100%;
+    padding: 2rem;
+  }
+  .sidebar__items {
+    gap: 2rem;
+  }
+  .sidebar__item-text {
+    margin-bottom: 2rem;
   }
 }
 @media (max-width: 660px) {
@@ -3792,5 +3820,22 @@ html.lenis body {
   }
   .contacts-us__block-link {
     font-size: 2rem;
+  }
+  /* articles */
+  .articles__title {
+    margin-bottom: 2rem;
+  }
+  .articles__date {
+    margin-bottom: 1rem;
+  }
+  .articles__text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .articles__img {
+    margin-bottom: 1rem;
+  }
+  .articles__list {
+    font-size: 1rem;
   }
 }

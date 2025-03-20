@@ -1,4 +1,5 @@
 .articles {
+  padding-top: 5rem;
 
   &__container {
     display: flex;
@@ -119,6 +120,7 @@
     &-count {
       font-weight: 700;
       font-size: 6rem;
+      line-height: 100%;
     }
 
     &-date {
