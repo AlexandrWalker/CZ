@@ -1,5 +1,5 @@
 .card {
-  
+
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -9,12 +9,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4rem;
+    padding: 4rem 7.5rem;
     background-color: var(--white);
     position: relative;
 
     &-img {
-      width: 23rem;
+      width: 100%;
       height: auto;
       object-fit: cover;
       flex-shrink: 0;
@@ -120,7 +120,6 @@
     gap: 4rem;
     padding: 5rem 0 4rem 7rem;
     border-bottom: 0.1rem solid var(--primary-grey-20);
-
     .filter {
       display: none;
     }
@@ -130,7 +129,7 @@
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    padding: 4rem 0 4rem 7rem;
+    padding: 2rem 0 4rem 7rem;
   }
 
   &__list {
@@ -142,30 +141,30 @@
   &__item {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    padding: 0 0 0 3rem;
+    gap: 2rem;
     position: relative;
 
-    &-img {
-      width: 2rem;
-      height: 2rem;
-      object-fit: cover;
-      flex-shrink: 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
     &-title {
-      font-weight: 400;
+      font-weight: 700;
       font-size: 1.6rem;
       line-height: 120%;
     }
 
     &-subtitle {
-      font-weight: 700;
-      font-size: 2.4rem;
+      font-weight: 400;
+      font-size: 1.6rem;
       line-height: 120%;
+    }
+
+    ul {}
+
+    li {
+      list-style-type: disc;
+      margin-left: 2.5rem;
+
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
     }
   }
 

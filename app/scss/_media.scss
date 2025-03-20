@@ -457,7 +457,7 @@
   }
 
   .partner__item-img.bystronom {
-    height: 1.2rem;
+    height: 1rem;
   }
 
   .partner__item-img.lenta {
@@ -629,7 +629,6 @@
   }
 
   .card__block-img {
-    max-width: 15.5rem;
     width: 100%;
   }
 
@@ -1306,7 +1305,7 @@
 
   .card__block .filter__items {
     display: flex;
-    left: 2rem;
+    left: 1rem;
     width: fit-content;
   }
 
@@ -1317,12 +1316,10 @@
   }
 
   .card__block {
-    padding: 6.5rem 2rem;
+    padding: 1rem;
   }
 
-  .card__block-img {
-    max-width: 10.7rem;
-  }
+  .card__block-img {}
 
   .card__head {
     padding: 0 0 2rem;
@@ -1333,9 +1330,7 @@
     padding: 0;
   }
 
-  .card__item {
-    padding-left: 2.4rem;
-  }
+  .card__item {}
 
   .card__item-img {
     display: block;

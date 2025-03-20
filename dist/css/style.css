@@ -1348,6 +1348,7 @@ html.lenis body {
   padding: 6rem 4rem 4rem;
   background-color: var(--white);
   text-align: center;
+  color: inherit;
 }
 .product__item-img {
   width: 100%;
@@ -1756,12 +1757,12 @@ html.lenis body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rem;
+  padding: 4rem 7.5rem;
   background-color: var(--white);
   position: relative;
 }
 .card__block-img {
-  width: 23rem;
+  width: 100%;
   height: auto;
   object-fit: cover;
   flex-shrink: 0;
@@ -1863,7 +1864,7 @@ html.lenis body {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  padding: 4rem 0 4rem 7rem;
+  padding: 2rem 0 4rem 7rem;
 }
 .card__list {
   display: flex;
@@ -1873,28 +1874,25 @@ html.lenis body {
 .card__item {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 0 0 0 3rem;
+  gap: 2rem;
   position: relative;
 }
-.card__item-img {
-  width: 2rem;
-  height: 2rem;
-  object-fit: cover;
-  flex-shrink: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 .card__item-title {
-  font-weight: 400;
+  font-weight: 700;
   font-size: 1.6rem;
   line-height: 120%;
 }
 .card__item-subtitle {
-  font-weight: 700;
-  font-size: 2.4rem;
+  font-weight: 400;
+  font-size: 1.6rem;
   line-height: 120%;
+}
+.card__item li {
+  list-style-type: disc;
+  margin-left: 2.5rem;
+}
+.card__item li:not(:last-child) {
+  margin-bottom: 2rem;
 }
 .card__btn {
   max-width: 32.5rem;
@@ -3005,7 +3003,7 @@ html.lenis body {
     height: 2.56rem;
   }
   .partner__item-img.bystronom {
-    height: 1.2rem;
+    height: 1rem;
   }
   .partner__item-img.lenta {
     height: 2.56rem;
@@ -3139,7 +3137,6 @@ html.lenis body {
     font-size: 1.4rem;
   }
   .card__block-img {
-    max-width: 15.5rem;
     width: 100%;
   }
   .card__content {
@@ -3672,7 +3669,7 @@ html.lenis body {
   }
   .card__block .filter__items {
     display: flex;
-    left: 2rem;
+    left: 1rem;
     width: fit-content;
   }
   .card .filter__item {
@@ -3681,10 +3678,7 @@ html.lenis body {
     font-size: 1rem;
   }
   .card__block {
-    padding: 6.5rem 2rem;
-  }
-  .card__block-img {
-    max-width: 10.7rem;
+    padding: 1rem;
   }
   .card__head {
     padding: 0 0 2rem;
@@ -3692,9 +3686,6 @@ html.lenis body {
   .card__body {
     gap: 2rem;
     padding: 0;
-  }
-  .card__item {
-    padding-left: 2.4rem;
   }
   .card__item-img {
     display: block;
