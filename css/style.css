@@ -3199,9 +3199,6 @@ html.lenis body {
     font-size: 1rem;
   }
   /* catalog */
-  .dropdown {
-    display: block;
-  }
   .catalog {
     padding-top: 3rem;
   }
@@ -3224,7 +3221,18 @@ html.lenis body {
     min-width: 7rem;
   }
   .catalog .tabs__btns {
-    display: none;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    width: calc(100% + 4rem);
+    margin-left: -2rem;
+    padding: 0 2rem;
+  }
+  .catalog .tabs__btns::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    background: none;
   }
   .breadcrumb__inner {
     padding: 1rem 0;
@@ -3669,6 +3677,21 @@ html.lenis body {
   }
 }
 @media (max-width: 520px) {
+  .adv__feat-item:nth-child(1) {
+    padding: 0 2rem 2rem 2rem;
+  }
+  .adv__feat-item:nth-child(2) {
+    padding: 0 2rem 2rem 2rem;
+  }
+  .adv__feat-item:nth-child(3) {
+    padding: 2rem 2rem 0 2rem;
+  }
+  .adv__feat-item:nth-child(4) {
+    padding: 2rem 2rem 0 2rem;
+  }
+  .hero__title {
+    font-size: 2.2rem;
+  }
   .card__sticker,
   .product__item-sticker {
     width: 4rem;

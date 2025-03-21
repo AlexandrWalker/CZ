@@ -202,13 +202,19 @@
               </div>
             </div>
             <div class="dropdown">
-              <button class="dropdown__button icon-chevron-arrow" data-value="Молоко">
+              <button class="dropdown__button icon-chevron-arrow" data-value="Молоко" data-tab="milk">
                 Молоко
               </button>
               <ul class="dropdown__list dropdown__list-border">
-                <li class="dropdown__list-item" data-value="Молоко">Молоко</li>
-                <li class="dropdown__list-item" data-value="Сметана">Сметана</li>
-                <li class="dropdown__list-item" data-value="Масло">Масло</li>
+                <li class="dropdown__list-item tabs__btn" data-value="Молоко" data-tab="milk">
+                  Молоко
+                </li>
+                <li class="dropdown__list-item tabs__btn" data-value="Сметана" data-tab="cream">
+                  Сметана
+                </li>
+                <li class="dropdown__list-item tabs__btn" data-value="Масло" data-tab="butter">
+                  Масло
+                </li>
               </ul>
               <input type="text" name="select-category" value="all" class="dropdown__input-hidden">
             </div>
@@ -318,7 +324,8 @@
 
               <div class="catalog__item">
                 <a class="product__item" href="/suhoe_moloko_25kg">
-                  <img class="product__item-img" src="./images/card/suhoe_moloko.png" alt="Молоко сухое обезжиренное для производства продуктов детского питания">
+                  <img class="product__item-img" src="./images/card/suhoe_moloko.png"
+                    alt="Молоко сухое обезжиренное для производства продуктов детского питания">
                   <div class="product__item-sticker">
                     <img src="./images/card/sticker.svg" alt="">
                     <span>0 %</span>
