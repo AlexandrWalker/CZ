@@ -228,6 +228,7 @@
           listItem.addEventListener('click', function (e) {
             e.stopPropagation();
             dropDownBtn.innerHTML = this.innerHTML;
+            dropDownBtn.dataset.tab = this.dataset.tab;
             dropDownBtn.focus();
             dropDownInput.value = this.dataset.value;
             dropDownList.classList.remove('dropdown__list--visible');

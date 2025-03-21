@@ -523,7 +523,7 @@
 
   /* catalog */
   .dropdown {
-    display: block;
+    // display: block;
   }
 
   .catalog {
@@ -554,7 +554,20 @@
   }
 
   .catalog .tabs__btns {
-    display: none;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    width: calc(100% + 4rem);
+    margin-left: -2rem;
+    padding: 0 2rem;
+    // display: none;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      padding: 0;
+      margin: 0;
+      background: none;
+    }
   }
 
   .breadcrumb {}
@@ -1125,6 +1138,26 @@
 }
 
 @media (max-width: 520px) {
+
+  .adv__feat-item:nth-child(1) {
+    padding: 0 2rem 2rem 2rem;
+  }
+
+  .adv__feat-item:nth-child(2) {
+    padding: 0 2rem 2rem 2rem;
+  }
+
+  .adv__feat-item:nth-child(3) {
+    padding: 2rem 2rem 0 2rem;
+  }
+
+  .adv__feat-item:nth-child(4) {
+    padding: 2rem 2rem 0 2rem;
+  }
+
+  .hero__title {
+    font-size: 2.2rem;
+  }
 
   .card__sticker,
   .product__item-sticker {
