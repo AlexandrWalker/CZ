@@ -252,6 +252,8 @@
   background-color: var(--primary-black);
   color: var(--white);
   padding: 9rem 0 8rem;
+  margin-bottom: 0;
+  border-bottom: 0.1rem solid var(--primary-bg-30);
 
   &__inner {
     display: flex;
@@ -347,11 +349,108 @@
       visibility: visible;
     }
 
+    .swiper-button-prev {
+      display: none;
+      background-color: var(--primary-accent);
+      position: absolute;
+      top: unset;
+      bottom: unset;
+      right: unset;
+      left: unset;
+      width: 4rem;
+      height: 4rem;
+
+      &::before {
+        font-size: 2.8rem;
+      }
+    }
+
     .swiper-button-next {
       background-color: var(--primary-accent);
       position: absolute;
-      left: 0;
+      top: unset;
       bottom: 0;
+      right: unset;
+      left: 0;
+      width: 11.5rem;
+      height: 11.5rem;
+
+      &::before {
+        font-size: 2.8rem;
+      }
+    }
+  }
+}
+
+.mission {
+  color: var(--primary-white);
+  background-color: var(--primary-black);
+  padding-top: 3rem;
+  background-image: url(./../images/wave-about.png);
+  background-repeat: no-repeat;
+  background-position: right 10rem;
+  background-size: cover;
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 56rem;
+    padding: 8rem 0;
+  }
+
+  &__quote {
+    height: 100%;
+
+    &-icon {
+      width: auto;
+      height: 9.5rem;
+      object-fit: contain;
+      flex-shrink: 0;
+      margin-bottom: 5rem;
+    }
+
+    &-text {
+      font-weight: 700;
+      font-size: 4rem;
+      line-height: 120%;
+    }
+
+    &-author {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 2.4rem;
+      line-height: 110%;
+      color: var(--primary-accent);
+
+      city {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 125%;
+        color: var(--primary-white);
+      }
+    }
+  }
+
+  &__photo {
+    width: auto;
+    height: 77.1rem;
+    object-fit: contain;
+    margin-top: 3rem;
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }

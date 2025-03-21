@@ -38,7 +38,7 @@
         slideChange: () => updateLineFills(history__slider),
       },
     });
-    
+
     updateLineFills(history__slider);
 
     /**
@@ -60,23 +60,18 @@
       spaceBetween: 30,
       speed: 600,
       loop: true,
-      mousewheel: false,
-      allowTouchMove: true,
-      noSwiping: true,
       watchSlidesProgress: true,
       pagination: {
         el: ".swiper-pagination",
         type: "fraction",
       },
-      effect: "creative",
-      creativeEffect: {
-        prev: {
-          shadow: true,
-          translate: [0, 0, -400],
-        },
-        next: {
-          translate: ["100%", 0, 0],
-        },
+      on: {
+        touchEnd: function (s, e) {
+          let range = 5;
+          let diff = s.touches.diff = s.isHorizontal() ? s.touches.currentX - s.touches.startX : s.touches.currentY
+            - s.touches.startY
+          if (diff < range || diff > -range) s.allowClick = true;
+        }
       },
     });
 
@@ -89,6 +84,7 @@
         swiper: values__thumbs,
       },
       navigation: {
+        prevEl: ".swiper-button-prev",
         nextEl: ".swiper-button-next",
       },
     });

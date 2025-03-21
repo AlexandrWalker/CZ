@@ -110,5 +110,13 @@
       background-color: var(--primary-accent);
       color: var(--white);
     }
+
+    &.active {
+
+      label {
+        background-color: var(--primary-accent);
+        color: var(--white);
+      }
+    }
   }
 }
