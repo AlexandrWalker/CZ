@@ -1311,6 +1311,7 @@ html.lenis body {
   padding: 12rem 0 8rem;
   width: 32.4rem;
   min-width: 32.4rem;
+  z-index: 2;
 }
 .product__head-title {
   margin-bottom: 3rem;
@@ -1322,6 +1323,7 @@ html.lenis body {
   padding: 7rem 0 0;
   margin-bottom: -15.8rem;
   width: 100%;
+  z-index: 1;
 }
 .product__slider {
   position: relative;
