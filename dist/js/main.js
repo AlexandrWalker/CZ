@@ -2,9 +2,8 @@
   document.addEventListener('DOMContentLoaded', () => {
 
     var product__slider = new Swiper(".product__slider-init", {
-      slidesPerView: 1,
+      slidesPerView: 2,
       spaceBetween: 10,
-      // slidesPerGroup: 1,
       speed: 600,
       mousewheel: {
         forceToAxis: true,
@@ -15,7 +14,7 @@
       },
       breakpoints: {
         521: {
-          slidesPerView: 1,
+          slidesPerView: 2,
           spaceBetween: 20,
         },
         769: {
@@ -183,13 +182,11 @@
             `.tabs__panel[data-tab="${tabsBtn.dataset.tab}"]`,
           );
           if (targetPanel) {
-            /* HACK */
             targetPanel.classList.add('tabs__panel--active');
           }
         });
       });
     };
-
 
     /**
      * Инициализация Lenis и ScrollTrigger
@@ -230,6 +227,7 @@
             dropDownBtn.innerHTML = this.innerHTML;
             dropDownBtn.dataset.tab = this.dataset.tab;
             dropDownBtn.focus();
+            dropDownBtn.click();
             dropDownInput.value = this.dataset.value;
             dropDownList.classList.remove('dropdown__list--visible');
           });

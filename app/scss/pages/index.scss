@@ -20,12 +20,12 @@
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    max-width: 82rem;
   }
 
   &__title {
     color: var(--primary-black);
     font-size: 5rem;
-    max-width: 82rem;
   }
 
   &__text {
@@ -185,19 +185,19 @@
     }
 
     &:nth-child(1) {
-      background-image: url(./../images/main/technology.png);
+      background-image: url(./../images/main/1.png);
     }
 
     &:nth-child(2) {
-      background-image: url(./../images/main/technology.png);
+      background-image: url(./../images/main/2.png);
     }
 
     &:nth-child(3) {
-      background-image: url(./../images/main/technology.png);
+      background-image: url(./../images/main/3.png);
     }
 
     &:nth-child(4) {
-      background-image: url(./../images/main/technology.png);
+      background-image: url(./../images/main/4.png);
     }
 
     &.active {
@@ -285,6 +285,8 @@
     }
 
     &-title {
+      font-weight: 700;
+      font-size: 2.4rem;
       margin-bottom: 2rem;
       opacity: 0;
       transition: opacity 0.3s ease;
@@ -324,60 +326,64 @@
 .product {
   background-color: var(--primary-accent);
   margin-bottom: 22.8rem;
+  padding-top: 5rem;
 
   &__inner {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 3rem;
   }
 
   &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
     color: var(--white);
-    padding: 12rem 0 8rem;
-    width: 32.4rem;
-    min-width: 32.4rem;
+    width: 100%;
     z-index: 2;
 
     &-title {
-      margin-bottom: 3rem;
+      width: min-content;
     }
 
-    &-text {
-      margin-bottom: 5rem;
+    &-wrap {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
     }
 
-    &-btn {}
+    &-btns {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    &-btn {
+      min-width: 19rem;
+      text-transform: uppercase;
+    }
+
+    .btn-yellow:hover {
+      background-color: var(--primary-color);
+    }
   }
 
   &__body {
-    padding: 7rem 0 0;
     margin-bottom: -15.8rem;
     width: 100%;
     z-index: 1;
+
+    &-btn {
+      width: 100%;
+    }
   }
 
   &__slider {
     position: relative;
+    margin-bottom: 2rem;
 
     .swiper-slide {
-      // max-width: 44.2rem;
-      // padding: 0 3rem 0 0;
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      transition: all 0.3s ease;
-    }
-
-    .swiper-slide-active,
-    .swiper-slide-next,
-    .swiper-slide-next+.swiper-slide {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: all;
-    }
-
-    .slider__btns {
-      left: -35.4rem;
+      height: auto;
     }
   }
 
@@ -385,57 +391,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 6rem 4rem 4rem;
+    padding: 4rem 5rem;
+    height: 100%;
     background-color: var(--white);
     text-align: center;
     color: inherit;
     position: relative;
-
-    &-sticker {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 10.3rem;
-      height: 10.3rem;
-      transform: rotate(23.22deg);
-      position: absolute;
-      top: 1.7rem;
-      right: 1.5rem;
-      font-weight: 700;
-      font-size: 2rem;
-      line-height: 120%;
-      text-align: center;
-      color: var(--white);
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        z-index: 1;
-      }
-
-      span {
-        z-index: 2;
-      }
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 50%;
-        display: block;
-        width: 80%;
-        height: 80%;
-        box-shadow: 1rem 2rem 3rem rgba(255, 77, 77, 0.43);
-      }
-    }
 
     &:hover {
 
@@ -456,6 +417,7 @@
       width: 100%;
       height: auto;
       object-fit: cover;
+      margin-bottom: 3rem;
     }
 
     &-name {
@@ -551,8 +513,8 @@
     }
 
     &-img {
-      width: auto;
-      height: 5.2rem;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       flex-shrink: 0;
     }
@@ -788,48 +750,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 32rem;
+    width: calc(100% / 8);
+    height: auto;
+    aspect-ratio: 1 / 1;
     border-top: 0.1rem solid var(--primary-black-30);
     border-right: 0.05rem solid var(--primary-black-30);
     border-left: 0.05rem solid var(--primary-black-30);
 
     &-img {
       width: auto;
+      height: 11.8rem;
       object-fit: cover;
       flex-shrink: 0;
-
-      &.metro {
-        height: 6.4rem;
-      }
-
-      &.bystronom {
-        height: 2.3rem;
-      }
-
-      &.lenta {
-        height: 6.4rem;
-      }
-
-      &.yarche {
-        height: 5.2rem;
-      }
-
-      &.spar {
-        height: 3.4rem;
-      }
-
-      &.magnit {
-        height: 3.5rem;
-      }
-
-      &.mariara {
-        height: 4.3rem;
-      }
-
-      &.auchan {
-        height: 4.6rem;
-      }
     }
   }
 }

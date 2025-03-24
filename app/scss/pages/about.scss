@@ -1,6 +1,11 @@
 .about {
   padding-top: 5rem;
 
+  background-image: url(./../images/about/wave.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center 14.2rem;
+
   &__title {
     color: var(--primary-black);
     margin-bottom: 6rem;
