@@ -192,7 +192,14 @@
      * Инициализация Lenis и ScrollTrigger
      */
     // Initialize a new Lenis instance for smooth scrolling
-    const lenis = new Lenis();
+    const lenis = new Lenis({
+      anchors: {
+        offset: 100,
+        onComplete: ()=>{
+          console.log('scrolled to anchor')
+        }
+      }
+    });
 
     // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
     lenis.on('scroll', ScrollTrigger.update);
