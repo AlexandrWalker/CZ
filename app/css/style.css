@@ -2889,6 +2889,7 @@ html.lenis body {
   }
   .feat__item {
     padding: 2rem;
+    width: calc(50% - 1rem);
   }
   .feat__item-title {
     font-size: 1.6rem;
@@ -3699,9 +3700,14 @@ html.lenis body {
     width: 5.4rem;
   }
   /* feat */
+  .feat__items {
+    margin-top: -1.2rem;
+    gap: 1rem;
+  }
   .feat__item {
     padding: 2rem 1.5rem;
     text-align: center;
+    width: calc(50% - 0.5rem);
   }
   .feat__item-title {
     font-size: 1.2rem;
