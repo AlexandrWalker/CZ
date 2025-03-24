@@ -280,8 +280,8 @@ a {
       color: var(--primary-color);
     }
 
-    input,
-    textarea {
+    .form-input,
+    .form-textarea {
       border-color: var(--primary-color);
       color: var(--primary-color);
 
@@ -292,7 +292,7 @@ a {
   }
 }
 
-input {
+.form-input {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;

@@ -1,0 +1,62 @@
+.quality {
+
+  &__body {
+    padding: 6rem 12rem;
+    background-color: var(--white);
+
+    &-title {
+      font-weight: 700;
+      font-size: 3rem;
+      line-height: 120%;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__list {
+
+    li {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1rem;
+
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 150%;
+      color: var(--primary-color);
+    }
+
+    input {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin: 0;
+      border: 0;
+      position: relative;
+      accent-color: var(--primary-accent);
+      border-color: transparent;
+    }
+
+    label {
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 150%;
+    }
+  }
+}
