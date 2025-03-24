@@ -1137,52 +1137,52 @@ html.lenis body {
   background-color: var(--white);
 }
 
-.adv__inner {
+.advan__inner {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.adv__content {
+.advan__content {
   display: flex;
   flex-direction: column;
   gap: 4rem;
   max-width: 58.6rem;
 }
-.adv__feat {
+.advan__feat {
   display: flex;
   flex-wrap: wrap;
   max-width: 67.8rem;
 }
-.adv__feat-item {
+.advan__feat-item {
   width: 50%;
 }
-.adv__feat-item:nth-child(1) {
+.advan__feat-item:nth-child(1) {
   padding: 0 3rem 3rem 3rem;
   border-right: 0.1rem solid var(--primary-black-30);
   border-bottom: 0.1rem solid var(--primary-black-30);
 }
-.adv__feat-item:nth-child(2) {
+.advan__feat-item:nth-child(2) {
   padding: 0 3rem 3rem 3rem;
   border-left: 0.1rem solid var(--primary-black-30);
   border-bottom: 0.1rem solid var(--primary-black-30);
 }
-.adv__feat-item:nth-child(3) {
+.advan__feat-item:nth-child(3) {
   padding: 3rem 3rem 0 3rem;
   border-top: 0.1rem solid var(--primary-black-30);
   border-right: 0.1rem solid var(--primary-black-30);
 }
-.adv__feat-item:nth-child(4) {
+.advan__feat-item:nth-child(4) {
   padding: 3rem 3rem 0 3rem;
   border-top: 0.1rem solid var(--primary-black-30);
   border-left: 0.1rem solid var(--primary-black-30);
 }
-.adv__feat-img {
+.advan__feat-img {
   width: 11.8rem;
   height: auto;
   object-fit: cover;
   margin-bottom: 3rem;
 }
-.adv__feat-title {
+.advan__feat-title {
   font-weight: 700;
   margin-bottom: 2rem;
 }
@@ -2901,20 +2901,20 @@ html.lenis body {
     min-width: 13rem;
   }
   /* adv */
-  .adv__inner {
+  .advan__inner {
     flex-direction: column;
     gap: 3rem;
   }
-  .adv__content {
+  .advan__content {
     gap: 2rem;
   }
-  .adv__feat-img {
+  .advan__feat-img {
     margin-bottom: 2rem;
   }
-  .adv__feat-title {
+  .advan__feat-title {
     margin-bottom: 1.5rem;
   }
-  .adv__feat-img {
+  .advan__feat-img {
     width: 9rem;
   }
   /* worth */
@@ -3666,16 +3666,16 @@ html.lenis body {
   .hero__text {
     max-width: 26rem;
   }
-  .adv__feat-item:nth-child(1) {
+  .advan__feat-item:nth-child(1) {
     padding: 0 2rem 2rem 2rem;
   }
-  .adv__feat-item:nth-child(2) {
+  .advan__feat-item:nth-child(2) {
     padding: 0 2rem 2rem 2rem;
   }
-  .adv__feat-item:nth-child(3) {
+  .advan__feat-item:nth-child(3) {
     padding: 2rem 2rem 0 2rem;
   }
-  .adv__feat-item:nth-child(4) {
+  .advan__feat-item:nth-child(4) {
     padding: 2rem 2rem 0 2rem;
   }
   .sticker {
