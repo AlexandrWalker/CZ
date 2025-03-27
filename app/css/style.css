@@ -1771,9 +1771,12 @@ html.lenis body {
   line-height: 125%;
 }
 .filter__items {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 1rem;
+}
+.filter__items.tabs__filter--active {
+  display: flex;
 }
 .filter__item {
   display: flex;

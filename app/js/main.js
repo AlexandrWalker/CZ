@@ -163,6 +163,7 @@
           // Сбрасываем активные состояния кнопок и панелей только внутри текущего уровня
           const tabsBtns = Array.from(currentTabsContainer.querySelectorAll('.tabs__btn'));
           const tabsPanels = Array.from(currentTabsContainer.querySelectorAll('.tabs__panel'));
+          const tabsFilter = Array.from(currentTabsContainer.querySelectorAll('.tabs__filter'));
 
           tabsBtns.forEach((btn) => {
             if (btn.closest('.tabs') === currentTabsContainer) {
@@ -176,13 +177,25 @@
             }
           });
 
+          tabsFilter.forEach((filter) => {
+            if (filter.closest('.tabs') === currentTabsContainer) {
+              filter.classList.remove('tabs__filter--active');
+            }
+          });
+
           // Устанавливаем активное состояние для выбранной вкладки
           tabsBtn.classList.add('tabs__btn--active');
           const targetPanel = currentTabsContainer.querySelector(
             `.tabs__panel[data-tab="${tabsBtn.dataset.tab}"]`,
           );
+          const targetFilter = currentTabsContainer.querySelector(
+            `.tabs__filter[data-tab="${tabsBtn.dataset.tab}"]`,
+          );
           if (targetPanel) {
             targetPanel.classList.add('tabs__panel--active');
+          }
+          if (targetFilter) {
+            targetFilter.classList.add('tabs__filter--active');
           }
         });
       });

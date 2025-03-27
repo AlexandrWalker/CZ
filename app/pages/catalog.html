@@ -37,7 +37,8 @@
               <p class="filter__text">
                 Жирность:
               </p>
-              <div class="filter__items">
+
+              <div class="filter__items tabs__filter tabs__filter--active" data-tab="milk">
                 <div class="filter__item">
                   <input id="filter_1" type="radio" name="filter" checked>
                   <label for="filter_1">
@@ -47,16 +48,45 @@
                 <div class="filter__item">
                   <input id="filter_2" type="radio" name="filter">
                   <label for="filter_2">
-                    3,5%
+                    3,2%
                   </label>
                 </div>
                 <div class="filter__item">
                   <input id="filter_3" type="radio" name="filter">
                   <label for="filter_3">
-                    1,8%
+                    1,5%
                   </label>
                 </div>
               </div>
+              <div class="filter__items tabs__filter" data-tab="cream">
+                <div class="filter__item">
+                  <input id="filter_4" type="radio" name="filter" checked>
+                  <label for="filter_4">
+                    15%
+                  </label>
+                </div>
+                <div class="filter__item">
+                  <input id="filter_5" type="radio" name="filter">
+                  <label for="filter_5">
+                    20%
+                  </label>
+                </div>
+              </div>
+              <div class="filter__items tabs__filter" data-tab="butter">
+                <div class="filter__item">
+                  <input id="filter_6" type="radio" name="filter" checked>
+                  <label for="filter_6">
+                    82,5%
+                  </label>
+                </div>
+                <div class="filter__item">
+                  <input id="filter_7" type="radio" name="filter">
+                  <label for="filter_7">
+                    72,5%
+                  </label>
+                </div>
+              </div>
+
             </div>
             <div class="catalog__btns">
               <a class="catalog__btn" href="/b2c">
@@ -78,7 +108,8 @@
               </div>
             </div>
             <div class="dropdown">
-              <button class="dropdown__button icon-chevron-arrow tabs__btn tabs__btn--active" data-value="Молоко" data-tab="milk">
+              <button class="dropdown__button icon-chevron-arrow tabs__btn tabs__btn--active" data-value="Молоко"
+                data-tab="milk">
                 Молоко
               </button>
               <ul class="dropdown__list dropdown__list-border">
@@ -199,12 +230,12 @@
               </div>
 
               <div class="catalog__item">
-                <a class="product__item" href="/suhoe_moloko_25kg">
+                <a class="product__item" href="/suhoe_moloko_dlya_detskogo_pitanya_25kg">
                   <img class="product__item-img" src="./images/card/suhoe_moloko.png"
                     alt="Молоко сухое обезжиренное для производства продуктов детского питания">
                   <div class="sticker">
                     <img src="./images/card/sticker.svg" alt="">
-                    <span>0 %</span>
+                    <span>1.5 %</span>
                   </div>
                   <span class="product__item-name">
                     Молоко сухое обезжиренное для производства продуктов детского питания
@@ -435,31 +466,6 @@
         </div>
       </div>
     </section>
-    <section class="callback">
-      <div class="container">
-        <div class="callback__inner">
-          <form class="callback__form" action="#" method="get">
-            <h2 class="callback__title block-title">
-              Свяжитесь с нами
-            </h2>
-            <div class="form-group icon-person">
-              <input type="text" placeholder="Ваше имя">
-            </div>
-            <div class="form-group icon-mail">
-              <input type="email" placeholder="Эл. почта">
-            </div>
-            <div class="form-group icon-person">
-              <input type="text" placeholder="Название компании">
-            </div>
-            <button class="callback__btn btn btn-yellow">
-              Отправить
-            </button>
-            <p class="callback__text">Нажимая кнопку, вы даёте <a href="/">согласие на обработку ваших персональных
-                данных</a></p>
-          </form>
-          <img class="callback__img" src="./images/main/contact.png" alt="">
-        </div>
-      </div>
-    </section>
+    <!--=include callback.html-->
   </main>
   <!--=include footer.html-->

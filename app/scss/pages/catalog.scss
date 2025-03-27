@@ -90,9 +90,13 @@
   }
 
   &__items {
-    display: flex;
+    display: none;
     align-items: center;
     gap: 1rem;
+
+    &.tabs__filter--active {
+      display: flex;
+    }
   }
 
   &__item {
