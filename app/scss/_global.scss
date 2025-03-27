@@ -265,7 +265,7 @@ a {
   position: relative;
 
 
-  &::before {
+  i {
     position: absolute;
     top: 0.4rem;
     left: 0.4rem;
@@ -276,7 +276,7 @@ a {
 
   &:hover {
 
-    &::before {
+    i {
       color: var(--primary-color);
     }
 

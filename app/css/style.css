@@ -451,7 +451,7 @@ a {
 .form-group {
   position: relative;
 }
-.form-group::before {
+.form-group i {
   position: absolute;
   top: 0.4rem;
   left: 0.4rem;
@@ -459,7 +459,7 @@ a {
   line-height: 100%;
   transition: all 0.3s ease;
 }
-.form-group:hover::before {
+.form-group:hover i {
   color: var(--primary-color);
 }
 .form-group:hover .form-input,
@@ -924,7 +924,7 @@ html.lenis body {
   text-decoration: underline;
 }
 
-.search {
+.search__btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1086,13 +1086,13 @@ html.lenis body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 8rem 0 0;
+  padding: 8rem 0 0 3rem;
   height: 100%;
 }
 .hero__content {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
   max-width: 82rem;
 }
 .hero__title {
@@ -1101,6 +1101,7 @@ html.lenis body {
 }
 .hero__text {
   font-size: 2.4rem;
+  line-height: 120%;
   max-width: 42rem;
 }
 
@@ -2951,7 +2952,7 @@ html.lenis body {
     padding: 0 2rem 0.8rem 4rem;
     margin-bottom: 2rem;
   }
-  .form-group::before {
+  .form-group i {
     top: 0.2rem;
     left: 0.2rem;
   }
@@ -3010,7 +3011,7 @@ html.lenis body {
     padding: 2.3rem 0 0;
   }
   .hero__content {
-    gap: 1.5rem;
+    gap: 1rem;
     max-width: 28rem;
   }
   .hero__title {
