@@ -1100,6 +1100,7 @@ html.lenis body {
   font-size: 5rem;
 }
 .hero__text {
+  font-size: 2.4rem;
   max-width: 42rem;
 }
 
@@ -3013,6 +3014,9 @@ html.lenis body {
   }
   .hero__title {
     font-size: 2rem;
+  }
+  .hero__text {
+    font-size: 1.2rem;
   }
   /* feat */
   .feat__items {
