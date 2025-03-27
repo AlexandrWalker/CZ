@@ -13,7 +13,6 @@ const fonter = require('gulp-fonter');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const include = require('gulp-include');
 
-
 function pages() {
   return src('app/pages/*.html')
     .pipe(include({
@@ -101,7 +100,7 @@ function building() {
     'app/images/*.*',
     '!app/images/src/**/*.*',
     '!app/images/src/*.*',
-    
+
     'app/fonts/*.*',
     'app/fonts/icomoon/*.*',
 
