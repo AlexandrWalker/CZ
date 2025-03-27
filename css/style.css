@@ -1865,6 +1865,7 @@ html.lenis body {
   color: var(--primary-color);
 }
 .card__block .filter__items {
+  display: flex;
   flex-direction: column;
   position: absolute;
   top: 50%;
