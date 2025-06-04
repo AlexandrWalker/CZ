@@ -140,7 +140,7 @@
     font-size: 2rem;
   }
 
-  .hero__text {
+  .hero p {
     font-size: 1.2rem;
   }
 
@@ -155,12 +155,12 @@
     width: calc(50% - 1rem);
   }
 
-  .feat__item-title {
+  .feat__item h5 {
     font-size: 1.6rem;
     margin-bottom: 1.5rem;
   }
 
-  .feat__item-text {
+  .feat__item p {
     margin-bottom: 2rem;
   }
 
@@ -182,7 +182,7 @@
     margin-bottom: 2rem;
   }
 
-  .advan__feat-title {
+  .advan__feat h6 {
     margin-bottom: 1.5rem;
   }
 
@@ -233,12 +233,12 @@
     padding: 2rem;
   }
 
-  .worth__body-title {
+  .worth__body h3 {
     font-size: inherit;
     margin-bottom: 1.5rem;
   }
 
-  .worth__body-text {
+  .worth__body p {
     margin-bottom: 1.5rem;
   }
 
@@ -294,7 +294,7 @@
     margin-bottom: 1.5rem;
   }
 
-  .product__item-desc {
+  .product__item p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
   }
@@ -472,6 +472,10 @@
     border-top: 0.1rem solid var(--white-20);
     grid-column: 1/4;
     grid-row: 2/3;
+  }
+
+  .footer__contact-text {
+    white-space: unset;
   }
 
   .footer__contact-phone {
@@ -1063,6 +1067,10 @@
     display: none;
   }
 
+  .mission {
+    background-position: -7.7rem 11.5rem;
+  }
+
   .mission__inner {
     gap: 0;
   }
@@ -1215,7 +1223,7 @@
     padding: 2rem 0 0;
   }
 
-  .hero__text {
+  .hero p {
     max-width: 26rem;
   }
 
@@ -1272,12 +1280,12 @@
     width: calc(50% - 0.5rem);
   }
 
-  .feat__item-title {
+  .feat__item h5 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
   }
 
-  .feat__item-text {
+  .feat__item p {
     font-size: 1rem;
     margin: 0;
   }
@@ -1384,7 +1392,7 @@
     margin-bottom: 1rem;
   }
 
-  .product__item-desc {
+  .product__item p {
     font-size: 0.8rem;
   }
 
@@ -1975,6 +1983,7 @@
 
   .mission {
     padding-top: 2rem;
+    background-image: none;
   }
 
   .mission__inner {

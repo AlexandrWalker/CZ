@@ -26,6 +26,10 @@
     position: relative;
   }
 
+  &__wrap {
+    overflow: hidden;
+  }
+
   &__img {
     width: auto;
     height: 63.9rem;
@@ -43,6 +47,7 @@
     width: 32.4rem;
     height: 27.5rem;
     color: var(--white);
+    z-index: 1;
 
     &-title {
       font-weight: 700;
@@ -393,8 +398,11 @@
   padding-top: 3rem;
   background-image: url(./../images/wave-about.png);
   background-repeat: no-repeat;
-  background-position: right 10rem;
+  // background-position: right 10rem;
+  background-position: right 26rem;
   background-size: cover;
+
+  overflow: hidden;
 
   &__inner {
     display: flex;
@@ -453,7 +461,8 @@
     margin-top: 3rem;
 
     &-img {
-      width: 100%;
+      // width: 100%;
+      width: auto;
       height: 100%;
       object-fit: cover;
     }

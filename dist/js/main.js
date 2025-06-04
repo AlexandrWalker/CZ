@@ -208,7 +208,7 @@
     const lenis = new Lenis({
       anchors: {
         offset: 100,
-        onComplete: ()=>{
+        onComplete: () => {
           console.log('scrolled to anchor')
         }
       }
@@ -225,6 +225,47 @@
 
     // Disable lag smoothing in GSAP to prevent any delay in scroll animations
     gsap.ticker.lagSmoothing(0);
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const parallaxImgContainers = document.querySelectorAll('[data-animation="parallax-img"]');
+    parallaxImgContainers.forEach(parallaxImgContainer => {
+      const image = parallaxImgContainer.querySelector('img');
+      gsap.fromTo(image,
+        { y: '-7%' },
+        {
+          y: '7%',
+          scrollTrigger: {
+            trigger: parallaxImgContainer,
+            start: 'top 60%',
+            end: 'bottom top',
+            scrub: true,
+          },
+        }
+      );
+    });
+
+
+
+    // const items = document.querySelectorAll('.work__slide');
+    // const itemsActive = document.getElementsByClassName('work__slide-active');
+
+    // items.forEach(element => {
+    //   if (element !== items[0]) {
+    //     element.addEventListener('mouseover', function () {
+    //       if (itemsActive.length > 0 && itemsActive[0] !== this) {
+    //         itemsActive[0].classList.remove('work__slide-active');
+    //       }
+    //       this.classList.add('work__slide-active');
+    //     });
+    //     element.addEventListener('mouseout', function () {
+    //       items[0].classList.add('work__slide-active');
+    //       this.classList.remove('work__slide-active');
+    //     });
+    //   }
+    // });
+
+
 
     /**
      * dropdown
