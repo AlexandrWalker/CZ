@@ -310,8 +310,21 @@
       });
     }
 
+    if (('; ' + document.cookie).split(`; COOKIE_ACCEPT=`).pop().split(';')[0] !== '1') {
+      const cookiesNotify = document.getElementById('cookie');
+
+      if (cookiesNotify) {
+        cookiesNotify.style.display = 'block';
+      }
+    }
+
     accordionFunc();
     harmonicFunc();
     tabsFunc();
   });
 })();
+
+function checkCookies() {
+  document.cookie = 'COOKIE_ACCEPT=1;path=\'/\';expires:' + (new Date(new Date().getTime() + 86400e3 * 365).toUTCString());
+  document.getElementById('cookie').remove();
+}

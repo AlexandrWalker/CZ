@@ -105,7 +105,7 @@
     display: none;
   }
 
-  .header__contact-text {
+  .header__contact p {
     font-size: 1rem;
     line-height: 120%;
   }
@@ -474,7 +474,7 @@
     grid-row: 2/3;
   }
 
-  .footer__contact-text {
+  .footer__contact p {
     white-space: unset;
   }
 
@@ -495,7 +495,7 @@
     width: 7.2rem;
   }
 
-  .footer__bottom-text {
+  .footer__bottom-inner p {
     font-size: 1rem;
   }
 
@@ -1179,6 +1179,16 @@
 
   .quality .callback__text {
     margin-top: -1rem;
+  }
+
+  /* cookie */
+  .cookie__block {
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .cookie__block .btn {
+    max-width: 30rem;
   }
 }
 
@@ -2044,6 +2054,13 @@
   .quality__list-row li:first-child,
   .quality__list-row li:last-child {
     display: none;
+  }
+
+  /* cookie */
+  .cookie__block {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
   }
 }
 

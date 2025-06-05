@@ -70,11 +70,11 @@
       }
     }
 
-    &-title {
+    h6 {
       font-weight: 700;
     }
 
-    &-text {
+    p {
       font-weight: 400;
       color: var(--primary-white-50);
       white-space: nowrap;
@@ -103,7 +103,7 @@
       border-top: 0.1rem solid var(--white-20);
     }
 
-    &-text {
+    p {
       font-weight: 400;
       font-size: 1.4rem;
       line-height: 143%;

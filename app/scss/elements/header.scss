@@ -80,8 +80,6 @@
         object-fit: cover;
       }
     }
-
-    &-text {}
   }
 
   &__contact {
@@ -122,7 +120,7 @@
       }
     }
 
-    &-text {
+    p {
       font-weight: 400;
       font-size: 1.2rem;
       color: var(--primary-grey);

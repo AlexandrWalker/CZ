@@ -5,6 +5,7 @@
 @import 'global';
 @import 'elements/header.scss';
 @import 'elements/footer.scss';
+@import 'elements/plate.scss';
 
 @import 'pages/index.scss';
 @import 'pages/catalog.scss';
@@ -16,5 +17,7 @@
 @import 'pages/about.scss';
 @import 'pages/articles.scss';
 @import 'pages/quality.scss';
+
+@import 'pages/policy.scss';
 
 @import 'media';
