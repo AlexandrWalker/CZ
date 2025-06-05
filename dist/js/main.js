@@ -142,6 +142,36 @@
       });
     }
 
+    const numbs = document.querySelector('.numbs');
+    if (numbs) {
+      function counter(array, time = 2000) {
+        let n = 0;
+        const num = Number(array.dataset.val);
+        let interval = setInterval(() => {
+          n < num ? (n += num / (time / 10)) : clearInterval(interval);
+          array.classList.contains('frac')
+            ? (array.innerHTML = n.toFixed(1))
+            : (array.innerHTML = Math.round(n));
+        }, 10);
+      }
+
+      const numbBoxes = document.querySelectorAll('.numbs');
+      numbBoxes.forEach((numbBox) => {
+        const numbs = numbBox.querySelectorAll('.number');
+        numbs.forEach((numb) => {
+          gsap.to(numb, {
+            scrollTrigger: {
+              trigger: numbBox,
+              start: `top 80%`,
+              // start: `top 60%`,
+              // markers: true,
+            },
+            onStart: () => counter(numb),
+          });
+        });
+      });
+    }
+
     /**
      * Управляет переключением вкладок на странице.
      * Добавляет и удаляет классы активности для кнопок и панелей вкладок.

@@ -377,6 +377,14 @@ a {
     font-weight: 500;
     font-size: 1.4rem;
     line-height: 142.9%;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      padding: 0;
+      margin: 0;
+    }
   }
 
   li {
@@ -396,6 +404,7 @@ a {
 
   a {
     color: inherit;
+    white-space: nowrap;
   }
 
   .tabs__btns {

@@ -476,9 +476,24 @@
     }
 
     &-count {
-      width: auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 2rem;
+      width: fit-content;
       height: 14.3rem;
       flex-shrink: 0;
+
+      font-size: 20rem;
+      line-height: 70%;
+      letter-spacing: -1.5rem;
+      color: var(--primary-accent);
+
+      span {
+        display: block;
+        width: 58.2rem;
+        text-align: right;
+      }
 
       img {
         width: auto;
@@ -575,6 +590,10 @@
     a {
       color: inherit;
       text-decoration: underline;
+
+      &:hover {
+        color: var(--primary-color);
+      }
     }
   }
 
