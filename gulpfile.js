@@ -87,6 +87,8 @@ function building() {
   return src([
     'app/CNAME',
 
+    'app/certificates/*.*',
+
     'app/*.html',
     '!app/pages/*.html',
 
