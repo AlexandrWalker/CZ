@@ -89,42 +89,73 @@
     });
 
     function harmonicFunc() {
-      var worthHead = document.querySelectorAll('.worth__item'),
-        worthActive = document.getElementsByClassName('active'),
-
+      const items = document.querySelectorAll('.work__item'),
+        itemsActive = document.getElementsByClassName('work__item-active'),
         worthRePrev = document.getElementsByClassName('re-prev'),
         worthPrev = document.getElementsByClassName('prev'),
-        worthNext = document.getElementsByClassName('next');
+        worthNext = document.getElementsByClassName('next'),
+        worthReNext = document.getElementsByClassName('re-next');
 
-      Array.from(worthHead).forEach(function (worthItem, i, worthHead) {
-        worthItem.addEventListener('click', function (e) {
-          if (worthActive.length > 0 && worthActive[0] !== this) {
-            worthActive[0].classList.remove('active');
-          }
-          if (worthRePrev.length > 0) {
-            worthRePrev[0].classList.remove('re-prev');
-          }
-          if (worthPrev.length > 0) {
-            worthPrev[0].classList.remove('prev');
-          }
-          if (worthNext.length > 0) {
-            worthNext[0].classList.remove('next');
-          }
-          this.classList.add('active');
-
-          var prePrev = this.previousElementSibling;
-
-          if (this.previousElementSibling) {
-            this.previousElementSibling.classList.add('prev');
-
-            if (prePrev.previousElementSibling) {
-              prePrev.previousElementSibling.classList.add('re-prev');
+      items.forEach(element => {
+        if (element !== items[0]) {
+          element.addEventListener('mouseover', function () {
+            if (itemsActive.length > 0 && itemsActive[0] !== this) {
+              itemsActive[0].classList.remove('work__item-active');
             }
-          }
-          if (this.nextElementSibling) {
-            this.nextElementSibling.classList.add('next');
-          }
-        });
+            if (worthRePrev.length > 0) {
+              worthRePrev[0].classList.remove('re-prev');
+            }
+            if (worthPrev.length > 0) {
+              worthPrev[0].classList.remove('prev');
+            }
+            if (worthNext.length > 0) {
+              worthNext[0].classList.remove('next');
+            }
+            if (worthReNext.length > 0) {
+              worthReNext[0].classList.remove('re-next');
+            }
+
+            this.classList.add('work__item-active');
+
+            var prePrev = this.previousElementSibling;
+            var preNext = this.nextElementSibling;
+
+            if (this.previousElementSibling) {
+              this.previousElementSibling.classList.add('prev');
+
+              if (prePrev.previousElementSibling) {
+                prePrev.previousElementSibling.classList.add('re-prev');
+              }
+            }
+            if (this.nextElementSibling) {
+              this.nextElementSibling.classList.add('next');
+
+              if (preNext.nextElementSibling) {
+                preNext.nextElementSibling.classList.add('re-next');
+              }
+            }
+          });
+          element.addEventListener('mouseout', function () {
+            if (worthRePrev.length > 0) {
+              worthRePrev[0].classList.remove('re-prev');
+            }
+            if (worthPrev.length > 0) {
+              worthPrev[0].classList.remove('prev');
+            }
+            if (worthNext.length > 0) {
+              worthNext[0].classList.remove('next');
+            }
+            if (worthReNext.length > 0) {
+              worthReNext[0].classList.remove('re-next');
+            }
+            items[0].classList.add('work__item-active');
+            this.classList.remove('work__item-active');
+            if (items[0].nextElementSibling) {
+              items[0].nextElementSibling.classList.add('next');
+              items[1].nextElementSibling.classList.add('re-next');
+            }
+          });
+        }
       });
     }
 
@@ -274,28 +305,6 @@
         }
       );
     });
-
-
-
-    // const items = document.querySelectorAll('.work__slide');
-    // const itemsActive = document.getElementsByClassName('work__slide-active');
-
-    // items.forEach(element => {
-    //   if (element !== items[0]) {
-    //     element.addEventListener('mouseover', function () {
-    //       if (itemsActive.length > 0 && itemsActive[0] !== this) {
-    //         itemsActive[0].classList.remove('work__slide-active');
-    //       }
-    //       this.classList.add('work__slide-active');
-    //     });
-    //     element.addEventListener('mouseout', function () {
-    //       items[0].classList.add('work__slide-active');
-    //       this.classList.remove('work__slide-active');
-    //     });
-    //   }
-    // });
-
-
 
     /**
      * dropdown
