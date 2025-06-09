@@ -246,21 +246,116 @@
 
           // Устанавливаем активное состояние для выбранной вкладки
           tabsBtn.classList.add('tabs__btn--active');
-          const targetPanel = currentTabsContainer.querySelector(
+          const targetPanel = currentTabsContainer.querySelectorAll(
             `.tabs__panel[data-tab="${tabsBtn.dataset.tab}"]`,
           );
           const targetFilter = currentTabsContainer.querySelector(
             `.tabs__filter[data-tab="${tabsBtn.dataset.tab}"]`,
           );
           if (targetPanel) {
-            targetPanel.classList.add('tabs__panel--active');
+            targetPanel.forEach(targetPanels => {
+              targetPanels.classList.add('tabs__panel--active');
+            });
           }
           if (targetFilter) {
             targetFilter.classList.add('tabs__filter--active');
           }
         });
+
+        tabsContainer.addEventListener('click', (event) => {
+          const tabsBtn = event.target.closest('.tabs__c_btn');
+          if (!tabsBtn || !tabsContainer.contains(tabsBtn)) return;
+
+          // Останавливаем всплытие, чтобы вложенные табы не влияли на родительские
+          event.stopPropagation();
+
+          // Ищем ближайший контейнер, к которому принадлежит нажатая кнопка
+          const currentTabsContainer = tabsBtn.closest('.tabs');
+          if (!currentTabsContainer) return;
+
+          // Сбрасываем активные состояния кнопок и панелей только внутри текущего уровня
+          const tabsBtns = Array.from(currentTabsContainer.querySelectorAll('.tabs__c_btn'));
+          const tabsCatalog = Array.from(currentTabsContainer.querySelectorAll('.tabs__catalog'));
+
+          tabsBtns.forEach((btn) => {
+            if (btn.closest('.tabs') === currentTabsContainer) {
+              btn.classList.remove('tabs__c_btn--active');
+            }
+          });
+
+          tabsCatalog.forEach((catalog) => {
+            if (catalog.closest('.tabs') === currentTabsContainer) {
+              event.stopPropagation();
+              catalog.classList.remove('tabs__catalog--active');
+            }
+          });
+
+          // Устанавливаем активное состояние для выбранной вкладки
+          tabsBtn.classList.add('tabs__c_btn--active');
+          const targetCatalog = currentTabsContainer.querySelector(
+            `.tabs__catalog[data-tab="${tabsBtn.dataset.tab}"]`,
+          );
+          if (targetCatalog) {
+            targetCatalog.classList.add('tabs__catalog--active');
+          }
+        });
       });
     };
+
+    /**
+     * Выпадашка
+     */
+    const dropdown = document.querySelector('.dropdown--js');
+    if (dropdown) {
+      let dropdowns = document.querySelectorAll('.dropdown--js');
+      dropdowns.forEach(dropdown => {
+
+        function updateSelected() {
+          let selectedValue = dropdown.querySelector('.dropdown__value');
+          let selectedOption = document.querySelector('.dropdown__radio:checked');
+          let selectedLabel = selectedOption.parentElement.querySelector('.dropdown__label');
+          let text = selectedLabel.textContent;
+          let data = selectedLabel.dataset.tab;
+          let selectedDropdown = dropdown.querySelector('.dropdown__selected--js');
+          selectedDropdown.querySelector('span').textContent = text;
+          selectedValue.dataset.value = text;
+          selectedDropdown.dataset.tab = data;
+        }
+
+        function toggleClass(el, className, add) {
+          let addClass = add;
+          if (typeof addClass === 'undefined') {
+            addClass = !el.classList.contains(className);
+            dropdown.querySelector('.dropdown__selected--js').click();
+          }
+          if (addClass) {
+            el.classList.add(className);
+          } else {
+            el.classList.remove(className);
+          }
+        }
+
+        let radios = dropdown.querySelectorAll('.dropdown__radio');
+        let root = dropdown;
+
+        for (let i = 0; i < radios.length; ++i) {
+          let radio = radios[i];
+          radio.addEventListener('change', function () {
+            updateSelected();
+          });
+          radio.addEventListener('click', function () {
+            toggleClass(root, 'is-active', false);
+          });
+        }
+
+        let selectedLabel = dropdown.querySelector('.dropdown__selected--js');
+        selectedLabel.addEventListener('click', function () {
+          toggleClass(root, 'is-active');
+        });
+
+        // updateSelected();
+      });
+    }
 
     /**
      * Инициализация Lenis и ScrollTrigger
@@ -305,49 +400,6 @@
         }
       );
     });
-
-    /**
-     * dropdown
-     */
-    if (document.querySelectorAll('.dropdown')) {
-      document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
-        const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
-        const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
-        const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
-        const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
-
-        dropDownBtn.addEventListener('click', function (e) {
-          dropDownList.classList.toggle('dropdown__list--visible');
-          this.classList.add('dropdown__button--active');
-        });
-
-        dropDownListItems.forEach(function (listItem) {
-          listItem.addEventListener('click', function (e) {
-            e.stopPropagation();
-            dropDownBtn.innerHTML = this.innerHTML;
-            dropDownBtn.dataset.tab = this.dataset.tab;
-            dropDownBtn.focus();
-            dropDownBtn.click();
-            dropDownInput.value = this.dataset.value;
-            dropDownList.classList.remove('dropdown__list--visible');
-          });
-        });
-
-        document.addEventListener('click', function (e) {
-          if (e.target !== dropDownBtn) {
-            dropDownBtn.classList.remove('dropdown__button--active');
-            dropDownList.classList.remove('dropdown__list--visible');
-          }
-        });
-
-        document.addEventListener('keydown', function (e) {
-          if (e.key === 'Tab' || e.key === 'Escape') {
-            dropDownBtn.classList.remove('dropdown__button--active');
-            dropDownList.classList.remove('dropdown__list--visible');
-          }
-        });
-      });
-    }
 
     if (('; ' + document.cookie).split(`; COOKIE_ACCEPT=`).pop().split(';')[0] !== '1') {
       const cookiesNotify = document.getElementById('cookie');

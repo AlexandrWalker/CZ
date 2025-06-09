@@ -179,61 +179,65 @@
               </p>
               <div class="filter__items tabs__filter tabs__filter--active" data-tab="milk">
                 <div class="filter__item">
-                  <input id="filter_1" type="radio" name="filter" checked>
+                  <input id="filter_1" type="radio" name="filter_milk" checked>
                   <label for="filter_1">
                     2,5%
                   </label>
                 </div>
                 <div class="filter__item">
-                  <input id="filter_2" type="radio" name="filter">
+                  <input id="filter_2" type="radio" name="filter_milk">
                   <label for="filter_2">
                     3,2%
                   </label>
                 </div>
                 <div class="filter__item">
-                  <input id="filter_3" type="radio" name="filter">
+                  <input id="filter_3" type="radio" name="filter_milk">
                   <label for="filter_3">
                     1,5%
                   </label>
                 </div>
               </div>
+
               <div class="filter__items tabs__filter" data-tab="cream">
                 <div class="filter__item">
-                  <input id="filter_4" type="radio" name="filter" checked>
+                  <input id="filter_4" type="radio" name="filter_cream" checked>
                   <label for="filter_4">
                     15%
                   </label>
                 </div>
                 <div class="filter__item">
-                  <input id="filter_5" type="radio" name="filter">
+                  <input id="filter_5" type="radio" name="filter_cream">
                   <label for="filter_5">
                     20%
                   </label>
                 </div>
               </div>
+
               <div class="filter__items tabs__filter" data-tab="butter">
                 <div class="filter__item">
-                  <input id="filter_6" type="radio" name="filter" checked>
+                  <input id="filter_6" type="radio" name="filter_butter" checked>
                   <label for="filter_6">
                     82,5%
                   </label>
                 </div>
                 <div class="filter__item">
-                  <input id="filter_7" type="radio" name="filter">
+                  <input id="filter_7" type="radio" name="filter_butter">
                   <label for="filter_7">
                     72,5%
                   </label>
                 </div>
               </div>
             </div>
+
             <div class="catalog__btns">
-              <a class="catalog__btn" href="/b2c">
+              <button class="catalog__btn tabs__c_btn tabs__c_btn--active" data-tab="b2c">
                 ДЛЯ B2C
-              </a>
-              <a class="catalog__btn catalog__btn--active" href="/b2b">
+              </button>
+              <button class="catalog__btn tabs__c_btn" data-tab="b2b">
                 ДЛЯ B2B
-              </a>
+              </button>
             </div>
+
             <div class="tabs__btns">
               <div class="tabs__btn tabs__btn--active" data-tab="milk">
                 Молоко
@@ -245,26 +249,34 @@
                 Масло
               </div>
             </div>
-            <div class="dropdown">
-              <button class="dropdown__button icon-chevron-arrow tabs__btn tabs__btn--active" data-value="Молоко"
-                data-tab="milk">
-                Молоко
-              </button>
-              <ul class="dropdown__list dropdown__list-border">
-                <li class="dropdown__list-item " data-value="Молоко" data-tab="milk">
-                  Молоко
-                </li>
-                <li class="dropdown__list-item" data-value="Сметана" data-tab="cream">
-                  Сметана
-                </li>
-                <li class="dropdown__list-item" data-value="Масло" data-tab="butter">
-                  Масло
-                </li>
-              </ul>
-              <input type="text" name="select-category" value="all" class="dropdown__input-hidden">
+
+            <div class="dropdown dropdown--js">
+              <div
+                class="dropdown__selected toggle--label dropdown__selected-label--js dropdown__selected--js icon-chevron-arrow"
+                data-value="Молоко" data-tab="milk">
+                <span>Молоко</span>
+              </div>
+              <div class="dropdown__container">
+                <div class="dropdown__content toggle--panel">
+                  <label class="dropdown__option">
+                    <input class="dropdown__radio" name="type__radio" type="radio" value="Молоко" checked />
+                    <span class="dropdown__label tabs__btn tabs__btn--active" data-tab="milk">Молоко</span>
+                  </label>
+                  <label class="dropdown__option">
+                    <input class="dropdown__radio" name="type__radio" type="radio" value="Сметана" />
+                    <span class="dropdown__label tabs__btn" data-tab="cream">Сметана</span>
+                  </label>
+                  <label class="dropdown__option">
+                    <input class="dropdown__radio" name="type__radio" type="radio" value="Масло" />
+                    <span class="dropdown__label tabs__btn" data-tab="butter">Масло</span>
+                  </label>
+                </div>
+              </div>
+              <input class="dropdown__value" type="hidden">
             </div>
+
           </div>
-          <div class="catalog__body">
+          <div class="catalog__body tabs__catalog tabs__catalog--active" data-tab="b2c">
             <div data-tab="milk" class="catalog__items tabs__panel tabs__panel--active">
 
               <div class="catalog__item">
@@ -339,47 +351,6 @@
                   </span>
                   <p class="product__item-desc">
                     Молоко питьевое пастеризованное с массовой долей жира 2,5% ГОСТ 31450-2013
-                  </p>
-                  <span class="product__item-link link">
-                    <i class="icon-chevron-circle"></i>
-                    Подробнее
-                  </span>
-                </a>
-              </div>
-
-              <div class="catalog__item">
-                <a class="product__item" href="/suhoe_moloko_25kg">
-                  <img class="product__item-img" src="./images/card/suhoe_moloko.png" alt="Сухое обезжиренное молоко">
-                  <div class="sticker">
-                    <img src="./images/card/sticker.svg" alt="">
-                    <span>1,5 %</span>
-                  </div>
-                  <span class="product__item-name">
-                    Сухое обезжиренное молоко
-                  </span>
-                  <p class="product__item-desc">
-                    Мешок 25кг. ГОСТ 33629-2015
-                  </p>
-                  <span class="product__item-link link">
-                    <i class="icon-chevron-circle"></i>
-                    Подробнее
-                  </span>
-                </a>
-              </div>
-
-              <div class="catalog__item">
-                <a class="product__item" href="/suhoe_moloko_dlya_detskogo_pitanya_25kg">
-                  <img class="product__item-img" src="./images/card/suhoe_moloko.png"
-                    alt="Молоко сухое обезжиренное для производства продуктов детского питания">
-                  <div class="sticker">
-                    <img src="./images/card/sticker.svg" alt="">
-                    <span>1.5 %</span>
-                  </div>
-                  <span class="product__item-name">
-                    Молоко сухое обезжиренное для производства продуктов детского питания
-                  </span>
-                  <p class="product__item-desc">
-                    Мешок 25кг. ГОСТ 34255-2017
                   </p>
                   <span class="product__item-link link">
                     <i class="icon-chevron-circle"></i>
@@ -515,6 +486,53 @@
                 </a>
               </div>
 
+            </div>
+          </div>
+          <div class="catalog__body tabs__catalog" data-tab="b2b">
+
+            <div data-tab="milk" class="catalog__items tabs__panel tabs__panel--active">
+              <div class="catalog__item">
+                <a class="product__item" href="/suhoe_moloko_25kg">
+                  <img class="product__item-img" src="./images/card/suhoe_moloko.png" alt="Сухое обезжиренное молоко">
+                  <div class="sticker">
+                    <img src="./images/card/sticker.svg" alt="">
+                    <span>1,5 %</span>
+                  </div>
+                  <span class="product__item-name">
+                    Сухое обезжиренное молоко
+                  </span>
+                  <p class="product__item-desc">
+                    Мешок 25кг. ГОСТ 33629-2015
+                  </p>
+                  <span class="product__item-link link">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </span>
+                </a>
+              </div>
+              <div class="catalog__item">
+                <a class="product__item" href="/suhoe_moloko_dlya_detskogo_pitanya_25kg">
+                  <img class="product__item-img" src="./images/card/suhoe_moloko.png"
+                    alt="Молоко сухое обезжиренное для производства продуктов детского питания">
+                  <div class="sticker">
+                    <img src="./images/card/sticker.svg" alt="">
+                    <span>1.5 %</span>
+                  </div>
+                  <span class="product__item-name">
+                    Молоко сухое обезжиренное для производства продуктов детского питания
+                  </span>
+                  <p class="product__item-desc">
+                    Мешок 25кг. ГОСТ 34255-2017
+                  </p>
+                  <span class="product__item-link link">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            <div data-tab="butter" class="catalog__items tabs__panel">
               <div class="catalog__item">
                 <a class="product__item" href="/maslo_82.5_20kg">
                   <img class="product__item-img" src="./images/card/maslo_monolit.png"
@@ -535,7 +553,6 @@
                   </span>
                 </a>
               </div>
-
               <div class="catalog__item">
                 <a class="product__item" href="/maslo_82.5_5kg">
                   <img class="product__item-img" src="./images/card/maslo_monolit.png"
@@ -556,7 +573,6 @@
                   </span>
                 </a>
               </div>
-
               <div class="catalog__item">
                 <a class="product__item" href="/maslo_k_82.5_20kg">
                   <img class="product__item-img" src="./images/card/maslo_monolit.png"
@@ -577,7 +593,6 @@
                   </span>
                 </a>
               </div>
-
               <div class="catalog__item">
                 <a class="product__item" href="/maslo_k_82.5_5kg">
                   <img class="product__item-img" src="./images/card/maslo_monolit.png"
@@ -598,8 +613,8 @@
                   </span>
                 </a>
               </div>
-
             </div>
+
           </div>
         </div>
       </div>

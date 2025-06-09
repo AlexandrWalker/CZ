@@ -213,7 +213,8 @@
         </div>
       </div>
     </section>
-    <section class="product">
+    <!-- Продукция завода -->
+    <section class="product tabs">
       <div class="container product__container">
         <div class="product__inner">
           <div class="product__head">
@@ -222,17 +223,21 @@
             </h2>
             <div class="product__head-wrap">
               <div class="product__head-btns">
-                <a class="product__head-btn btn" href="/">ДЛЯ B2C</a>
-                <a class="product__head-btn btn btn-yellow" href="/">ДЛЯ B2B</a>
+                <button class="product__head-btn btn tabs__btn tabs__btn--active" data-tab="tabs-b2c">ДЛЯ B2C</button>
+                <button class="product__head-btn btn tabs__btn" data-tab="tabs-b2b">ДЛЯ B2B</button>
               </div>
               <div class="slider__btns">
-                <div class="swiper-button-prev icon-chevron-arrow"></div>
-                <div class="swiper-button-next icon-chevron-arrow"></div>
+                <div class="swiper-button-prev">
+                  <i class="icon-chevron-arrow"></i>
+                </div>
+                <div class="swiper-button-next">
+                  <i class="icon-chevron-arrow"></i>
+                </div>
               </div>
             </div>
           </div>
           <div class="product__body">
-            <div class="product__slider product__slider-init">
+            <div class="product__slider product__slider-init tabs__panel tabs__panel--active" data-tab="tabs-b2c">
               <div class="swiper-wrapper">
                 <div class="product__slider-item swiper-slide">
                   <a class="product__item" href="/moloko_3.2_1000">
@@ -343,6 +348,129 @@
                     </span>
                     <p>
                       Сметана с массовой долей жира 20%, ГОСТ 31452-2012
+                    </p>
+                    <span class="product__item-link link">
+                      <i class="icon-chevron-circle"></i>
+                      Подробнее
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="product__slider product__slider-init tabs__panel" data-tab="tabs-b2b">
+              <div class="swiper-wrapper">
+                <div class="product__slider-item swiper-slide">
+                  <a class="product__item" href="/suhoe_moloko_25kg">
+                    <img class="product__item-img" src="./images/card/suhoe_moloko.png" alt="Сухое обезжиренное молоко">
+                    <div class="sticker">
+                      <img src="./images/card/sticker.svg" alt="">
+                      <span>1,5 %</span>
+                    </div>
+                    <span class="product__item-name">
+                      Сухое обезжиренное молоко
+                    </span>
+                    <p>
+                      Мешок 25кг. ГОСТ 33629-2015
+                    </p>
+                    <span class="product__item-link link">
+                      <i class="icon-chevron-circle"></i>
+                      Подробнее
+                    </span>
+                  </a>
+                </div>
+                <div class="product__slider-item swiper-slide">
+                  <a class="product__item" href="/suhoe_moloko_dlya_detskogo_pitanya_25kg">
+                    <img class="product__item-img" src="./images/card/suhoe_moloko.png"
+                      alt="Молоко сухое обезжиренное для производства продуктов детского питания">
+                    <div class="sticker">
+                      <img src="./images/card/sticker.svg" alt="">
+                      <span>1,5 %</span>
+                    </div>
+                    <span class="product__item-name">
+                      Молоко сухое обезжиренное для производства продуктов детского питания
+                    </span>
+                    <p>
+                      Мешок 25кг. ГОСТ 34255-2017
+                    </p>
+                    <span class="product__item-link link">
+                      <i class="icon-chevron-circle"></i>
+                      Подробнее
+                    </span>
+                  </a>
+                </div>
+                <div class="product__slider-item swiper-slide">
+                  <a class="product__item" href="/maslo_82.5_20kg">
+                    <img class="product__item-img" src="./images/card/maslo_monolit.png"
+                      alt="Масло сливочное традиционное м.д.ж. 82,5%">
+                    <div class="sticker">
+                      <img src="./images/card/sticker.svg" alt="">
+                      <span>82,5 %</span>
+                    </div>
+                    <span class="product__item-name">
+                      Масло сливочное традиционное м.д.ж. 82,5%
+                    </span>
+                    <p>
+                      Монолит 20кг. ГОСТ 32261-2013
+                    </p>
+                    <span class="product__item-link link">
+                      <i class="icon-chevron-circle"></i>
+                      Подробнее
+                    </span>
+                  </a>
+                </div>
+                <div class="product__slider-item swiper-slide">
+                  <a class="product__item" href="/maslo_82.5_5kg">
+                    <img class="product__item-img" src="./images/card/maslo_monolit.png"
+                      alt="Масло сливочное традиционное м.д.ж. 82,5%">
+                    <div class="sticker">
+                      <img src="./images/card/sticker.svg" alt="">
+                      <span>82,5 %</span>
+                    </div>
+                    <span class="product__item-name">
+                      Масло сливочное традиционное м.д.ж. 82,5%
+                    </span>
+                    <p>
+                      Монолит 5кг. ГОСТ 32261-2013
+                    </p>
+                    <span class="product__item-link link">
+                      <i class="icon-chevron-circle"></i>
+                      Подробнее
+                    </span>
+                  </a>
+                </div>
+                <div class="product__slider-item swiper-slide">
+                  <a class="product__item" href="/maslo_k_82.5_20kg">
+                    <img class="product__item-img" src="./images/card/maslo_monolit.png"
+                      alt="Масло сливочное крестьянское м.д.ж. 72,5%">
+                    <div class="sticker">
+                      <img src="./images/card/sticker.svg" alt="">
+                      <span>82,5 %</span>
+                    </div>
+                    <span class="product__item-name">
+                      Масло сливочное крестьянское м.д.ж. 72,5%
+                    </span>
+                    <p>
+                      Монолит 5кг. ГОСТ 32261-2013
+                    </p>
+                    <span class="product__item-link link">
+                      <i class="icon-chevron-circle"></i>
+                      Подробнее
+                    </span>
+                  </a>
+                </div>
+                <div class="product__slider-item swiper-slide">
+                  <a class="product__item" href="/maslo_k_82.5_5kg">
+                    <img class="product__item-img" src="./images/card/maslo_monolit.png"
+                      alt="Масло сливочное крестьянское м.д.ж. 72,5%">
+                    <div class="sticker">
+                      <img src="./images/card/sticker.svg" alt="">
+                      <span>72,5 %</span>
+                    </div>
+                    <span class="product__item-name">
+                      Масло сливочное крестьянское м.д.ж. 72,5%
+                    </span>
+                    <p>
+                      Монолит 5 кг. ГОСТ 32261-2013
                     </p>
                     <span class="product__item-link link">
                       <i class="icon-chevron-circle"></i>

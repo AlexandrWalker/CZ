@@ -540,7 +540,7 @@ html.lenis body {
     gap: 2rem;
   }
 
-  &__btn {
+  &__btn:not(.btn, .dropdown__label) {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -353,6 +353,10 @@
     &-btn {
       min-width: 19rem;
       text-transform: uppercase;
+
+      &.tabs__btn--active {
+        --button-bgcolor: var(--primary-yellow);
+      }
     }
 
     .btn-yellow:hover {
@@ -373,6 +377,11 @@
   &__slider {
     position: relative;
     margin-bottom: 2rem;
+    display: none;
+
+    &.tabs__panel--active {
+      display: block;
+    }
 
     .swiper-slide {
       height: auto;
