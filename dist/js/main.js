@@ -79,14 +79,14 @@
       speed: 600,
       loop: true,
       grabCursor: true,
-      thumbs: {
-        swiper: values__thumbs,
-      },
       navigation: {
         prevEl: ".swiper-button-prev",
         nextEl: ".swiper-button-next",
       },
     });
+
+    values__thumbs.controller.control = values__slider;
+    values__slider.controller.control = values__thumbs;
 
     function harmonicFunc() {
       const items = document.querySelectorAll('.work__item'),
@@ -241,6 +241,7 @@
           tabsFilter.forEach((filter) => {
             if (filter.closest('.tabs') === currentTabsContainer) {
               filter.classList.remove('tabs__filter--active');
+              filter.parentNode.classList.remove('show');
             }
           });
 
@@ -249,7 +250,7 @@
           const targetPanel = currentTabsContainer.querySelectorAll(
             `.tabs__panel[data-tab="${tabsBtn.dataset.tab}"]`,
           );
-          const targetFilter = currentTabsContainer.querySelector(
+          const targetFilter = currentTabsContainer.querySelectorAll(
             `.tabs__filter[data-tab="${tabsBtn.dataset.tab}"]`,
           );
           if (targetPanel) {
@@ -258,7 +259,10 @@
             });
           }
           if (targetFilter) {
-            targetFilter.classList.add('tabs__filter--active');
+            targetFilter.forEach(targetFilters => {
+              targetFilters.classList.add('tabs__filter--active');
+              targetFilters.parentNode.classList.add('show');
+            });
           }
         });
 
