@@ -1,3 +1,5 @@
+// const { init } = require("browser-sync");
+
 (() => {
   document.addEventListener('DOMContentLoaded', () => {
 
@@ -30,6 +32,7 @@
       slidesPerGroup: 1,
       watchSlidesProgress: true,
       speed: 600,
+      init: false,
       mousewheel: {
         forceToAxis: true,
       },
@@ -60,6 +63,8 @@
       speed: 600,
       loop: true,
       watchSlidesProgress: true,
+      grabCursor: false,
+      mousewheel: false,
       pagination: {
         el: ".swiper-pagination",
         type: "fraction",
@@ -79,6 +84,9 @@
       speed: 600,
       loop: true,
       grabCursor: true,
+      mousewheel: {
+        forceToAxis: true,
+      },
       navigation: {
         prevEl: ".swiper-button-prev",
         nextEl: ".swiper-button-next",
@@ -158,6 +166,7 @@
         }
       });
     }
+    harmonicFunc();
 
     function accordionFunc() {
       var accordionHead = document.querySelectorAll('.accordion'),
@@ -169,9 +178,132 @@
             accordionActive[0].classList.remove('active');
           }
           this.classList.toggle('active');
+          console.log('ass');
+
+          if (document.getElementById('menu')) {
+            const menu = document.getElementById('menu');
+            if (menu.querySelector('.active')) {
+              menu.classList.add('menu-active');
+            } else {
+              menu.classList.remove('menu-active');
+            }
+          }
         });
       });
     }
+    accordionFunc();
+
+    /**
+     * Активация любого количества модальных окон
+     */
+    function modalFunc() {
+      var modal__btn = document.querySelector('.modal__btn');
+
+      if (!modal__btn) {
+        return;
+      } else {
+
+        var close = document.querySelectorAll('.modal__close-btn');
+        var openBtn = document.querySelectorAll('.modal__btn');
+
+        Array.from(openBtn, openButton => {
+          openButton.addEventListener('click', e => {
+
+            let open = document.getElementsByClassName('open');
+
+            if (open.length > 0 && open[0] !== this) {
+              open[0].classList.remove('open');
+            }
+
+            let modalId = e.target.getAttribute('data-id');
+            if (modalId) {
+              document.getElementById(modalId).classList.add('open');
+              document.body.classList.add('no-scroll');
+            } else {
+              return
+            }
+
+            Array.from(close, closeButton => {
+              closeButton.addEventListener('click', e => {
+                document.getElementById(modalId).classList.remove("open");
+                document.body.classList.remove('no-scroll');
+              });
+
+              window.addEventListener('keydown', (e) => {
+                if (e.key === "Escape") {
+                  document.getElementById(modalId).classList.remove("open")
+                  document.body.classList.remove('no-scroll');
+                }
+              });
+
+              document.querySelector(".modal.open .modal__box").addEventListener('click', event => {
+                event._isClickWithInModal = true;
+              });
+
+              document.getElementById(modalId).addEventListener('click', event => {
+                if (event._isClickWithInModal) return;
+                event.currentTarget.classList.remove('open');
+                document.body.classList.remove('no-scroll');
+              });
+            });
+          });
+        });
+      }
+    };
+    modalFunc();
+
+    /**
+     * Управляет поведением меню-бургера.
+     */
+    function burgerNav() {
+      const burger = document.getElementById('burger');
+      const menu = document.getElementById('menu');
+      const closeButton = document.querySelector('.menu__close');
+      const overlay = document.querySelector('.menu__overlay');
+
+      /**
+       * Переключает видимость меню.
+       */
+      const toggleMenu = () => {
+        const isOpened = burger.classList.toggle('burger--opened');
+        menu.classList.toggle('menu--opened', isOpened);
+        lenis.stop();
+      };
+
+      /**
+       * Закрывает меню.
+       */
+      const closeMenu = () => {
+        burger.classList.remove('burger--opened');
+        menu.classList.remove('menu--opened');
+
+        const accordionActive = menu.getElementsByClassName('active');
+
+        if (accordionActive.length > 0 && accordionActive[0] !== this) {
+          accordionActive[0].classList.remove('active');
+        }
+
+        menu.classList.remove('menu-active');
+
+        lenis.start();
+      };
+
+      // Открытие/закрытие меню по клику на бургер
+      burger.addEventListener('click', toggleMenu);
+
+      // Закрытие меню по клику на кнопку закрытия или на overlay
+      [closeButton, overlay].forEach((element) => element.addEventListener('click', closeMenu));
+
+      // Закрытие меню при клике вне области меню и бургера
+      document.addEventListener('click', (event) => {
+        if (!menu.contains(event.target) && !burger.contains(event.target)) {
+          closeMenu();
+        }
+      });
+
+      document.querySelectorAll('.menu__list a').forEach((element) => element.addEventListener('click', closeMenu));
+    }
+    burgerNav();
 
     const numbs = document.querySelector('.numbs');
     if (numbs) {
@@ -180,9 +312,10 @@
         const num = Number(array.dataset.val);
         let interval = setInterval(() => {
           n < num ? (n += num / (time / 10)) : clearInterval(interval);
+          n < num ? (n += num / (time / 10)) : numbs.classList.add('active');
           array.classList.contains('frac')
-            ? (array.innerHTML = n.toFixed(1))
-            : (array.innerHTML = Math.round(n));
+            ? (array.innerHTML = new Intl.NumberFormat('ru-RU').format(n.toFixed(1)))
+            : (array.innerHTML = new Intl.NumberFormat('ru-RU').format(Math.round(n)));
         }, 10);
       }
 
@@ -200,6 +333,28 @@
             onStart: () => counter(numb),
           });
         });
+      });
+    }
+
+    const searchBtn = document.getElementById('search__btn');
+    if (searchBtn) {
+      searchBtn.addEventListener('click', function () {
+
+        searchBtn.parentNode.classList.toggle('search--show');
+
+        window.addEventListener('keydown', (e) => {
+          if (e.key === "Escape") {
+            searchBtn.parentNode.classList.remove("search--show")
+          }
+        });
+
+        document.addEventListener('click', (e) => {
+          const withinBoundaries = e.composedPath().includes(searchBtn.parentNode);
+
+          if (!withinBoundaries) {
+            searchBtn.parentNode.classList.remove("search--show")
+          }
+        })
       });
     }
 
@@ -302,9 +457,17 @@
           if (targetCatalog) {
             targetCatalog.classList.add('tabs__catalog--active');
           }
+
+          console.log(tabsBtn.dataset.tab);
+          if (tabsBtn.dataset.tab == 'b2b') {
+            tabsBtn.parentNode.parentNode.classList.add('filter__parent--active');
+          } else {
+            tabsBtn.parentNode.parentNode.classList.remove('filter__parent--active');
+          }
         });
       });
     };
+    tabsFunc();
 
     /**
      * Выпадашка
@@ -361,6 +524,109 @@
       });
     }
 
+    $(window).on('resize load', function () {
+
+      const headerPhone = document.getElementById('header-phone');
+
+      if (headerPhone) {
+        if (window.innerWidth <= 520) {
+          headerPhone.innerHTML = 'Связаться';
+        } else {
+          headerPhone.innerHTML = headerPhone.dataset.value;
+        }
+      }
+
+      const cookieBtn = document.getElementById('cookie-btn');
+
+      if (cookieBtn) {
+        if (window.innerWidth <= 520) {
+          cookieBtn.innerHTML = 'Ок';
+        } else {
+          cookieBtn.innerHTML = 'Принять';
+        }
+      }
+
+      const productHeadDownload = document.querySelector('.product__head-download');
+
+      if (productHeadDownload) {
+        if (window.innerWidth <= 768) {
+          productHeadDownload.querySelector('span').innerHTML = 'Каталог продукции';
+        } else {
+          productHeadDownload.querySelector('span').innerHTML = productHeadDownload.querySelector('span').dataset.value;
+        }
+      }
+    });
+
+    /**
+     * Инициализация TransferElements
+     */
+    const madeLink = document.getElementById('made-link');
+    const roskachestvo = document.getElementById('roskachestvo');
+    const productDownload = document.querySelector('.product__head-download');
+    const videoLink = document.querySelector('.video__link');
+    const newsMain = document.querySelector('.news--main');
+
+    if (madeLink) {
+      new TransferElements(
+        {
+          sourceElement: madeLink,
+          breakpoints: {
+            768: {
+              targetElement: document.querySelector('.transfer-pos--1')
+            }
+          },
+        }
+      );
+    }
+    if (roskachestvo) {
+      new TransferElements(
+        {
+          sourceElement: roskachestvo,
+          breakpoints: {
+            768: {
+              targetElement: document.querySelector('.transfer-pos--2')
+            }
+          },
+        }
+      );
+    }
+    if (productDownload) {
+      new TransferElements(
+        {
+          sourceElement: productDownload,
+          breakpoints: {
+            768: {
+              targetElement: document.querySelector('.product__body')
+            }
+          },
+        }
+      );
+    }
+    if (videoLink) {
+      new TransferElements(
+        {
+          sourceElement: videoLink,
+          breakpoints: {
+            768: {
+              targetElement: document.querySelector('.about__content')
+            }
+          },
+        }
+      );
+    }
+    if (newsMain) {
+      new TransferElements(
+        {
+          sourceElement: newsMain.querySelector('.news__head-btn'),
+          breakpoints: {
+            768: {
+              targetElement: newsMain.querySelector('.news__inner')
+            }
+          },
+        }
+      );
+    }
+
     /**
      * Инициализация Lenis и ScrollTrigger
      */
@@ -388,6 +654,14 @@
 
     gsap.registerPlugin(ScrollTrigger);
 
+    $('.video__link').fancybox({
+      openEffect: 'none',
+      closeEffect: 'none',
+      helpers: {
+        media: {}
+      }
+    });
+
     const parallaxImgContainers = document.querySelectorAll('[data-animation="parallax-img"]');
     parallaxImgContainers.forEach(parallaxImgContainer => {
       const image = parallaxImgContainer.querySelector('img');
@@ -405,6 +679,48 @@
       );
     });
 
+    $(window).on('resize load', function () {
+      // window.addEventListener('resize load', function () {
+
+      if (window.innerWidth <= '768') {
+        history__slider.init();
+      } else {
+        /* history animation */
+        const panelsContainers = document.getElementById("history__slider");
+
+        if (panelsContainers) {
+          let panelsContainer = document.querySelector("#history__slider"), tween;
+          const panels = gsap.utils.toArray("#history__slider .history__slide");
+
+          tween = gsap.to(panels, {
+            x: () => -1 * (panelsContainer.scrollWidth - (innerWidth / 3)),
+            ease: "none",
+            scrollTrigger: {
+              trigger: "#history__inner",
+              pin: true,
+              start: "top 20%",
+              scrub: 1,
+              end: () => "+=" + (panelsContainer.scrollWidth - innerWidth),
+              // markers: true,
+            }
+          });
+        }
+
+        $(window).on('scroll', function () {
+
+          const story__slides = document.querySelectorAll('.history__slide');
+
+          story__slides.forEach(story__slide => {
+            if (story__slide.getBoundingClientRect().left < window.innerWidth / 3 && story__slide.getBoundingClientRect().right > window.innerWidth / 3) {
+              story__slide.classList.add('swiper-slide-active');
+            } else {
+              story__slide.classList.remove('swiper-slide-active');
+            }
+          });
+        });
+      }
+    });
+
     if (('; ' + document.cookie).split(`; COOKIE_ACCEPT=`).pop().split(';')[0] !== '1') {
       const cookiesNotify = document.getElementById('cookie');
 
@@ -413,9 +729,6 @@
       }
     }
 
-    accordionFunc();
-    harmonicFunc();
-    tabsFunc();
   });
 })();
 

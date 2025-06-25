@@ -48,8 +48,10 @@
 
     p {
       font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 1.2;
 
-      &.contacts__list-title {
+      &.contacts__list-text {
         font-weight: 700;
       }
     }
@@ -60,6 +62,10 @@
       line-height: 120%;
       text-transform: uppercase;
       color: inherit;
+
+      &:hover {
+        text-decoration-line: underline;
+      }
     }
   }
 }
@@ -114,6 +120,10 @@
       line-height: 100%;
       text-transform: uppercase;
       color: var(--white);
+
+      &:hover {
+        text-decoration-line: underline;
+      }
     }
 
     &:last-child {
@@ -125,7 +135,7 @@
   &__map {
     width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
     margin: -12.5rem 0 6rem;
   }
 }
