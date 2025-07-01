@@ -1840,6 +1840,14 @@
     max-width: 26rem;
   }
 
+  .hero--desktop {
+    display: none;
+  }
+
+  .hero--mobile {
+    display: block;
+  }
+
   .advan {
     margin-bottom: 2rem;
   }

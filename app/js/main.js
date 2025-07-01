@@ -7,6 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
     var product__slider = new Swiper(".product__slider-init", {
       slidesPerView: 2,
       spaceBetween: 10,
+      loop: true,
       speed: 600,
       mousewheel: {
         forceToAxis: true,
@@ -762,11 +763,25 @@ gsap.registerPlugin(ScrollTrigger);
       const timelineItems = document.querySelectorAll('.timeline-item');
       const timelineWidth = timelineWrapper.scrollWidth - window.innerWidth;
 
+      // $(window).on('resize load', function () {
+      //   if (window.innerWidth <= '768') {
+      //     const timelineTop = `top 120px`;
+      //     console.log(timelineTop);
+      //     asd(timelineTop);
+      //   } else {
+      //     const timelineTop = `top 120px`;
+      //     console.log(timelineTop);
+      //     asd(timelineTop);
+      //   }
+      // });
+
       // const header = document.querySelector('.header');
 
+      // function asd(timelineTop) {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".history",
+          // start: timelineTop,
           start: `top 270px`,
           endTrigger: ".values",
           end: `+=${timelineWidth}`,
@@ -811,6 +826,7 @@ gsap.registerPlugin(ScrollTrigger);
           cookiesNotify.style.display = 'block';
         }
       }
+      // }
     }
 
   });
