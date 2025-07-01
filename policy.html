@@ -1392,6 +1392,56 @@
       </div>
     </div>
   </div>
+  
+  <div class="modal lenis" id="modal-vacancy" data-lenis-prevent>
+    <div class="modal__box">
+      <button class="modal__close-btn">
+      </button>
+      <div class="modal__content">
+        <div class="modal__head">
+          <h2>
+            Не&nbsp;нашли нужную вакансию?
+            <br>Отправьте своё резюме&nbsp;нам
+          </h2>
+        </div>
+        <div class="modal__body">
+          <form action="#" method="get">
+            <div class="form-group">
+              <i class="icon-person"></i>
+              <input class="form-input" name="names" type="text" placeholder="Ваше имя" required>
+            </div>
+            <div class="form-group">
+              <i class="icon-mail"></i>
+              <input class="form-input" name="mail" type="email" placeholder="Эл. почта" pattern="^\S+@\S+\.\S+$"
+                minlength="2" maxlength="40" required>
+            </div>
+            <div class="form-group">
+              <i class="icon-person"></i>
+              <input class="form-input" name="company-name" type="text" placeholder="Название компании" required>
+            </div>
+            <div class="form-group form-file-wrap">
+              <input class="form-file-input" id="form-file" type="file" value="" tabindex="5">
+              <label class="form-file" for="form-file">
+                <div>
+                  <i class="form-file-icon"></i> <span class="form-file-text">Прикрепить резюме</span>
+                </div> <span>(не более 20 мегабайт)</span>
+              </label>
+              <div id="clear" class="form-file-clear">Удалить файл</div>
+            </div>
+            <button class="form-btn btn btn-yellow">
+              Отправить
+            </button>
+            <div class="form-bottom">
+              <p>
+                Нажимая кнопку «Отправить», я согласен с&nbsp;<a href="/policy.html">обработкой персональных
+                  данных</a> и с&nbsp;<a href="/agreement.html">пользовательским соглашением</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- scipts -->
   <script src="./libs/gsap/gsap.min.js" defer></script>
   <script src="./libs/gsap/ScrollSmoother.min.js" defer></script>
