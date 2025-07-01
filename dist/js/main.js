@@ -1,4 +1,5 @@
 // const { init } = require("browser-sync");
+gsap.registerPlugin(ScrollTrigger);
 
 (() => {
   document.addEventListener('DOMContentLoaded', () => {
@@ -96,6 +97,26 @@
 
     values__thumbs.controller.control = values__slider;
     values__slider.controller.control = values__thumbs;
+
+    /**
+     * Инициализация Lenis
+     */
+    const lenis = new Lenis({
+      anchors: {
+        offset: 100,
+        onComplete: () => {
+          console.log('scrolled to anchor')
+        }
+      }
+    });
+
+    lenis.on('scroll', ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
 
     function harmonicFunc() {
       const items = document.querySelectorAll('.work__item'),
@@ -220,6 +241,7 @@
             if (modalId) {
               document.getElementById(modalId).classList.add('open');
               document.body.classList.add('no-scroll');
+              // lenis.stop();
             } else {
               return
             }
@@ -228,12 +250,14 @@
               closeButton.addEventListener('click', e => {
                 document.getElementById(modalId).classList.remove("open");
                 document.body.classList.remove('no-scroll');
+                // lenis.start();
               });
 
               window.addEventListener('keydown', (e) => {
                 if (e.key === "Escape") {
                   document.getElementById(modalId).classList.remove("open")
                   document.body.classList.remove('no-scroll');
+                  // lenis.start();
                 }
               });
 
@@ -245,6 +269,7 @@
                 if (event._isClickWithInModal) return;
                 event.currentTarget.classList.remove('open');
                 document.body.classList.remove('no-scroll');
+                // lenis.start();
               });
             });
           });
@@ -628,32 +653,7 @@
       );
     }
 
-    /**
-     * Инициализация Lenis и ScrollTrigger
-     */
-    // Initialize a new Lenis instance for smooth scrolling
-    const lenis = new Lenis({
-      anchors: {
-        offset: 100,
-        onComplete: () => {
-          console.log('scrolled to anchor')
-        }
-      }
-    });
 
-    // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
-    lenis.on('scroll', ScrollTrigger.update);
-
-    // Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
-    // This ensures Lenis's smooth scroll animation updates on each GSAP tick
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000); // Convert time from seconds to milliseconds
-    });
-
-    // Disable lag smoothing in GSAP to prevent any delay in scroll animations
-    gsap.ticker.lagSmoothing(0);
-
-    gsap.registerPlugin(ScrollTrigger);
 
     $('.video__link').fancybox({
       openEffect: 'none',
@@ -757,57 +757,59 @@
     //   }
     // });
 
-    const timelineWrapper = document.querySelector('.timeline-wrapper');
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    const timelineWidth = timelineWrapper.scrollWidth - window.innerWidth;
+    if (document.querySelector('.timeline')) {
+      const timelineWrapper = document.querySelector('.timeline-wrapper');
+      const timelineItems = document.querySelectorAll('.timeline-item');
+      const timelineWidth = timelineWrapper.scrollWidth - window.innerWidth;
 
-    // const header = document.querySelector('.header');
+      // const header = document.querySelector('.header');
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".history",
-        start: `top 270px`,
-        endTrigger: ".values",
-        end: `+=${timelineWidth}`,
-        scrub: 1,
-        pin: true,
-        anticipatePin: 1,
-        onUpdate: self => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".history",
+          start: `top 270px`,
+          endTrigger: ".values",
+          end: `+=${timelineWidth}`,
+          scrub: 1,
+          pin: true,
+          anticipatePin: 1,
+          onUpdate: self => {
 
-          const progress = self.progress;
-          const itemIndex = Math.floor(progress * (timelineItems.length - 1));
+            const progress = self.progress;
+            const itemIndex = Math.floor(progress * (timelineItems.length - 1));
 
-          timelineItems.forEach(item => item.classList.remove('swiper-slide-active'));
+            timelineItems.forEach(item => item.classList.remove('swiper-slide-active'));
 
-          if (timelineItems[itemIndex]) {
-            timelineItems[itemIndex].classList.add('swiper-slide-active');
+            if (timelineItems[itemIndex]) {
+              timelineItems[itemIndex].classList.add('swiper-slide-active');
+            }
           }
         }
-      }
-    });
+      });
 
-    tl.to(timelineWrapper, {
-      x: -timelineWidth,
-      ease: "none"
-    });
+      tl.to(timelineWrapper, {
+        x: -timelineWidth,
+        ease: "none"
+      });
 
-    document.querySelector('.button-next')?.addEventListener('click', () => {
-      const currentScroll = Math.abs(gsap.getProperty(timelineWrapper, "x"));
-      const nextScroll = Math.min(currentScroll + window.innerWidth * 0.8, timelineWidth);
-      gsap.to(timelineWrapper, { x: -nextScroll, duration: 0.5 });
-    });
+      document.querySelector('.button-next')?.addEventListener('click', () => {
+        const currentScroll = Math.abs(gsap.getProperty(timelineWrapper, "x"));
+        const nextScroll = Math.min(currentScroll + window.innerWidth * 0.8, timelineWidth);
+        gsap.to(timelineWrapper, { x: -nextScroll, duration: 0.5 });
+      });
 
-    document.querySelector('.button-prev')?.addEventListener('click', () => {
-      const currentScroll = Math.abs(gsap.getProperty(timelineWrapper, "x"));
-      const prevScroll = Math.max(currentScroll - window.innerWidth * 0.8, 0);
-      gsap.to(timelineWrapper, { x: -prevScroll, duration: 0.5 });
-    });
+      document.querySelector('.button-prev')?.addEventListener('click', () => {
+        const currentScroll = Math.abs(gsap.getProperty(timelineWrapper, "x"));
+        const prevScroll = Math.max(currentScroll - window.innerWidth * 0.8, 0);
+        gsap.to(timelineWrapper, { x: -prevScroll, duration: 0.5 });
+      });
 
-    if (('; ' + document.cookie).split(`; COOKIE_ACCEPT=`).pop().split(';')[0] !== '1') {
-      const cookiesNotify = document.getElementById('cookie');
+      if (('; ' + document.cookie).split(`; COOKIE_ACCEPT=`).pop().split(';')[0] !== '1') {
+        const cookiesNotify = document.getElementById('cookie');
 
-      if (cookiesNotify) {
-        cookiesNotify.style.display = 'block';
+        if (cookiesNotify) {
+          cookiesNotify.style.display = 'block';
+        }
       }
     }
 

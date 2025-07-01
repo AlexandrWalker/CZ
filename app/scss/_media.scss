@@ -77,6 +77,10 @@
     font-size: 1.2rem;
   }
 
+  .modal .form-file-wrap {
+    margin-bottom: 2rem;
+  }
+
   .modal .form-bottom p {
     font-size: 1.2rem;
   }
@@ -489,6 +493,8 @@
   }
 
   .callback__form h2 {
+    font-size: 2rem;
+    letter-spacing: -0.08em;
     margin-bottom: 2rem;
   }
 
@@ -1749,6 +1755,24 @@
   .principles-feat__desc-wrap {
     column-gap: 2rem;
   }
+
+  .form-file {
+    font-size: 1.2rem;
+  }
+
+  .form-file-clear {
+    font-size: 1.2rem;
+  }
+
+  .form-file i {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .form-file i::before {
+    width: 1.271rem;
+    height: 1.271rem;
+  }
 }
 
 @media (max-width: 660px) {
@@ -2865,6 +2889,18 @@
 
   .principles-feat__desc-wrap {
     column-count: unset;
+  }
+
+  .form-file {
+    font-size: 1rem;
+  }
+
+  .form-file-clear {
+    font-size: 1rem;
+  }
+
+  .form-file div {
+    margin-right: 0.5rem;
   }
 }
 
