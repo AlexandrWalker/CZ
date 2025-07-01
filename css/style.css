@@ -3985,18 +3985,6 @@ html.lenis body {
   max-width: 74rem;
   width: 100%;
 }
-.vacancy__item.active .vacancy__item-body {
-  padding-top: 3rem;
-  -ms-grid-rows: 1fr;
-  grid-template-rows: 1fr;
-}
-.vacancy__item.active .vacancy__item-head i {
-  background-color: var(--primary-accent);
-  color: var(--white);
-  -webkit-transform: rotate(90deg) scale(-1, -1);
-      -ms-transform: rotate(90deg) scale(-1, -1);
-          transform: rotate(90deg) scale(-1, -1);
-}
 .vacancy__item:hover .vacancy__item-head i {
   background-color: var(--primary-accent);
   color: var(--white);
@@ -4012,6 +4000,18 @@ html.lenis body {
       -ms-flex-align: center;
           align-items: center;
   gap: 2rem;
+}
+.vacancy__item-head.active + .vacancy__item-body {
+  padding-top: 3rem;
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+}
+.vacancy__item-head.active i {
+  background-color: var(--primary-accent);
+  color: var(--white);
+  -webkit-transform: rotate(90deg) scale(-1, -1);
+      -ms-transform: rotate(90deg) scale(-1, -1);
+          transform: rotate(90deg) scale(-1, -1);
 }
 .vacancy__item-head i {
   display: -webkit-box;
@@ -4354,6 +4354,7 @@ html.lenis body {
   height: 63.9rem;
   -o-object-fit: contain;
      object-fit: contain;
+  aspect-ratio: 1063/639;
 }
 .about__presentation {
   display: -webkit-box;

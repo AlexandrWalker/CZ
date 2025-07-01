@@ -661,6 +661,41 @@
         media: {}
       }
     });
+    // $("a.video__link").fancybox({
+    //   type: 'iframe',
+    //   iframe: {
+    //     allowfullscreen: 'true',
+    //     allowautoplay: 'true',
+    //     // allowpicture-in -picture: 'true',
+    //     // allowencrypted media: 'true',
+    //     allowgyroscope: 'true',
+    //     allowaccelerometer: 'true',
+    //     // allowclipboard- write: 'true',
+    //     // screen - wake - lock: 'true',
+    //     frameborder: 0,
+    //     width: 3840,
+    //     height: 2160,
+    //   }
+    // });
+
+    // $(function () {
+    //   $('.promo_present').fancybox
+    //     (
+    //       {
+    //         type: 'iframe',
+    //         href: "https://kinescope.io/embed/jYTJ2ukSa875vHWnJWk1HC",
+    //         iframe: {
+    //           scrolling: 'auto',
+    //           allowfullscreen: 'true',
+    //           allowautoplay: 'true',
+    //           preload: true
+    //         },
+    //         width: '3840',
+    //         height: '2160'
+    //       }
+    //     )
+    // }
+    // );
 
     const parallaxImgContainers = document.querySelectorAll('[data-animation="parallax-img"]');
     parallaxImgContainers.forEach(parallaxImgContainer => {
