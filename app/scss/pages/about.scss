@@ -445,9 +445,14 @@
       left: unset;
       width: 4rem;
       height: 4rem;
+      // transition: all 0.3s ease;
 
       &::before {
         font-size: 2.8rem;
+      }
+
+      &:hover {
+        // background-color: var(--primary-color);
       }
     }
 
@@ -460,9 +465,14 @@
       left: 0;
       width: 11.5rem;
       height: 11.5rem;
+      // transition: all 0.3s ease;
 
       &::before {
         font-size: 2.8rem;
+      }
+
+      &:hover {
+        // background-color: var(--primary-color);
       }
     }
   }

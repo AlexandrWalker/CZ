@@ -1941,6 +1941,15 @@ html.lenis body {
   font-size: 3.2rem;
 }
 
+.timeline-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+.timeline-item {
+  flex-shrink: 0;
+}
+
 .hero {
   background-image: url(./../images/main/hero-1.png);
   background-repeat: no-repeat;
@@ -3710,7 +3719,6 @@ html.lenis body {
 .values__slider .swiper-button-next::before {
   font-size: 2.8rem;
 }
-
 .mission {
   color: var(--primary-white);
   background-color: var(--primary-black);
