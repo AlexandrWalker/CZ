@@ -57,19 +57,6 @@
 
   &__item {
 
-    &.active {
-      .vacancy__item-body {
-        padding-top: 3rem;
-        grid-template-rows: 1fr;
-      }
-
-      .vacancy__item-head i {
-        background-color: var(--primary-accent);
-        color: var(--white);
-        transform: rotate(90deg) scale(-1, -1);
-      }
-    }
-
     &:hover {
 
       .vacancy__item-head i {
@@ -83,6 +70,20 @@
       justify-content: space-between;
       align-items: center;
       gap: 2rem;
+
+      &.active {
+        
+        &+.vacancy__item-body {
+          padding-top: 3rem;
+          grid-template-rows: 1fr;
+        }
+
+        i {
+          background-color: var(--primary-accent);
+          color: var(--white);
+          transform: rotate(90deg) scale(-1, -1);
+        }
+      }
 
       i {
         display: flex;
