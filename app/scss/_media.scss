@@ -69,11 +69,26 @@
     margin-bottom: 2rem;
   }
 
+  .form-textarea {
+    font-size: 1.2rem;
+    padding: 0.2rem 2rem 0.8rem 3.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .modal .form-textarea {
+    margin-bottom: 1rem;
+  }
+
+  .vacancy-page .callback__btn {
+    margin: 1rem 0 1.5rem;
+  }
+
   .modal__head {
     // width: calc(100% - 4rem);
   }
 
-  .modal .form-input {
+  .modal .form-input,
+  .modal .form-textarea {
     font-size: 1.2rem;
   }
 
@@ -900,6 +915,10 @@
     margin-bottom: 2rem;
   }
 
+  .certif__body {
+    gap: 2rem;
+  }
+
   .certif__items {
     gap: 2rem;
   }
@@ -910,7 +929,7 @@
     padding: 2rem;
   }
 
-  .certif__item-title {
+  .certif__item h3 {
     font-size: 1.6rem;
   }
 
@@ -1343,6 +1362,8 @@
   .values__block {
     width: calc(100% - 22rem);
     width: 42.7rem;
+
+    margin: auto 0;
   }
 
   .values__content-title {
@@ -2418,6 +2439,9 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
+
+    border-bottom: 0;
+    padding-bottom: 0;
   }
 
   .tabs__btns {
@@ -2429,12 +2453,16 @@
     width: calc(50% - 0.5rem);
   }
 
+  .certif .tabs__btn {
+    width: fit-content;
+  }
+
   .certif__item {
     height: 21.5rem;
     padding: 2rem 1rem;
   }
 
-  .certif__item-title {
+  .certif__item h3 {
     font-size: 1rem;
   }
 
@@ -2443,7 +2471,7 @@
     height: 7.1rem;
   }
 
-  .certif__item-text {
+  .certif__item p {
     font-size: 1rem;
   }
 
@@ -2518,6 +2546,10 @@
 
   .vacancy__item-bottom {
     gap: 1.5rem;
+  }
+
+  .vacancy-page .callback__btn {
+    margin: 1rem 0;
   }
 
   /* contacts */
@@ -2619,6 +2651,7 @@
 
   .history__slide {
     width: 50%;
+    width: 18.4rem;
   }
 
   .history__slider-item p {
@@ -2663,6 +2696,10 @@
   }
 
   .values__content-title {}
+
+  .values__thumbs {
+    padding-bottom: 0;
+  }
 
   .values__thumbs .swiper-pagination {
     display: none;
@@ -2909,6 +2946,22 @@
 
   .form-file div {
     margin-right: 0.5rem;
+  }
+
+  .form-textarea {
+    margin-bottom: 0.5rem;
+  }
+
+  .modal .form-textarea {
+    margin-bottom: 0.5rem;
+  }
+
+  #modal-vacancy .form-btn {
+    margin-bottom: 1rem;
+  }
+
+  #modal-vacancy .form-file-wrap {
+    margin-bottom: 1rem;
   }
 }
 

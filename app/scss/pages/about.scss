@@ -170,7 +170,7 @@
   &__slide {
     width: 47.2rem;
 
-    &--last {
+    &:last-child {
 
       .history__slider-line {
         background: transparent;
@@ -178,6 +178,8 @@
         span {
           background: transparent;
         }
+
+        span::before {}
       }
     }
   }
@@ -281,6 +283,10 @@
     .history__slider-line span {
       width: 100%;
     }
+
+    .history__slider-line span::before {
+      background-color: var(--primary-accent);
+    }
   }
 
   &__adv {
@@ -349,11 +355,13 @@
 
   &__thumbs {
     position: relative;
+    padding-bottom: 5rem;
 
     .swiper-slide {
       opacity: 0;
       visibility: hidden;
       transition: all 0.3s ease;
+      height: fit-content;
     }
 
     .swiper-slide-active {

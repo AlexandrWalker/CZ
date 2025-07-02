@@ -1,6 +1,13 @@
 .vacancy {
   padding-top: 5rem;
 
+  &-page {
+
+    .callback__btn {
+      margin: 2rem 0 1.5rem;
+    }
+  }
+
   &__title {
     margin-bottom: 3rem;
   }

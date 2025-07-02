@@ -759,74 +759,77 @@ gsap.registerPlugin(ScrollTrigger);
     // });
 
     if (document.querySelector('.timeline')) {
-      const timelineWrapper = document.querySelector('.timeline-wrapper');
-      const timelineItems = document.querySelectorAll('.timeline-item');
-      const timelineWidth = timelineWrapper.scrollWidth - window.innerWidth;
 
-      // $(window).on('resize load', function () {
-      //   if (window.innerWidth <= '768') {
-      //     const timelineTop = `top 120px`;
-      //     console.log(timelineTop);
-      //     asd(timelineTop);
-      //   } else {
-      //     const timelineTop = `top 120px`;
-      //     console.log(timelineTop);
-      //     asd(timelineTop);
-      //   }
-      // });
+      $(window).on('resize load', function () {
+        if (window.innerWidth <= '768') {
+          const timelineTop = 150;
+          console.log(timelineTop);
+          timelineFunc(timelineTop);
+        } else {
+          const timelineTop = 270;
+          console.log(timelineTop);
+          timelineFunc(timelineTop);
+        }
+      });
 
       // const header = document.querySelector('.header');
 
-      // function asd(timelineTop) {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".history",
-          // start: timelineTop,
-          start: `top 270px`,
-          endTrigger: ".values",
-          end: `+=${timelineWidth}`,
-          scrub: 1,
-          pin: true,
-          anticipatePin: 1,
-          onUpdate: self => {
+      function timelineFunc(timelineTop) {
+        const timelineWrapper = document.querySelector('.timeline-wrapper');
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        const timelineWidth = timelineWrapper.scrollWidth - window.innerWidth;
+        const timelineWidthUpdate = timelineWidth + timelineTop;
 
-            const progress = self.progress;
-            const itemIndex = Math.floor(progress * (timelineItems.length - 1));
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".history",
+            start: `top ` + timelineTop + `px`,
+            endTrigger: ".values",
+            end: `+=${timelineWidthUpdate}`,
+            scrub: 1,
+            pin: true,
+            anticipatePin: 1,
+            onUpdate: self => {
 
-            timelineItems.forEach(item => item.classList.remove('swiper-slide-active'));
+              const progress = self.progress;
+              const itemIndex = Math.floor(progress * (timelineItems.length - 1));
 
-            if (timelineItems[itemIndex]) {
-              timelineItems[itemIndex].classList.add('swiper-slide-active');
+              timelineItems.forEach(item => item.classList.remove('swiper-slide-active'));
+
+              if (timelineItems[itemIndex]) {
+                timelineItems[itemIndex].classList.add('swiper-slide-active');
+              }
+
+              console.log(`+=${timelineWidthUpdate}`);
             }
           }
-        }
-      });
+        });
 
-      tl.to(timelineWrapper, {
-        x: -timelineWidth,
-        ease: "none"
-      });
+        tl.to(timelineWrapper, {
+          x: -timelineWidthUpdate,
+          ease: "none"
+        });
 
-      document.querySelector('.button-next')?.addEventListener('click', () => {
-        const currentScroll = Math.abs(gsap.getProperty(timelineWrapper, "x"));
-        const nextScroll = Math.min(currentScroll + window.innerWidth * 0.8, timelineWidth);
-        gsap.to(timelineWrapper, { x: -nextScroll, duration: 0.5 });
-      });
+        document.querySelector('.button-next')?.addEventListener('click', () => {
+          const currentScroll = Math.abs(gsap.getProperty(timelineWrapper, "x"));
+          const nextScroll = Math.min(currentScroll + window.innerWidth * 0.8, timelineWidthUpdate);
+          gsap.to(timelineWrapper, { x: -nextScroll, duration: 0.5 });
+        });
 
-      document.querySelector('.button-prev')?.addEventListener('click', () => {
-        const currentScroll = Math.abs(gsap.getProperty(timelineWrapper, "x"));
-        const prevScroll = Math.max(currentScroll - window.innerWidth * 0.8, 0);
-        gsap.to(timelineWrapper, { x: -prevScroll, duration: 0.5 });
-      });
+        document.querySelector('.button-prev')?.addEventListener('click', () => {
+          const currentScroll = Math.abs(gsap.getProperty(timelineWrapper, "x"));
+          const prevScroll = Math.max(currentScroll - window.innerWidth * 0.8, 0);
+          gsap.to(timelineWrapper, { x: -prevScroll, duration: 0.5 });
+        });
 
-      if (('; ' + document.cookie).split(`; COOKIE_ACCEPT=`).pop().split(';')[0] !== '1') {
-        const cookiesNotify = document.getElementById('cookie');
+        if (('; ' + document.cookie).split(`; COOKIE_ACCEPT=`).pop().split(';')[0] !== '1') {
+          const cookiesNotify = document.getElementById('cookie');
 
-        if (cookiesNotify) {
-          cookiesNotify.style.display = 'block';
+          if (cookiesNotify) {
+            cookiesNotify.style.display = 'block';
+          }
         }
       }
-      // }
     }
 
   });
