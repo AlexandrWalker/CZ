@@ -2810,6 +2810,12 @@ html.lenis body {
   gap: 2rem;
   margin-bottom: 4rem;
 }
+.catalog__head-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
 .catalog__head .tabs__btns {
   gap: 1rem;
 }
@@ -2865,25 +2871,10 @@ html.lenis body {
   background-color: var(--primary-accent);
   color: var(--white);
 }
-.catalog__body {
-  display: none;
-  opacity: 0;
-}
-.catalog__body.tabs__catalog--active {
-  display: block;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
 .catalog__items {
-  display: none;
+  display: flex;
   flex-wrap: wrap;
   gap: 3rem;
-  opacity: 0;
-}
-.catalog__items.tabs__panel--active {
-  display: flex;
-  opacity: 1;
-  transition: opacity 0.3s ease;
 }
 .catalog__item {
   width: calc(33.33333% - 2rem);
@@ -2891,6 +2882,32 @@ html.lenis body {
 .catalog__all-products {
   color: var(--primary-black);
   border: 0.1rem solid var(--primary-grey-thrd);
+}
+.catalog .filter {
+  gap: 0;
+}
+.catalog .filter__items {
+  display: grid;
+  grid-template-columns: 0fr 0fr 0fr;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  gap: 0;
+  opacity: 0;
+}
+.catalog .filter__items.tabs__filter--active {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+  opacity: 1;
+}
+.catalog .filter__items.tabs__filter--active .filter__item {
+  min-width: 8.4rem;
+  border-color: var(--primary-grey-thrd);
+}
+.catalog .filter__item {
+  min-width: unset;
+  overflow: hidden;
+  border-color: transparent;
 }
 
 .filter {
@@ -5141,6 +5158,11 @@ html.lenis body {
   .catalog__head .tabs__btns {
     display: none;
   }
+  .catalog__head-item:first-child {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
   .catalog__items {
     gap: 2rem;
   }
@@ -5302,9 +5324,6 @@ html.lenis body {
     gap: 1rem;
   }
   .catalog__btns {
-    width: calc(50% - 1rem);
-  }
-  .catalog__head .dropdown {
     width: calc(50% - 1rem);
   }
   .catalog__btn,
@@ -6391,6 +6410,21 @@ html.lenis body {
     flex-direction: column;
     gap: 1rem;
     margin-bottom: 1rem;
+  }
+  .catalog__head-item {
+    width: 100%;
+  }
+  .catalog .filter {
+    width: fit-content;
+  }
+  .catalog .filter__items {
+    overflow: visible;
+  }
+  .catalog .filter__item {
+    border-width: 0;
+  }
+  .catalog .filter__items.tabs__filter--active .filter__item {
+    border-width: 0.1rem;
   }
   .catalog__all-products {
     width: 100%;
