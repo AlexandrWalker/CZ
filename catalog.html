@@ -410,137 +410,141 @@
           <h2 class="catalog__title block-title">
             Продукция
           </h2>
+
           <div class="catalog__head">
-            <div class="filter">
-              <p class="filter__text">
-                Жирность:
-              </p>
-              <div class="filter__items tabs__filter tabs__filter--active" data-tab="milk">
-                <div class="filter__item">
-                  <input id="filter_1" type="radio" name="filter_milk" checked>
-                  <label for="filter_1">
-                    2,5%
-                  </label>
+
+            <div class="catalog__head-item">
+              <div class="filter">
+                <p class="filter__text">
+                  Жирность:
+                </p>
+                <div class="filter__items tabs__filter tabs__filter--active" data-tab="milk">
+                  <div class="filter__item">
+                    <input id="filter_1" type="radio" name="filter_milk" checked>
+                    <label for="filter_1">
+                      2,5%
+                    </label>
+                  </div>
+                  <div class="filter__item">
+                    <input id="filter_2" type="radio" name="filter_milk">
+                    <label for="filter_2">
+                      3,2%
+                    </label>
+                  </div>
+                  <div class="filter__item">
+                    <input id="filter_3" type="radio" name="filter_milk">
+                    <label for="filter_3">
+                      1,5%
+                    </label>
+                  </div>
                 </div>
-                <div class="filter__item">
-                  <input id="filter_2" type="radio" name="filter_milk">
-                  <label for="filter_2">
-                    3,2%
-                  </label>
+                <div class="filter__items tabs__filter" data-tab="cream">
+                  <div class="filter__item">
+                    <input id="filter_4" type="radio" name="filter_cream" checked>
+                    <label for="filter_4">
+                      15%
+                    </label>
+                  </div>
+                  <div class="filter__item">
+                    <input id="filter_5" type="radio" name="filter_cream">
+                    <label for="filter_5">
+                      20%
+                    </label>
+                  </div>
                 </div>
-                <div class="filter__item">
-                  <input id="filter_3" type="radio" name="filter_milk">
-                  <label for="filter_3">
-                    1,5%
-                  </label>
+                <div class="filter__items tabs__filter" data-tab="butter">
+                  <div class="filter__item">
+                    <input id="filter_6" type="radio" name="filter_butter" checked>
+                    <label for="filter_6">
+                      82,5%
+                    </label>
+                  </div>
+                  <div class="filter__item">
+                    <input id="filter_7" type="radio" name="filter_butter">
+                    <label for="filter_7">
+                      72,5%
+                    </label>
+                  </div>
                 </div>
               </div>
-
-              <div class="filter__items tabs__filter" data-tab="cream">
-                <div class="filter__item">
-                  <input id="filter_4" type="radio" name="filter_cream" checked>
-                  <label for="filter_4">
-                    15%
-                  </label>
-                </div>
-                <div class="filter__item">
-                  <input id="filter_5" type="radio" name="filter_cream">
-                  <label for="filter_5">
-                    20%
-                  </label>
-                </div>
-              </div>
-
-              <div class="filter__items tabs__filter" data-tab="butter">
-                <div class="filter__item">
-                  <input id="filter_6" type="radio" name="filter_butter" checked>
-                  <label for="filter_6">
-                    82,5%
-                  </label>
-                </div>
-                <div class="filter__item">
-                  <input id="filter_7" type="radio" name="filter_butter">
-                  <label for="filter_7">
-                    72,5%
-                  </label>
+              <div class="filter filter__weight">
+                <p class="filter__text">
+                  Вес:
+                </p>
+                <div class="filter__items tabs__filter" data-tab="butter">
+                  <div class="filter__item">
+                    <input id="filter_8" type="radio" name="filter_butter_weight" checked>
+                    <label for="filter_8">
+                      20 кг
+                    </label>
+                  </div>
+                  <div class="filter__item">
+                    <input id="filter_9" type="radio" name="filter_butter_weight">
+                    <label for="filter_9">
+                      5 кг
+                    </label>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div class="filter filter__weight">
-              <p class="filter__text">
-                Вес:
-              </p>
-              <div class="filter__items tabs__filter" data-tab="butter">
-                <div class="filter__item">
-                  <input id="filter_8" type="radio" name="filter_butter_weight" checked>
-                  <label for="filter_8">
-                    20 кг
-                  </label>
-                </div>
-                <div class="filter__item">
-                  <input id="filter_9" type="radio" name="filter_butter_weight">
-                  <label for="filter_9">
-                    5 кг
-                  </label>
-                </div>
-              </div>
-            </div>
-
-            <button class="catalog__all-products btn btn-outline">
-              Вся продукция
-            </button>
-
-            <div class="catalog__btns">
-              <button class="catalog__btn tabs__c_btn tabs__c_btn--active" data-tab="b2c">
-                ДЛЯ B2C
-              </button>
-              <button class="catalog__btn tabs__c_btn" data-tab="b2b">
-                ДЛЯ B2B
+              <button class="catalog__all-products btn btn-outline">
+                Вся продукция
               </button>
             </div>
 
-            <div class="tabs__btns">
-              <div class="tabs__btn tabs__btn--active" data-tab="milk">
-                Молоко
-              </div>
-              <div class="tabs__btn" data-tab="cream">
-                Сметана
-              </div>
-              <div class="tabs__btn" data-tab="butter">
-                Масло
+            <div class="catalog__head-item">
+              <div class="catalog__btns">
+                <button class="catalog__btn tabs__c_btn tabs__c_btn--active" data-tab="b2c">
+                  ДЛЯ B2C
+                </button>
+                <button class="catalog__btn tabs__c_btn" data-tab="b2b">
+                  ДЛЯ B2B
+                </button>
               </div>
             </div>
 
-            <div class="dropdown dropdown--js">
-              <div
-                class="dropdown__selected toggle--label dropdown__selected-label--js dropdown__selected--js icon-chevron-arrow"
-                data-value="Молоко" data-tab="milk">
-                <span>Молоко</span>
-              </div>
-              <div class="dropdown__container">
-                <div class="dropdown__content toggle--panel">
-                  <label class="dropdown__option">
-                    <input class="dropdown__radio" name="type__radio" type="radio" value="Молоко" checked />
-                    <span class="dropdown__label tabs__btn tabs__btn--active" data-tab="milk">Молоко</span>
-                  </label>
-                  <label class="dropdown__option cream">
-                    <input class="dropdown__radio" name="type__radio" type="radio" value="Сметана" />
-                    <span class="dropdown__label tabs__btn" data-tab="cream">Сметана</span>
-                  </label>
-                  <label class="dropdown__option">
-                    <input class="dropdown__radio" name="type__radio" type="radio" value="Масло" />
-                    <span class="dropdown__label tabs__btn" data-tab="butter">Масло</span>
-                  </label>
+            <div class="catalog__head-item">
+              <div class="tabs__btns">
+                <div class="tabs__btn tabs__btn--active" data-tab="milk">
+                  Молоко
+                </div>
+                <div class="tabs__btn" data-tab="cream">
+                  Сметана
+                </div>
+                <div class="tabs__btn" data-tab="butter">
+                  Масло
                 </div>
               </div>
-              <input class="dropdown__value" type="hidden">
+              <div class="dropdown dropdown--js">
+                <div
+                  class="dropdown__selected toggle--label dropdown__selected-label--js dropdown__selected--js icon-chevron-arrow"
+                  data-value="Молоко" data-tab="milk">
+                  <span>Молоко</span>
+                </div>
+                <div class="dropdown__container">
+                  <div class="dropdown__content toggle--panel">
+                    <label class="dropdown__option">
+                      <input class="dropdown__radio" name="type__radio" type="radio" value="Молоко" checked />
+                      <span class="dropdown__label tabs__btn tabs__btn--active" data-tab="milk">Молоко</span>
+                    </label>
+                    <label class="dropdown__option cream">
+                      <input class="dropdown__radio" name="type__radio" type="radio" value="Сметана" />
+                      <span class="dropdown__label tabs__btn" data-tab="cream">Сметана</span>
+                    </label>
+                    <label class="dropdown__option">
+                      <input class="dropdown__radio" name="type__radio" type="radio" value="Масло" />
+                      <span class="dropdown__label tabs__btn" data-tab="butter">Масло</span>
+                    </label>
+                  </div>
+                </div>
+                <input class="dropdown__value" type="hidden">
+              </div>
             </div>
 
           </div>
-          <div class="catalog__body tabs__catalog tabs__catalog--active" data-tab="b2c">
-            <div data-tab="milk" class="catalog__items tabs__panel tabs__panel--active">
 
+          <div class="catalog__body">
+
+            <div class="catalog__items">
               <div class="catalog__item">
                 <a class="product__item" href="/moloko_3.2_1000">
                   <img class="product__item-img" src="./images/card/moloko_3.2_1000.png" alt="">
@@ -560,7 +564,6 @@
                   </span>
                 </a>
               </div>
-
               <div class="catalog__item">
                 <a class="product__item" href="/moloko_3.2_1500">
                   <img class="product__item-img" src="./images/card/moloko_3.2_1500.png" alt="">
@@ -580,7 +583,6 @@
                   </span>
                 </a>
               </div>
-
               <div class="catalog__item">
                 <a class="product__item" href="/moloko_2.5_1000">
                   <img class="product__item-img" src="./images/card/moloko_2.5_1000.png" alt="">
@@ -600,7 +602,6 @@
                   </span>
                 </a>
               </div>
-
               <div class="catalog__item">
                 <a class="product__item" href="/moloko_2.5_1500">
                   <img class="product__item-img" src="./images/card/moloko_2.5_1500.png" alt="">
@@ -620,9 +621,6 @@
                   </span>
                 </a>
               </div>
-
-            </div>
-            <div data-tab="cream" class="catalog__items tabs__panel">
               <div class="catalog__item">
                 <a class="product__item" href="/cream_15">
                   <img class="product__item-img" src="./images/card/cream_15.png" alt="">
@@ -661,9 +659,6 @@
                   </span>
                 </a>
               </div>
-            </div>
-            <div data-tab="butter" class="catalog__items tabs__panel">
-
               <div class="catalog__item">
                 <a class="product__item" href="/maslo_82.5_180">
                   <img class="product__item-img" src="./images/card/Масло 82,5 180 г_Молодчинка 1.png"
@@ -684,7 +679,6 @@
                   </span>
                 </a>
               </div>
-
               <div class="catalog__item">
                 <a class="product__item" href="/maslo_82.5_430">
                   <img class="product__item-img" src="./images/card/Масло 82,5 430 г_Молодчинка 1.png"
@@ -705,7 +699,6 @@
                   </span>
                 </a>
               </div>
-
               <div class="catalog__item">
                 <a class="product__item" href="/maslo_k_72.5_180">
                   <img class="product__item-img" src="./images/card/Масло крест 72,5 180 г_Молодчинка.png"
@@ -726,7 +719,6 @@
                   </span>
                 </a>
               </div>
-
               <div class="catalog__item">
                 <a class="product__item" href="/maslo_k_72.5_430">
                   <img class="product__item-img" src="./images/card/Масло крест 72,5 430 г_Молодчинка.png"
@@ -747,12 +739,6 @@
                   </span>
                 </a>
               </div>
-
-            </div>
-          </div>
-          <div class="catalog__body tabs__catalog" data-tab="b2b">
-
-            <div data-tab="milk" class="catalog__items tabs__panel tabs__panel--active">
               <div class="catalog__item">
                 <a class="product__item" href="/suhoe_moloko_25kg">
                   <img class="product__item-img" src="./images/card/suhoe_moloko.png" alt="Сухое обезжиренное молоко">
@@ -792,9 +778,6 @@
                   </span>
                 </a>
               </div>
-            </div>
-
-            <div data-tab="butter" class="catalog__items tabs__panel">
               <div class="catalog__item">
                 <a class="product__item" href="/maslo_82.5_20kg">
                   <img class="product__item-img" src="./images/card/maslo_monolit.png"
@@ -879,7 +862,6 @@
 
           </div>
         </div>
-      </div>
     </section>
     <!-- Обратная связь -->
     <section class="callback">
