@@ -85,8 +85,6 @@ function cleanDist() {
 
 function building() {
   return src([
-    'app/CNAME',
-
     'app/certificates/*.*',
 
     'app/*.html',
