@@ -355,11 +355,21 @@ section {
   line-height: 120%;
   color: var(--white);
 }
+.title h1 {
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
 
 .block-title {
   font-weight: 700;
   font-size: 4rem;
   line-height: 120%;
+}
+.block-title h2 {
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 .block-title span {
   color: var(--primary-accent);
@@ -2734,7 +2744,7 @@ html.lenis body {
   gap: 2rem;
   max-width: 82rem;
 }
-.hero h1 {
+.hero .title {
   color: var(--primary-black);
   font-size: 5rem;
 }
@@ -6291,7 +6301,7 @@ html.lenis body {
     gap: 1rem;
     max-width: 28rem;
   }
-  .hero h1 {
+  .hero .title {
     font-size: 2rem;
   }
   .hero p {
@@ -7729,7 +7739,7 @@ html.lenis body {
   .hero__inner {
     padding: 3rem 0 0;
   }
-  .hero h1 {
+  .hero .title {
     font-size: 4rem;
   }
   .hero h1 span {

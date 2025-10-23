@@ -112,12 +112,24 @@ section {
   font-size: 8rem;
   line-height: 120%;
   color: var(--white);
+
+  h1 {
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
 }
 
 .block-title {
   font-weight: 700;
   font-size: 4rem;
   line-height: 120%;
+
+  h2 {
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
 
   span {
     color: var(--primary-accent);
