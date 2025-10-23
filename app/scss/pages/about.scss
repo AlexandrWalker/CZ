@@ -6,9 +6,28 @@
   background-size: 100%;
   background-position: center 14.2rem;
 
+  &-page {
+
+    overflow: visible;
+
+    body {
+      overflow: visible;
+    }
+
+    .wrapper {
+      overflow: visible;
+    }
+  }
+
   &__title {
     color: var(--primary-black);
     margin-bottom: 6rem;
+
+    h1 {
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
   }
 
   &__blocks {
@@ -163,12 +182,23 @@
 
 .history {
 
+  &__inner {
+    width: 100%;
+  }
+
   &__title {
     margin-bottom: 6rem;
+
+    h2 {
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
   }
 
   &__slide {
-    width: 47.2rem;
+    min-width: 47.2rem;
+    width: fit-content;
 
     &:last-child {
 
@@ -235,7 +265,7 @@
         transition: width 0.6s;
         background-color: var(--primary-accent);
 
-        &.active {
+        .timeline-active & {
           width: 100%;
 
           &::before {
@@ -260,7 +290,7 @@
     }
   }
 
-  .swiper-slide-active {
+  .timeline-active {
 
     h3 {
       font-size: 8rem;
@@ -331,6 +361,7 @@
   padding: 9rem 0 8rem;
   margin-bottom: 0;
   border-bottom: 0.1rem solid var(--primary-bg-30);
+  overflow: hidden;
 
   &__inner {
     display: flex;
@@ -346,10 +377,13 @@
     z-index: 2;
 
     &-title {
-      font-weight: 700;
-      font-size: 4rem;
-      line-height: 110%;
-      margin-bottom: 4rem;
+
+      h2 {
+        font-weight: 700;
+        font-size: 4rem;
+        line-height: 110%;
+        margin-bottom: 4rem;
+      }
     }
   }
 
@@ -429,6 +463,12 @@
       bottom: 6rem;
       right: 6rem;
       z-index: 2;
+
+      h6 {
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
     }
 
     .swiper-slide {

@@ -28,6 +28,12 @@
 
   &__title {
     margin-bottom: 4rem;
+
+    h2 {
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
   }
 
   &__date {
@@ -36,55 +42,57 @@
     line-height: 110%;
     color: rgba(66, 78, 103, 0.5);
     margin-bottom: 3rem;
+
+    p {
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
   }
 
   &__content {
 
-    .articles__text:first-child {
-      font-weight: 700;
+    p:not(ul p) {
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 120%;
+      margin-bottom: 3rem;
     }
-  }
 
-  &__text {
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 120%;
-    margin-bottom: 3rem;
-
-    // &:not(:last-child) {
-    //   margin-bottom: 3rem;
-    // }
-  }
-
-  &__img {
-    width: auto;
-    height: 30rem;
-    object-fit: contain;
-    float: left;
-    margin: 0 3rem 3.5rem 0;
-  }
-
-  &__list {
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 130%;
-
-    &-title {
+    p:not(ul p):first-child {
       font-weight: 700;
     }
 
-    li {
-      color: var(--primary-black);
+    img {
+      width: auto;
+      height: 30rem;
+      object-fit: contain;
+      float: left;
+      margin: 0 3rem 3.5rem 0;
+    }
 
-      &:not(:last-child) {
-        margin-bottom: 2rem;
+    ul {
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 130%;
+
+      span {
+        font-weight: 700;
       }
 
-      a {
-        color: var(--primary-color);
+      li {
+        color: var(--primary-black);
 
-        &:hover {
-          text-decoration-line: underline;
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+
+        a {
+          color: var(--primary-color);
+
+          &:hover {
+            text-decoration-line: underline;
+          }
         }
       }
     }
@@ -102,6 +110,11 @@
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 4rem;
+
+    h3 {
+      font-size: inherit;
+      font-weight: inherit;
+    }
   }
 
   &__items {
@@ -130,10 +143,15 @@
       color: var(--primary-black-50);
       margin-bottom: 3rem;
       max-width: 26.2rem;
+
+      p {
+        font-weight: inherit;
+      }
     }
 
     &-wrap {
       display: flex;
+      align-items: flex-end;
       gap: 1rem;
       color: var(--primary-accent);
     }
@@ -141,7 +159,7 @@
     &-count {
       font-weight: 700;
       font-size: 6rem;
-      line-height: 100%;
+      line-height: 85%;
     }
 
     &-date {

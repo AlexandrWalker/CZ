@@ -26,6 +26,12 @@
     &-title {
       width: min-content;
       color: var(--white);
+
+      h2 {
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
     }
 
     &-btn {
@@ -59,6 +65,12 @@
       font-weight: 700;
       font-size: 3rem;
       line-height: 120%;
+
+      h3 {
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
     }
   }
 
@@ -115,7 +127,7 @@
       }
     }
 
-    &-title {
+    p {
       font-weight: 700;
       font-size: 1.6rem;
       line-height: 150%;
@@ -153,6 +165,11 @@
       line-height: 150%;
       text-align: center;
       padding: 1.5rem 0;
+
+      input {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
     }
 
     tr td:first-child {

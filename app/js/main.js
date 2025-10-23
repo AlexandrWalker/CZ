@@ -105,19 +105,20 @@ gsap.registerPlugin(ScrollTrigger);
     const lenis = new Lenis({
       anchors: {
         offset: 100,
-        onComplete: () => {
-          console.log('scrolled to anchor')
-        }
-      }
+      },
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
     });
 
-    lenis.on('scroll', ScrollTrigger.update);
+    // lenis.on('scroll', ScrollTrigger.update);
 
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
+    // gsap.ticker.add((time) => {
+    //   lenis.raf(time * 1000);
+    // });
 
-    gsap.ticker.lagSmoothing(0);
+    // gsap.ticker.lagSmoothing(0);
+
 
     function harmonicFunc() {
       const items = document.querySelectorAll('.work__item'),
@@ -716,120 +717,546 @@ gsap.registerPlugin(ScrollTrigger);
       );
     });
 
-    // $(window).on('resize load', function () {
-    //   // window.addEventListener('resize load', function () {
+    /**
+     * Таймлайн
+     */
+    const TimelineScroll = {
 
-    //   if (window.innerWidth <= '768') {
-    //     history__slider.init();
-    //   } else {
-    //     /* history animation */
-    //     const panelsContainers = document.getElementById("history__slider");
+      defaultConfig: {
+        breakpoint: 768,
+        selectors: {
+          placeholder: '.timeline-placeholder',
+          container: '.timeline-container',
+          timeline: '.timeline',
+          wrapper: '.timeline-wrapper',
+          items: '.timeline-item',
+          btnPrev: '.timeline-button-prev',
+          btnNext: '.timeline-button-next'
+        }
+      },
 
-    //     if (panelsContainers) {
-    //       let panelsContainer = document.querySelector("#history__slider"), tween;
-    //       const panels = gsap.utils.toArray("#history__slider .history__slide");
+      init(placeholderSelector = '.timeline-placeholder', customSelectors = {}) {
 
-    //       tween = gsap.to(panels, {
-    //         x: () => -1 * (panelsContainer.scrollWidth - (innerWidth / 3)),
-    //         ease: "none",
-    //         scrollTrigger: {
-    //           trigger: "#history__inner",
-    //           pin: true,
-    //           start: "top 20%",
-    //           scrub: 1,
-    //           end: () => "+=" + (panelsContainer.scrollWidth - innerWidth),
-    //           // markers: true,
-    //         }
-    //       });
-    //     }
+        this.config = {
+          ...this.defaultConfig,
+          selectors: { ...this.defaultConfig.selectors, ...customSelectors }
+        };
 
-    //     $(window).on('scroll', function () {
+        this.state = {
+          rootElement: null,
+          timelinePlaceholder: null,
+          timelineContainer: null,
+          timeline: null,
+          timelineWrapper: null,
+          timelineItems: null,
+          btnPrev: null,
+          btnNext: null,
 
-    //       const story__slides = document.querySelectorAll('.history__slide');
+          itemWidth: 0,
+          containerWidth: 0,
+          totalWidth: 0,
+          maxScroll: 0,
+          placeholderHeight: 0,
+          containerHeight: 0,
+          scrollDistance: 0,
 
-    //       story__slides.forEach(story__slide => {
-    //         if (story__slide.getBoundingClientRect().left < window.innerWidth / 3 && story__slide.getBoundingClientRect().right > window.innerWidth / 3) {
-    //           story__slide.classList.add('swiper-slide-active');
-    //         } else {
-    //           story__slide.classList.remove('swiper-slide-active');
-    //         }
-    //       });
-    //     });
-    //   }
-    // });
+          timelineProgress: 0,
+          currentIndex: 0,
+          isAnimating: false,
+          startX: 0,
+          startY: 0,
+          currentX: 0,
+          isDragging: false,
+          startScroll: 0,
+          xSwipe: false,
 
-    if (document.querySelector('.timeline')) {
+          scrollTimeout: null,
+          isScrolling: false,
 
-      $(window).on('resize load', function () {
-        if (window.innerWidth <= '768') {
-          const timelineTop = 150;
-          console.log(timelineTop);
-          timelineFunc(timelineTop);
+          buttonHoldInterval: null,
+          buttonHoldDirection: null,
+          buttonHoldDelay: 300,
+          buttonHoldSpeed: 100,
+          initialButtonPress: true
+        };
+
+        this.setRootElement(placeholderSelector);
+
+        this.cacheElements();
+        this.calculatePlaceholderHeight();
+        this.bindEvents();
+        this.updateButtons();
+        this.updateActiveItem(0);
+        return this;
+      },
+
+      setRootElement(selector) {
+        const element = typeof selector === 'string'
+          ? document.querySelector(selector)
+          : selector;
+
+        if (!element) {
+          console.warn(`TimelineScroll: Root element not found with selector "${selector}"`);
+        }
+
+        this.state.rootElement = element;
+      },
+
+      destroy() {
+        window.removeEventListener('resize', this.onResize.bind(this));
+        this.stopButtonHold();
+      },
+
+      next() {
+        this.goToIndex(this.state.currentIndex + 1);
+      },
+
+      prev() {
+        this.goToIndex(this.state.currentIndex - 1);
+      },
+
+      goTo(index) {
+        this.goToIndex(index);
+      },
+
+      getCurrentIndex() {
+        return this.state.currentIndex;
+      },
+
+      startButtonHold(direction) {
+        const s = this.state;
+
+        if (s.buttonHoldInterval) {
+          clearInterval(s.buttonHoldInterval);
+        }
+
+        s.buttonHoldDirection = direction;
+        s.initialButtonPress = true;
+
+        if (direction === 'next') {
+          this.next();
         } else {
-          const timelineTop = 270;
-          console.log(timelineTop);
-          timelineFunc(timelineTop);
+          this.prev();
         }
-      });
 
-      // const header = document.querySelector('.header');
-
-      function timelineFunc(timelineTop) {
-        const timelineWrapper = document.querySelector('.timeline-wrapper');
-        const timelineItems = document.querySelectorAll('.timeline-item');
-        const timelineWidth = timelineWrapper.scrollWidth - window.innerWidth;
-        const timelineWidthUpdate = timelineWidth + timelineTop;
-
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: ".history",
-            start: `top ` + timelineTop + `px`,
-            endTrigger: ".values",
-            end: `+=${timelineWidthUpdate}`,
-            scrub: 1,
-            pin: true,
-            anticipatePin: 1,
-            onUpdate: self => {
-
-              const progress = self.progress;
-              const itemIndex = Math.floor(progress * (timelineItems.length - 1));
-
-              timelineItems.forEach(item => item.classList.remove('swiper-slide-active'));
-
-              if (timelineItems[itemIndex]) {
-                timelineItems[itemIndex].classList.add('swiper-slide-active');
-              }
-
-              console.log(`+=${timelineWidthUpdate}`);
+        s.buttonHoldInterval = setTimeout(() => {
+          s.initialButtonPress = false;
+          s.buttonHoldInterval = setInterval(() => {
+            if (s.buttonHoldDirection === 'next') {
+              this.next();
+            } else {
+              this.prev();
             }
+          }, s.buttonHoldSpeed);
+        }, s.buttonHoldDelay);
+      },
+
+      stopButtonHold() {
+        const s = this.state;
+
+        if (s.buttonHoldInterval) {
+          clearTimeout(s.buttonHoldInterval);
+          clearInterval(s.buttonHoldInterval);
+          s.buttonHoldInterval = null;
+          s.buttonHoldDirection = null;
+        }
+      },
+
+      cacheElements() {
+        const s = this.state;
+        const selectors = this.config.selectors;
+
+        s.timelinePlaceholder = s.rootElement;
+        s.timelineContainer = this.findElement(selectors.container);
+        s.timeline = this.findElement(selectors.timeline);
+        s.timelineWrapper = this.findElement(selectors.wrapper);
+        s.timelineItems = this.findElement(selectors.items, true);
+        s.btnPrev = this.findElement(selectors.btnPrev);
+        s.btnNext = this.findElement(selectors.btnNext);
+
+        this.validateRequiredElements();
+      },
+
+      findElement(selector, all = false) {
+        if (all) {
+          return this.state.rootElement.querySelectorAll(selector);
+        }
+        return this.state.rootElement.querySelector(selector);
+      },
+
+      validateRequiredElements() {
+        const s = this.state;
+        const required = [
+          { element: s.timelineContainer, name: 'container' },
+          { element: s.timeline, name: 'timeline' },
+          { element: s.timelineWrapper, name: 'wrapper' },
+          { element: s.timelineItems, name: 'items' }
+        ];
+
+        required.forEach(({ element, name }) => {
+          if (!element || (Array.isArray(element) && element.length === 0)) {
+            console.warn(`TimelineScroll: Required element "${name}" not found with selector "${this.config.selectors[name]}"`)
           }
         });
+      },
 
-        tl.to(timelineWrapper, {
-          x: -timelineWidthUpdate,
-          ease: "none"
+      isMobileDevice() {
+        return window.innerWidth <= this.config.breakpoint;
+      },
+
+      calculatePlaceholderHeight() {
+        const s = this.state;
+
+        if (this.isMobileDevice()) {
+          s.timelinePlaceholder.style.height = 'auto';
+          return;
+        }
+
+        s.containerHeight = s.timelineContainer.offsetHeight;
+        s.itemWidth = s.timelineItems[0].offsetWidth;
+        s.containerWidth = s.timeline.offsetWidth;
+        s.totalWidth = s.itemWidth * s.timelineItems.length;
+        s.maxScroll = Math.max(0, s.totalWidth - s.containerWidth);
+        s.scrollDistance = s.maxScroll;
+        s.placeholderHeight = s.containerHeight + s.scrollDistance;
+
+        s.timelinePlaceholder.style.height = `${s.placeholderHeight}px`;
+      },
+
+      updateButtons() {
+        const s = this.state;
+        if (this.isMobileDevice() || !s.btnPrev || !s.btnNext) return;
+
+        s.btnPrev.disabled = s.currentIndex === 0;
+        s.btnNext.disabled = s.currentIndex === s.timelineItems.length - 1;
+      },
+
+      goToIndex(index) {
+        if (this.isMobileDevice()) {
+          return this.goToIndexMobile(index);
+        }
+
+        const s = this.state;
+        if (s.isAnimating) return;
+
+        index = Math.max(0, Math.min(index, s.timelineItems.length - 1));
+        if (index === s.currentIndex) return;
+
+        s.isAnimating = true;
+
+        const maxIndex = s.timelineItems.length - 1;
+        const targetProgress = index / maxIndex;
+        const containerTop = s.timelinePlaceholder.offsetTop;
+        const targetScroll = containerTop + (targetProgress * s.scrollDistance);
+
+        lenis.scrollTo(targetScroll, {
+          duration: 0.4, // Было 0.7, стало 0.4
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          onComplete: () => {
+            s.isAnimating = false;
+          }
+        });
+      },
+
+      goToIndexMobile(index) {
+        const s = this.state;
+        index = Math.max(0, Math.min(index, s.timelineItems.length - 1));
+        const item = s.timelineItems[index];
+        const itemLeft = item.offsetLeft;
+        const itemWidth = item.offsetWidth;
+        const containerWidth = s.timeline.offsetWidth;
+
+        const scrollPosition = itemLeft - (containerWidth / 2) + (itemWidth / 2);
+
+        s.timeline.scrollTo({
+          left: scrollPosition,
+          behavior: 'smooth'
         });
 
-        document.querySelector('.button-next')?.addEventListener('click', () => {
-          const currentScroll = Math.abs(gsap.getProperty(timelineWrapper, "x"));
-          const nextScroll = Math.min(currentScroll + window.innerWidth * 0.8, timelineWidthUpdate);
-          gsap.to(timelineWrapper, { x: -nextScroll, duration: 0.5 });
-        });
+        this.updateActiveItemMobile(index);
+      },
 
-        document.querySelector('.button-prev')?.addEventListener('click', () => {
-          const currentScroll = Math.abs(gsap.getProperty(timelineWrapper, "x"));
-          const prevScroll = Math.max(currentScroll - window.innerWidth * 0.8, 0);
-          gsap.to(timelineWrapper, { x: -prevScroll, duration: 0.5 });
-        });
+      updateTimeline(scrollY) {
+        const s = this.state;
+        if (this.isMobileDevice()) return;
 
-        if (('; ' + document.cookie).split(`; COOKIE_ACCEPT=`).pop().split(';')[0] !== '1') {
-          const cookiesNotify = document.getElementById('cookie');
+        const containerTop = s.timelinePlaceholder.offsetTop;
 
-          if (cookiesNotify) {
-            cookiesNotify.style.display = 'block';
+        let scrollProgress = (scrollY - containerTop) / s.scrollDistance;
+        scrollProgress = Math.max(0, Math.min(1, scrollProgress));
+
+        if (scrollY >= containerTop && scrollY <= containerTop + s.scrollDistance) {
+          s.timelineProgress = scrollProgress;
+
+          const translateX = -s.timelineProgress * s.maxScroll;
+          s.timelineWrapper.style.transform = `translateX(${translateX}px)`;
+
+          this.updateActiveItem(s.timelineProgress);
+
+        } else {
+          if (scrollY < containerTop) {
+            s.timelineProgress = 0;
+            s.timelineWrapper.style.transform = 'translateX(0px)';
+            this.updateActiveItem(0);
+          } else if (scrollY > containerTop + s.scrollDistance) {
+            s.timelineProgress = 1;
+            s.timelineWrapper.style.transform = `translateX(${-s.maxScroll}px)`;
+            this.updateActiveItem(1);
           }
         }
+      },
+
+      updateActiveItem(progress) {
+        const s = this.state;
+        const maxIndex = s.timelineItems.length - 1;
+        const newIndex = Math.min(
+          maxIndex,
+          Math.round(progress * maxIndex)
+        );
+
+        if (newIndex !== s.currentIndex) {
+          s.currentIndex = newIndex;
+
+          s.timelineItems.forEach((item, index) => {
+            item.classList.toggle('timeline-active', index === s.currentIndex);
+          });
+
+          this.updateButtons();
+        }
+      },
+
+      updateActiveItemMobile(index) {
+        const s = this.state;
+        if (index !== s.currentIndex) {
+          s.currentIndex = index;
+
+          s.timelineItems.forEach((item, i) => {
+            item.classList.toggle('timeline-active', i === s.currentIndex);
+          });
+        }
+      },
+
+      handleMobileScroll() {
+        const s = this.state;
+        if (!this.isMobileDevice()) return;
+
+        clearTimeout(s.scrollTimeout);
+        s.isScrolling = true;
+
+        const scrollLeft = s.timeline.scrollLeft;
+        const containerWidth = s.timeline.offsetWidth;
+        const itemWidth = s.timelineItems[0].offsetWidth;
+
+        const center = scrollLeft + (containerWidth / 2);
+
+        let closestIndex = 0;
+        let minDistance = Infinity;
+
+        s.timelineItems.forEach((item, index) => {
+          const itemLeft = item.offsetLeft;
+          const itemCenter = itemLeft + (itemWidth / 2);
+          const distance = Math.abs(center - itemCenter);
+
+          if (distance < minDistance) {
+            minDistance = distance;
+            closestIndex = index;
+          }
+        });
+
+        this.updateActiveItemMobile(closestIndex);
+
+        s.scrollTimeout = setTimeout(() => {
+          s.isScrolling = false;
+
+          if (!s.isScrolling) {
+            this.goToIndex(closestIndex);
+          }
+        }, 100);
+      },
+
+      handleTouchStart(e) {
+        const s = this.state;
+        if (s.isAnimating) return;
+
+        s.startX = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
+        s.startY = e.type === 'touchstart' ? e.touches[0].clientY : e.clientY;
+        s.currentX = parseInt(getComputedStyle(s.timelineWrapper).transform.split(',')[4] || 0, 10);
+        s.startScroll = lenis.scroll;
+        s.isDragging = true;
+        s.xSwipe = false;
+        s.timelineWrapper.classList.add('grabbing');
+      },
+
+      handleTouchMove(e) {
+        const s = this.state;
+        if (!s.isDragging) return;
+        e.preventDefault();
+
+        const x = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
+        const y = e.type === 'touchmove' ? e.touches[0].clientY : e.clientY;
+
+        if (!s.xSwipe) {
+          const diffX = Math.abs(x - s.startX);
+          const diffY = Math.abs(y - s.startY);
+
+          if (diffY > diffX && diffY > 10) {
+            s.isDragging = false;
+            s.timelineWrapper.classList.remove('grabbing');
+            return;
+          }
+
+          if (diffX > 10) {
+            s.xSwipe = true;
+            e.preventDefault();
+          }
+        }
+
+        if (s.xSwipe) {
+          const diff = x - s.startX;
+
+          let newX = s.currentX + diff;
+
+          newX = Math.min(Math.max(newX, -s.maxScroll), 0);
+
+          s.timelineWrapper.style.transform = `translateX(${newX}px)`;
+
+          lenis.scrollTo(s.startScroll, { immediate: true });
+        }
+      },
+
+      handleTouchEnd(e) {
+        const s = this.state;
+        if (!s.isDragging) return;
+        s.isDragging = false;
+        s.timelineWrapper.classList.remove('grabbing');
+
+        const x = e.type === 'touchend' ? (e.changedTouches ? e.changedTouches[0].clientX : 0) : e.clientX;
+        const diff = x - s.startX;
+        const velocity = diff / 100;
+
+        if (Math.abs(diff) > 50 || Math.abs(velocity) > 0.5) {
+          if (diff > 0) {
+            this.goToIndex(s.currentIndex - 1);
+          } else {
+            this.goToIndex(s.currentIndex + 1);
+          }
+        } else {
+          this.goToIndex(s.currentIndex);
+        }
+      },
+
+      onLenisScroll({ scroll }) {
+        if (!this.state.isDragging) {
+          this.updateTimeline(scroll);
+        }
+      },
+
+      onResize() {
+        this.calculatePlaceholderHeight();
+        this.updateTimeline(lenis.scroll);
+        this.updateButtons();
+      },
+
+      bindEvents() {
+        const s = this.state;
+
+        if (s.btnPrev) {
+          s.btnPrev.addEventListener('click', () => {
+            this.goToIndex(s.currentIndex - 1);
+          });
+
+          s.btnPrev.addEventListener('mousedown', () => {
+            this.startButtonHold('prev');
+          });
+
+          s.btnPrev.addEventListener('touchstart', () => {
+            this.startButtonHold('prev');
+          });
+
+          s.btnPrev.addEventListener('mouseup', () => {
+            this.stopButtonHold();
+          });
+
+          s.btnPrev.addEventListener('touchend', () => {
+            this.stopButtonHold();
+          });
+
+          s.btnPrev.addEventListener('mouseleave', () => {
+            this.stopButtonHold();
+          });
+        }
+
+        if (s.btnNext) {
+          s.btnNext.addEventListener('click', () => {
+            this.goToIndex(s.currentIndex + 1);
+          });
+
+          s.btnNext.addEventListener('mousedown', () => {
+            this.startButtonHold('next');
+          });
+
+          s.btnNext.addEventListener('touchstart', () => {
+            this.startButtonHold('next');
+          });
+
+          s.btnNext.addEventListener('mouseup', () => {
+            this.stopButtonHold();
+          });
+
+          s.btnNext.addEventListener('touchend', () => {
+            this.stopButtonHold();
+          });
+
+          s.btnNext.addEventListener('mouseleave', () => {
+            this.stopButtonHold();
+          });
+        }
+
+        document.addEventListener('mouseup', () => {
+          this.stopButtonHold();
+        });
+
+        document.addEventListener('touchend', () => {
+          this.stopButtonHold();
+        });
+
+        if (!this.isMobileDevice()) {
+          s.timelineWrapper.addEventListener('touchstart', this.handleTouchStart.bind(this), { passive: false });
+          s.timelineWrapper.addEventListener('mousedown', this.handleTouchStart.bind(this));
+
+          s.timelineWrapper.addEventListener('touchmove', this.handleTouchMove.bind(this), { passive: false });
+          s.timelineWrapper.addEventListener('mousemove', this.handleTouchMove.bind(this));
+
+          s.timelineWrapper.addEventListener('touchend', this.handleTouchEnd.bind(this));
+          s.timelineWrapper.addEventListener('mouseup', this.handleTouchEnd.bind(this));
+          s.timelineWrapper.addEventListener('mouseleave', this.handleTouchEnd.bind(this));
+        }
+
+        s.timeline.addEventListener('scroll', this.handleMobileScroll.bind(this));
+
+        lenis.on('scroll', this.onLenisScroll.bind(this));
+        window.addEventListener('resize', this.onResize.bind(this));
       }
+    };
+
+    TimelineScroll.create = function (placeholderSelector = '.timeline-placeholder', customSelectors = {}) {
+      const instance = Object.create(this);
+      return instance.init(placeholderSelector, customSelectors);
+    };
+    // можно вынести в отдельный файл - КОНЕЦ
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    if (document.getElementById('timelinePlaceholder')) {
+      const timeline = TimelineScroll.create('#timelinePlaceholder');
+    }
+
+    if (document.querySelector('.about-page')) {
+      document.documentElement.classList.add('about-page');
     }
 
   });

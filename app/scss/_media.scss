@@ -75,6 +75,14 @@
     margin-bottom: 1rem;
   }
 
+  input[type=radio]+label::before {
+    top: 0.2rem;
+  }
+
+  input[type=radio]+label::after {
+    top: 0.5rem;
+  }
+
   .modal .form-textarea {
     margin-bottom: 1rem;
   }
@@ -582,7 +590,7 @@
     grid-column: 2/3;
   }
 
-  .news__item h6 {
+  .news__item-head h6 {
     font-size: 1.4rem;
   }
 
@@ -975,6 +983,7 @@
     padding: 2rem;
   }
 
+  .press .news__item:nth-child(1) .news__item-head h6,
   .innerPage .news__item:nth-child(1) .news__item h6 {
     font-size: 1.6rem;
   }
@@ -1044,12 +1053,12 @@
     padding: 2rem 0;
   }
 
-  .vacancy__item-list h6 {
+  .vacancy__item-content ul h6 {
     font-weight: 700;
     font-size: 1.2rem;
   }
 
-  .vacancy__item-list li p {
+  .vacancy__item-content ul li p {
     font-size: 1.2rem;
   }
 
@@ -1143,11 +1152,11 @@
     gap: 2rem;
   }
 
-  .contacts-us__block-title {
+  .contacts-us__block-title h5 {
     font-size: 1.4rem;
   }
 
-  .contacts-us__block-text {
+  .contacts-us__block-text p {
     font-size: 1.4rem;
   }
 
@@ -1176,13 +1185,13 @@
     font-size: 1.4rem;
   }
 
-  .articles__img {
+  .articles__content img {
     width: 100%;
     height: auto;
     margin: 0 0 2rem;
   }
 
-  .articles__text {
+  .articles__content p {
     font-size: 1.4rem;
     margin: 0 0 2rem;
   }
@@ -1303,7 +1312,7 @@
   }
 
   .history__slide {
-    width: 22rem;
+    min-width: 22rem;
   }
 
   .history__slider-item {
@@ -1311,7 +1320,7 @@
   }
 
   .history__slider-count {
-    height: 2rem;
+    height: 3rem;
     margin-bottom: 3rem;
   }
 
@@ -1320,7 +1329,7 @@
     line-height: 2rem;
   }
 
-  .history .swiper-slide-active .history__slider-item h3 {
+  .history .timeline-active .history__slider-item h3 {
     font-size: 3rem;
   }
 
@@ -1372,7 +1381,7 @@
     margin: auto 0;
   }
 
-  .values__content-title {
+  .values__content-title h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
   }
@@ -1467,7 +1476,7 @@
     font-size: 1.6rem;
   }
 
-  .quality__list-title {
+  .quality__list p {
     font-size: 1.2rem;
   }
 
@@ -1800,11 +1809,61 @@
     width: 1.271rem;
     height: 1.271rem;
   }
+
+  .timeline {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    padding: 0 10rem;
+    margin-right: -10rem;
+    margin-left: -10rem;
+    width: calc(100% + 10rem + 10rem);
+  }
+
+  .timeline::-webkit-scrollbar {
+    display: none;
+  }
+
+  .timeline-placeholder {
+    padding: 4rem 0 3rem;
+  }
+
+  .timeline-container {
+    /* Мобильная версия - убираем фиксацию */
+    position: relative;
+    height: auto;
+    top: unset;
+  }
+
+  .timeline-wrapper {
+    /* На мобильных устройствах - свободный скролл */
+    width: max-content;
+    transition: none;
+    gap: 0;
+    transform: none !important;
+    padding: 0;
+  }
+
+  .timeline-button-prev,
+  .timeline-button-next {
+    /* Скрываем кнопки на мобильных устройствах */
+    display: none;
+  }
 }
 
 @media (max-width: 660px) {
   .container {
     padding: 0 2rem;
+  }
+
+  .timeline {
+    padding: 0 2rem;
+    margin-right: -2rem;
+    margin-left: -2rem;
+    width: calc(100% + 2rem + 2rem);
   }
 
   /* partner */
@@ -2512,6 +2571,8 @@
     height: 15.9rem;
   }
 
+  .press .news__item:nth-child(1) .news__item-head h6,
+  .press .news__item .news__item-head h6,
   .innerPage .news__item:nth-child(1) .news__item-date,
   .innerPage .news__item .news__item-date {
     font-size: 1.2rem;
@@ -2562,11 +2623,11 @@
     padding: 1.5rem 0 0;
   }
 
-  .vacancy__item-list h6 {
+  .vacancy__item-content ul h6 {
     margin-bottom: 2rem;
   }
 
-  .vacancy__item-list li:not(:last-child) {
+  .vacancy__item-content ul li:not(:last-child) {
     margin-bottom: 1.5rem;
   }
 
@@ -2616,15 +2677,15 @@
     margin-bottom: 2rem;
   }
 
-  .articles__text {
+  .articles__content p {
     margin-bottom: 1.5rem;
   }
 
-  .articles__img {
+  .articles__content img {
     margin-bottom: 1.5rem;
   }
 
-  .articles__list {
+  .articles__content ul {
     font-size: 1.4rem;
   }
 
@@ -2676,8 +2737,7 @@
   }
 
   .history__slide {
-    width: 50%;
-    width: 18.4rem;
+    min-width: 18.4rem;
   }
 
   .history__slider-item p {
@@ -2720,8 +2780,6 @@
   .values__block {
     width: 100%;
   }
-
-  .values__content-title {}
 
   .values__thumbs {
     padding-bottom: 0;

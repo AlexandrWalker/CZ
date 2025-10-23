@@ -6,12 +6,13 @@
 }
 
 .press {
+
   .news__item:nth-child(1) {
     grid-column: 1 / 4;
     height: 63.9rem;
     padding: 9rem 8rem 5rem;
 
-    .news__item-title {
+    .news__item-head h6 {
       font-size: 3rem;
       max-width: 32rem;
     }

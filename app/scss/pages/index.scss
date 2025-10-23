@@ -692,6 +692,12 @@
     &-btn {
       min-width: 24.8rem;
     }
+
+    h2 {
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
   }
 
   &__items {
@@ -707,10 +713,31 @@
     height: 41.5rem;
     padding: 3rem;
     background-color: var(--white);
-    position: relative;
-    transition: all 0.3s ease, color 0s;
+    transition: all 0.5s ease, color 0s;
     color: inherit;
     overflow: hidden;
+    position: relative;
+
+    &:hover {
+      color: var(--white);
+      background-size: 100% 100%;
+
+      &::before {
+        opacity: 1;
+      }
+
+      .news__item-bg {
+        opacity: 1;
+      }
+
+      .news__item-date {
+        color: var(--white);
+      }
+
+      .news__item-count {
+        color: var(--white);
+      }
+    }
 
     &::before {
       content: "";
@@ -725,46 +752,7 @@
       z-index: 1;
       background: linear-gradient(180deg, rgba(0, 0, 0, 0) 70.36%, rgba(0, 0, 0, 0.55) 100%);
       opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      opacity: 0;
-      background-image: unset;
-      background-repeat: no-repeat;
-      background-size: 110% 110%;
-      background-position: center;
-      transition: all 0.3s ease;
-    }
-
-    &:hover {
-      color: var(--white);
-      background-size: 100% 100%;
-
-      &::before {
-        opacity: 1;
-      }
-
-      &::after {
-        opacity: 1;
-      }
-
-      .news__item-date {
-        color: var(--white);
-      }
-
-      .news__item-count {
-        color: var(--white);
-      }
+      transition: opacity 0.5s ease;
     }
 
     &:nth-child(1) {
@@ -775,8 +763,7 @@
         opacity: 1;
       }
 
-      &::after {
-        background-image: url(./../images/main/news-1.png);
+      .news__item-bg {
         opacity: 1;
       }
 
@@ -791,59 +778,28 @@
 
     &:nth-child(2) {
       grid-column: 3/4;
+    }
 
-      &:hover::after {
-        background-image: url(./../images/main/news-2.png);
+    &-head {
+      position: relative;
+      z-index: 2;
+
+      h6 {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 110%;
       }
     }
 
-    &:nth-child(3) {
-
-      &:hover::after {
-        background-image: url(./../images/main/news-1.png);
-      }
-    }
-
-    &:nth-child(4) {
-
-      &:hover::after {
-        background-image: url(./../images/main/news-2.png);
-      }
-    }
-
-    &:nth-child(5) {
-
-      &:hover::after {
-        background-image: url(./../images/main/news-1.png);
-      }
-    }
-
-    &:nth-child(6) {
-
-      &:hover::after {
-        background-image: url(./../images/main/news-2.png);
-      }
-    }
-
-    &:nth-child(7) {
-
-      &:hover::after {
-        background-image: url(./../images/main/news-1.png);
-      }
-    }
-
-    h6 {
-      font-weight: 700;
-      font-size: 2rem;
-      line-height: 110%;
-      z-index: 1;
-    }
-
-    &-bottom {
+    &-body {
       display: flex;
-      justify-content: space-between;
+      flex-direction: row;
       align-items: flex-end;
-      z-index: 1;
+      justify-content: space-between;
+      gap: 2rem;
+
+      position: relative;
+      z-index: 2;
     }
 
     &-date {
@@ -851,7 +807,7 @@
       line-height: 133%;
       color: var(--primary-black-50);
       width: min-content;
-      transition: all 0.3s ease;
+      transition: all 0.5s ease;
     }
 
     &-count {
@@ -859,13 +815,32 @@
       font-size: 6rem;
       line-height: 110%;
       color: var(--primary-accent);
-      transition: all 0.3s ease;
+      transition: all 0.5s ease;
+    }
+
+    &-bg {
+      opacity: 0;
+      transition: all 0.5s ease;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 }
 
 .partner {
   margin-bottom: 0;
+  overflow: hidden;
 
   &__container {
     max-width: 192rem;

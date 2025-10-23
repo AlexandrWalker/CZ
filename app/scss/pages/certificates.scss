@@ -12,6 +12,15 @@
     padding-bottom: 3rem;
     margin-bottom: 3rem;
     border-bottom: 0.1rem solid var(--primary-grey-20);
+
+    &-title {
+
+      h2 {
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
+    }
   }
 
   &__body {
@@ -75,14 +84,17 @@
       }
     }
 
-    p {
+    &-text {
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      color: var(--primary-color-50);
+    }
+
+    p {
       font-weight: 400;
       font-size: 1.2rem;
       line-height: 100%;
-      color: var(--primary-color-50);
     }
 
     i {

@@ -29,6 +29,12 @@
       font-size: 3rem;
       line-height: 120%;
       color: inherit;
+
+      p {
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
     }
   }
 
@@ -50,8 +56,11 @@
       font-weight: 400;
       font-size: 1.6rem;
       line-height: 1.2;
+    }
 
-      &.contacts__list-text {
+    &-text {
+
+      p {
         font-weight: 700;
       }
     }
@@ -105,14 +114,20 @@
     position: relative;
 
     &-title {
-      font-weight: 700;
-      font-size: 3rem;
-      line-height: 110%;
+
+      h5 {
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 110%;
+      }
     }
 
     &-text {
-      font-size: 1.6rem;
-      max-width: 55.4rem;
+
+      p {
+        font-size: 1.6rem;
+        max-width: 55.4rem;
+      }
     }
 
     &-link {
