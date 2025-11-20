@@ -240,6 +240,31 @@
     font-size: 1.4rem;
   }
 
+  /* notfound */
+  .wrapper.innerPage.notfound__page {
+    padding-top: 8rem;
+  }
+
+  .notfound {
+    min-height: 31.1rem;
+  }
+
+  .notfound__inner {
+    padding: 2.3rem 0;
+  }
+
+  .notfound__content {
+    max-width: 28rem;
+  }
+
+  .innerPage .notfound .title {
+    font-size: 10rem;
+  }
+
+  .notfound p {
+    font-size: 2rem;
+  }
+
   /* feat */
   .feat__items {
     margin-top: -3.4rem;
@@ -1962,6 +1987,38 @@
   }
 
   .hero--mobile {
+    display: block;
+  }
+
+  .notfound {
+    background-image: url(./../images/main/hero-mob.png);
+    background-size: cover;
+    background-position: right bottom;
+    height: 45.9rem;
+  }
+
+  .notfound__inner {
+    padding: 1.2rem 0 0;
+    gap: 2rem;
+  }
+
+  .notfound__content {
+    max-width: 31.4rem;
+  }
+
+  .notfound p {
+    font-size: 1.4rem;
+  }
+
+  .notfound .btn {
+    --button-padding-x: 2rem;
+  }
+
+  .notfound--desktop {
+    display: none;
+  }
+
+  .notfound--mobile {
     display: block;
   }
 

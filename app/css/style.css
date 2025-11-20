@@ -253,6 +253,9 @@ section {
 .wrapper.innerPage {
   padding-top: 24.4rem;
 }
+.wrapper.notfound__page {
+  padding-top: 19.4rem;
+}
 
 .main {
   flex: 1 0 auto;
@@ -4799,6 +4802,65 @@ html.lenis body {
   text-decoration-line: underline;
 }
 
+.notfound {
+  background-image: url(./../images/main/hero-1.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center bottom;
+  height: 77.6rem;
+  margin: 0;
+  position: relative;
+}
+.notfound iframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+.notfound--mobile {
+  display: none;
+}
+.notfound__container {
+  position: relative;
+  z-index: 1;
+}
+.notfound__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 8rem 0 0 3rem;
+  height: 100%;
+}
+.notfound__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 62rem;
+}
+.notfound .title {
+  font-weight: 700;
+  font-size: 15rem;
+  line-height: 120%;
+  letter-spacing: -0.08em;
+  color: var(--primary-black);
+}
+.notfound p {
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 120%;
+  color: var(--primary-black);
+}
+.notfound .btn {
+  --button-padding-x: 2.7rem;
+}
+
 .policy__inner {
   max-width: 110rem;
 }
@@ -5020,6 +5082,25 @@ html.lenis body {
   }
   .hero p {
     font-size: 1.4rem;
+  }
+  /* notfound */
+  .wrapper.innerPage.notfound__page {
+    padding-top: 8rem;
+  }
+  .notfound {
+    min-height: 31.1rem;
+  }
+  .notfound__inner {
+    padding: 2.3rem 0;
+  }
+  .notfound__content {
+    max-width: 28rem;
+  }
+  .innerPage .notfound .title {
+    font-size: 10rem;
+  }
+  .notfound p {
+    font-size: 2rem;
   }
   /* feat */
   .feat__items {
@@ -6360,6 +6441,31 @@ html.lenis body {
     display: none;
   }
   .hero--mobile {
+    display: block;
+  }
+  .notfound {
+    background-image: url(./../images/main/hero-mob.png);
+    background-size: cover;
+    background-position: right bottom;
+    height: 45.9rem;
+  }
+  .notfound__inner {
+    padding: 1.2rem 0 0;
+    gap: 2rem;
+  }
+  .notfound__content {
+    max-width: 31.4rem;
+  }
+  .notfound p {
+    font-size: 1.4rem;
+  }
+  .notfound .btn {
+    --button-padding-x: 2rem;
+  }
+  .notfound--desktop {
+    display: none;
+  }
+  .notfound--mobile {
     display: block;
   }
   .advan {

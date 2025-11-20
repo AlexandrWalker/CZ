@@ -1,0 +1,67 @@
+.notfound {
+  background-image: url(./../images/main/hero-1.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center bottom;
+  height: 77.6rem;
+  margin: 0;
+
+  position: relative;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  &--mobile {
+    display: none;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 8rem 0 0 3rem;
+    height: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 62rem;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 15rem;
+    line-height: 120%;
+    letter-spacing: -0.08em;
+    color: var(--primary-black);
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 120%;
+    color: var(--primary-black);
+  }
+
+  .btn {
+    --button-padding-x: 2.7rem;
+  }
+}
