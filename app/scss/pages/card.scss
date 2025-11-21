@@ -158,7 +158,9 @@
 
   .filter__item {
 
+    &.active,
     &:hover {
+
       label {
         background-color: var(--primary-accent);
         border-color: var(--primary-accent);

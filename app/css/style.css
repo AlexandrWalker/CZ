@@ -3288,7 +3288,7 @@ html.lenis body {
   width: 100%;
   min-width: unset;
 }
-.card .filter__item:hover label {
+.card .filter__item.active label, .card .filter__item:hover label {
   background-color: var(--primary-accent);
   border-color: var(--primary-accent);
 }
