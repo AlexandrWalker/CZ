@@ -109,6 +109,7 @@
       transition: all 0.3s ease;
       transition-delay: 0.2s;
 
+      .header__contact-active &,
       &:hover {
         border-radius: 2.5rem 2.5rem 0 0;
         transition-delay: 0s;

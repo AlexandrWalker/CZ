@@ -1038,15 +1038,15 @@ html.lenis body {
   transition: all 0.3s ease;
   transition-delay: 0.2s;
 }
-.header__contact-wrap:hover {
+.header__contact-active .header__contact-wrap, .header__contact-wrap:hover {
   border-radius: 2.5rem 2.5rem 0 0;
   transition-delay: 0s;
   transition: all 0s;
 }
-.header__contact-wrap:hover .header__contact-content {
+.header__contact-active .header__contact-wrap .header__contact-content, .header__contact-wrap:hover .header__contact-content {
   grid-template-rows: 1fr;
 }
-.header__contact-wrap:hover .header__contact-phone i {
+.header__contact-active .header__contact-wrap .header__contact-phone i, .header__contact-wrap:hover .header__contact-phone i {
   transform: rotate(270deg);
 }
 .header__contact-phone {
@@ -5566,15 +5566,25 @@ html.lenis body {
     height: 4rem;
     font-size: 1.4rem;
   }
+  .catalog__head-item--type {
+    order: 1;
+  }
   .catalog__head-item {
     width: 100%;
+    order: 2;
   }
   .catalog__filter--primary {
     width: 100%;
   }
+  .catalog__head .dropdown {
+    order: 3;
+  }
   .catalog__filter--primary .catalog__filter-item {
     width: calc(50% - 0.5rem);
     min-width: unset;
+  }
+  .catalog__filter-item label {
+    padding: 0 2.65rem;
   }
   .catalog__filter--category {
     flex-wrap: wrap;
@@ -6560,6 +6570,7 @@ html.lenis body {
   }
   .header__contact-wrap {
     padding: 0 0.6rem;
+    pointer-events: none;
   }
   .header__contact-phone i {
     width: 2rem;
@@ -7368,6 +7379,9 @@ html.lenis body {
   #modal-vacancy .form-file-wrap {
     margin-bottom: 1rem;
   }
+  #category-maslo-wt {
+    order: -1;
+  }
 }
 @media (max-width: 480px) {
   .product__item {
@@ -7391,5 +7405,14 @@ html.lenis body {
   .mission__photo {
     height: 28rem;
     right: -2rem;
+  }
+  .catalog__item {
+    width: 100%;
+  }
+  .catalog__filter {
+    flex-wrap: wrap;
+  }
+  .catalog__filter-item--all {
+    width: 100%;
   }
 }

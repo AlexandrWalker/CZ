@@ -118,6 +118,30 @@ gsap.registerPlugin(ScrollTrigger);
       },
     });
 
+    (function () {
+      const btn = document.querySelector('.header__contact');
+      if (!btn) return;
+
+      document.addEventListener('click', (e) => {
+        if (window.innerWidth > 521) return;
+
+        if (btn.contains(e.target)) {
+          btn.classList.toggle('header__contact-active');
+          return;
+        }
+
+        btn.classList.remove('header__contact-active');
+      });
+
+      window.addEventListener('scroll', () => {
+        if (window.innerWidth > 521) return;
+
+        if (btn.classList.contains('header__contact-active')) {
+          btn.classList.remove('header__contact-active');
+        }
+      });
+    })();
+
     // var history__slider = new Swiper(".history__slider-init", {
     //   slidesPerView: "auto",
     //   spaceBetween: 0,

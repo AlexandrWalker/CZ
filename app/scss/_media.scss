@@ -830,17 +830,30 @@
     font-size: 1.4rem;
   }
 
+  .catalog__head-item--type {
+    order: 1;
+  }
+
   .catalog__head-item {
     width: 100%;
+    order: 2;
   }
 
   .catalog__filter--primary {
     width: 100%;
   }
 
+  .catalog__head .dropdown {
+    order: 3;
+  }
+
   .catalog__filter--primary .catalog__filter-item {
     width: calc(50% - 0.5rem);
     min-width: unset;
+  }
+
+  .catalog__filter-item label {
+    padding: 0 2.65rem;
   }
 
   .catalog__filter--category {
@@ -2107,6 +2120,8 @@
 
   .header__contact-wrap {
     padding: 0 0.6rem;
+
+    pointer-events: none;
   }
 
   .header__contact-phone i {
@@ -3139,6 +3154,10 @@
   #modal-vacancy .form-file-wrap {
     margin-bottom: 1rem;
   }
+
+  #category-maslo-wt {
+    order: -1;
+  }
 }
 
 @media (max-width: 480px) {
@@ -3168,5 +3187,17 @@
   .mission__photo {
     height: 28rem;
     right: -2rem;
+  }
+
+  .catalog__item {
+    width: 100%;
+  }
+
+  .catalog__filter {
+    flex-wrap: wrap;
+  }
+
+  .catalog__filter-item--all {
+    width: 100%;
   }
 }
