@@ -1280,7 +1280,7 @@ html.lenis body {
        -o-transition-delay: 0.2s;
           transition-delay: 0.2s;
 }
-.header__contact-wrap:hover {
+.header__contact-active .header__contact-wrap, .header__contact-wrap:hover {
   border-radius: 2.5rem 2.5rem 0 0;
   -webkit-transition-delay: 0s;
        -o-transition-delay: 0s;
@@ -1289,11 +1289,11 @@ html.lenis body {
   -o-transition: all 0s;
   transition: all 0s;
 }
-.header__contact-wrap:hover .header__contact-content {
+.header__contact-active .header__contact-wrap .header__contact-content, .header__contact-wrap:hover .header__contact-content {
   -ms-grid-rows: 1fr;
   grid-template-rows: 1fr;
 }
-.header__contact-wrap:hover .header__contact-phone i {
+.header__contact-active .header__contact-wrap .header__contact-phone i, .header__contact-wrap:hover .header__contact-phone i {
   -webkit-transform: rotate(270deg);
       -ms-transform: rotate(270deg);
           transform: rotate(270deg);
@@ -7101,15 +7101,31 @@ html.lenis body {
     height: 4rem;
     font-size: 1.4rem;
   }
+  .catalog__head-item--type {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
   .catalog__head-item {
     width: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
   .catalog__filter--primary {
     width: 100%;
   }
+  .catalog__head .dropdown {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
   .catalog__filter--primary .catalog__filter-item {
     width: calc(50% - 0.5rem);
     min-width: unset;
+  }
+  .catalog__filter-item label {
+    padding: 0 2.65rem;
   }
   .catalog__filter--category {
     -ms-flex-wrap: wrap;
@@ -8180,6 +8196,7 @@ html.lenis body {
   }
   .header__contact-wrap {
     padding: 0 0.6rem;
+    pointer-events: none;
   }
   .header__contact-phone i {
     width: 2rem;
@@ -9170,6 +9187,11 @@ html.lenis body {
   #modal-vacancy .form-file-wrap {
     margin-bottom: 1rem;
   }
+  #category-maslo-wt {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
 }
 @media (max-width: 480px) {
   .product__item {
@@ -9195,5 +9217,15 @@ html.lenis body {
   .mission__photo {
     height: 28rem;
     right: -2rem;
+  }
+  .catalog__item {
+    width: 100%;
+  }
+  .catalog__filter {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .catalog__filter-item--all {
+    width: 100%;
   }
 }
