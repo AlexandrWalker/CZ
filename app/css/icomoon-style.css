@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'dwnld';
-  src: url('./../fonts/icomoon/dwnld.eot?sqn9h2');
-  src: url('./../fonts/icomoon/dwnld.eot?sqn9h2#iefix') format('embedded-opentype'),
-    url('./../fonts/icomoon/dwnld.ttf?sqn9h2') format('truetype'),
-    url('./../fonts/icomoon/dwnld.woff?sqn9h2') format('woff'),
-    url('./../fonts/icomoon/dwnld.svg?sqn9h2#dwnld') format('svg');
+  font-family: 'ChanovskyIconFonts';
+  src: url('./../fonts/icomoon/ChanovskyIconFonts.eot?3rgkvv');
+  src: url('./../fonts/icomoon/ChanovskyIconFonts.eot?3rgkvv#iefix') format('embedded-opentype'),
+    url('./../fonts/icomoon/ChanovskyIconFonts.ttf?3rgkvv') format('truetype'),
+    url('./../fonts/icomoon/ChanovskyIconFonts.woff?3rgkvv') format('woff'),
+    url('./../fonts/icomoon/ChanovskyIconFonts.svg?3rgkvv#ChanovskyIconFonts') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -13,7 +13,7 @@
 [class^="icon-"],
 [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'dwnld' !important;
+  font-family: 'ChanovskyIconFonts' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -39,33 +39,37 @@
 }
 
 .icon-mail:before {
-  content: "\e904";
-}
-
-.icon-mail-border:before {
-  content: "\e905";
-}
-
-.icon-main-download:before {
-  content: "\e906";
-}
-
-.icon-person:before {
-  content: "\e907";
-}
-
-.icon-play:before {
   content: "\e908";
 }
 
-.icon-search:before {
+.icon-mail-border:before {
   content: "\e909";
 }
 
-.icon-telegram-border:before {
+.icon-main-download:before {
   content: "\e90a";
 }
 
-.icon-whatsapp-border:before {
+.icon-person:before {
   content: "\e90b";
+}
+
+.icon-play:before {
+  content: "\e90e";
+}
+
+.icon-search:before {
+  content: "\e90f";
+}
+
+.icon-tel:before {
+  content: "\e910";
+}
+
+.icon-telegram-border:before {
+  content: "\e911";
+}
+
+.icon-whatsapp-border:before {
+  content: "\e912";
 }

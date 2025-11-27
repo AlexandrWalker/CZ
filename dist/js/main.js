@@ -142,6 +142,48 @@ gsap.registerPlugin(ScrollTrigger);
       });
     })();
 
+    (function () {
+      const catalogBtn = document.querySelector('.catalog__filter-head');
+      if (!catalogBtn) return;
+
+      const catalogHeadValue = catalogBtn.querySelector('span');
+      const catalogHeadInput = catalogBtn.querySelector('input[type="hidden"]');
+      const radios = document.querySelectorAll('.catalog__category');
+      if (!catalogHeadValue || !catalogHeadInput || !radios.length) return;
+
+      // Открытие/закрытие списка
+      document.addEventListener('click', (e) => {
+        if (window.innerWidth > 769) return;
+
+        if (catalogBtn.contains(e.target)) {
+          catalogBtn.classList.toggle('catalog__filter-head--active');
+          return;
+        }
+
+        catalogBtn.classList.remove('catalog__filter-head--active');
+      });
+
+      // Закрытие при скролле
+      window.addEventListener('scroll', () => {
+        if (window.innerWidth > 769) return;
+
+        if (catalogBtn.classList.contains('catalog__filter-head--active')) {
+          catalogBtn.classList.remove('catalog__filter-head--active');
+        }
+      });
+
+      // Обновление span и input при выборе radio
+      radios.forEach(radio => {
+        radio.addEventListener('change', () => {
+          const value = radio.value;
+          catalogHeadValue.textContent = value;
+          catalogHeadInput.value = value;
+          catalogBtn.classList.remove('catalog__filter-head--active');
+        });
+      });
+
+    })();
+
     // var history__slider = new Swiper(".history__slider-init", {
     //   slidesPerView: "auto",
     //   spaceBetween: 0,

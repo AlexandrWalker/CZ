@@ -135,40 +135,4 @@
     font-size: 1.6rem;
     margin-bottom: 1.5rem;
   }
-
-  // .form {
-  //   display: flex;
-  //   flex-direction: column;
-  //   gap: 2rem;
-
-  //   &-textarea,
-  //   &-input {
-  //     color: var(--primary-black-50);
-  //     border-color: var(--primary-black-50);
-
-  //     &::placeholder {
-  //       color: var(--primary-black-50);
-  //     }
-
-  //     &:hover,
-  //     &:focus,
-  //     &:active {
-  //       color: var(--primary-black);
-  //       border-color: var(--primary-black);
-
-  //       &::placeholder {
-  //         color: var(--primary-black);
-  //       }
-  //     }
-  //   }
-
-  //   &-checkbox {
-  //     border-color: var(--primary-black);
-  //     background: transparent;
-
-  //     &:checked {
-  //       background-color: var(--primary-accent);
-  //     }
-  //   }
-  // }
 }

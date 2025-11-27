@@ -146,57 +146,38 @@
               </div>
             </div>
             <div class="catalog__head-item catalog__head-item--category">
-              <div class="catalog__filter catalog__filter--category">
-                <div class="catalog__filter-item">
-                  <input class="catalog__category" id="filter_milk" type="radio" name="filter_category"
-                    data-category="category-milk" checked>
-                  <label for="filter_milk">
-                    Молоко
-                  </label>
-                </div>
-                <div class="catalog__filter-item catalog__filter-item--flag">
-                  <input class="catalog__category" id="filter_smetana" type="radio" name="filter_category"
-                    data-category="category-smetana">
-                  <label for="filter_smetana">
-                    Сметана
-                  </label>
-                </div>
-                <div class="catalog__filter-item">
-                  <input class="catalog__category" id="filter_maslo" type="radio" name="filter_category"
-                    data-category="category-maslo">
-                  <label for="filter_maslo">
-                    Масло
-                  </label>
+              <div class="catalog__filter-head">
+                <input type="hidden" value="Молоко">
+                <i class="icon-chevron-arrow"></i>
+                <span>
+                  Молоко
+                </span>
+              </div>
+              <div class="catalog__filter-body">
+                <div class="catalog__filter catalog__filter--category">
+                  <div class="catalog__filter-item">
+                    <input class="catalog__category" id="filter_milk" type="radio" name="filter_category"
+                      data-category="category-milk" value="Молоко" checked>
+                    <label for="filter_milk">
+                      Молоко
+                    </label>
+                  </div>
+                  <div class="catalog__filter-item catalog__filter-item--flag">
+                    <input class="catalog__category" id="filter_smetana" type="radio" name="filter_category"
+                      data-category="category-smetana" value="Сметана">
+                    <label for="filter_smetana">
+                      Сметана
+                    </label>
+                  </div>
+                  <div class="catalog__filter-item">
+                    <input class="catalog__category" id="filter_maslo" type="radio" name="filter_category"
+                      data-category="category-maslo" value="Масло">
+                    <label for="filter_maslo">
+                      Масло
+                    </label>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- Это мобильная версия -->
-            <div class="dropdown dropdown--js">
-              <div
-                class="dropdown__selected toggle--label dropdown__selected-label--js dropdown__selected--js icon-chevron-arrow"
-                data-value="Молоко" data-tab="milk">
-                <span>Молоко</span>
-              </div>
-              <div class="dropdown__container">
-                <div class="dropdown__content toggle--panel">
-                  <label class="dropdown__option">
-                    <input class="dropdown__radio" name="type__radio" type="radio" value="Молоко"
-                      data-category="category-milk" checked />
-                    <span class="dropdown__label tabs__btn tabs__btn--active" data-tab="milk">Молоко</span>
-                  </label>
-                  <label class="dropdown__option cream">
-                    <input class="dropdown__radio" name="type__radio" type="radio" value="Сметана"
-                      data-category="category-smetana" />
-                    <span class="dropdown__label tabs__btn" data-tab="cream">Сметана</span>
-                  </label>
-                  <label class="dropdown__option">
-                    <input class="dropdown__radio" name="type__radio" type="radio" value="Масло"
-                      data-category="category-maslo" />
-                    <span class="dropdown__label tabs__btn" data-tab="butter">Масло</span>
-                  </label>
-                </div>
-              </div>
-              <input class="dropdown__value" type="hidden">
             </div>
           </div>
           <div class="catalog__body" data-primary="b2c" data-category="category-milk" data-filter="milk-1">
