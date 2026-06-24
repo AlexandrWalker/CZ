@@ -449,8 +449,9 @@
 
     &-img {
       z-index: 1;
-      width: 100%;
-      height: auto;
+      max-width: 100%;
+      width: auto;
+      height: 54.6rem;
       object-fit: contain;
     }
 
@@ -589,16 +590,18 @@
   }
 
   &__photo {
+    max-width: 100%;
     width: auto;
     height: 77.1rem;
     object-fit: contain;
     margin-top: 3rem;
 
     &-img {
+      max-width: 100%;
       // width: 100%;
       width: auto;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
   }
 }

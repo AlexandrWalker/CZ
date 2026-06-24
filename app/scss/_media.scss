@@ -808,7 +808,7 @@
     display: flex;
   }
 
-  .catalog__filter-head--active + .catalog__filter-body {
+  .catalog__filter-head--active+.catalog__filter-body {
     grid-template-rows: 1fr;
     border-color: var(--primary-color);
     border-width: 0.1rem;
@@ -1512,6 +1512,11 @@
 
   .values__slider-title {
     display: none;
+  }
+
+  .values__slider-img {
+    height: 28rem;
+    object-fit: cover;
   }
 
   .mission {
