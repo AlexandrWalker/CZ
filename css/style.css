@@ -5891,10 +5891,13 @@ html.lenis body {
 .quality__table tr td:first-child::before {
   content: attr(data-tooltip);
   background-color: #333;
+  max-width: calc(100vw - 8rem);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   padding: 0.6rem 1rem;
   border-radius: 0.4rem;
   font-size: 1.2rem;
-  white-space: nowrap;
   color: var(--white);
   opacity: 0;
   visibility: hidden;
