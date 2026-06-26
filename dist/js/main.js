@@ -873,6 +873,17 @@ gsap.registerPlugin(ScrollTrigger);
       );
     });
 
+    (function () {
+      const textarea = document.querySelector('.auto-textarea');
+
+      if(!textarea) return;
+
+      textarea.addEventListener('input', function () {
+        this.style.height = 'auto';
+        this.style.height = this.scrollHeight / 10 + 'rem';
+      });
+    })();
+
     /**
      * Таймлайн
      */

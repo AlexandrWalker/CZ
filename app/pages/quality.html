@@ -58,19 +58,19 @@
                     </p>
                   </li>
                   <li>
-                    <input id="q-01" name="q-product" type="radio">
+                    <input id="q-01" name="q-product" type="radio" required>
                     <label for="q-01">Молоко</label>
                   </li>
                   <li>
-                    <input id="q-02" name="q-product" type="radio">
+                    <input id="q-02" name="q-product" type="radio" required>
                     <label for="q-02">Сметана</label>
                   </li>
                   <li>
-                    <input id="q-03" name="q-product" type="radio">
+                    <input id="q-03" name="q-product" type="radio" required>
                     <label for="q-03">Творог</label>
                   </li>
                   <li>
-                    <input id="q-04" name="q-product" type="radio">
+                    <input id="q-04" name="q-product" type="radio" required>
                     <label for="q-04">Сливочное масло</label>
                   </li>
                 </ul>
@@ -81,16 +81,16 @@
                     </p>
                   </li>
                   <li>
-                    <input id="q-05" name="q-product" type="radio">
+                    <input id="q-05" name="q-product" type="radio" required>
                     <label for="q-05">Сухое молоко</label>
                   </li>
                   <li>
-                    <input id="q-06" name="q-product" type="radio">
+                    <input id="q-06" name="q-product" type="radio" required>
                     <label for="q-06">Топленое масло</label>
                   </li>
                 </ul>
               </div>
-              <div class="quality__item">
+              <!-- <div class="quality__item">
                 <div class="quality__body-title">
                   <h3>Дайте оценку по 5-бальной шкале</h3>
                 </div>
@@ -101,19 +101,19 @@
                     </span>
                   </li>
                   <li>
-                    <input id="q-07" name="scale" value="1" type="radio">
+                    <input id="q-07" name="scale" value="1" type="radio" required>
                     <label for="q-07">1</label>
                   </li>
                   <li>
-                    <input id="q-08" name="scale" value="2" type="radio">
+                    <input id="q-08" name="scale" value="2" type="radio" required>
                     <label for="q-08">2</label>
                   </li>
                   <li>
-                    <input id="q-09" name="scale" value="3" type="radio">
+                    <input id="q-09" name="scale" value="3" type="radio" required>
                     <label for="q-09">3</label>
                   </li>
                   <li>
-                    <input id="q-10" name="scale" value="4" type="radio">
+                    <input id="q-10" name="scale" value="4" type="radio" required>
                     <label for="q-10">4</label>
                   </li>
                   <li>
@@ -126,73 +126,246 @@
                     </span>
                   </li>
                 </ul>
-              </div>
+              </div> -->
               <div class="quality__item">
                 <div class="quality__body-title">
                   <h3>
-                    Оцените основные параметры:
+                    Оцените основные параметры по 10-балльной шкале:
                   </h3>
                 </div>
                 <table class="quality__table">
+                  <caption>
+                    <div>1 — крайне не соответствует ожиданиям</div>
+                    <div>5 — соответствует ожиданиям</div>
+                    <div>10 — превосходит ожидания</div>
+                  </caption>
                   <thead>
                     <tr>
-                      <th></th>
                       <th>
-                        Мало
+                        Параметр
                       </th>
                       <th>
-                        Оптимально
+                        1
                       </th>
                       <th>
-                        Много
+                        2
+                      </th>
+                      <th>
+                        3
+                      </th>
+                      <th>
+                        4
+                      </th>
+                      <th>
+                        5
+                      </th>
+                      <th>
+                        6
+                      </th>
+                      <th>
+                        7
+                      </th>
+                      <th>
+                        8
+                      </th>
+                      <th>
+                        9
+                      </th>
+                      <th>
+                        10
                       </th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>
-                        Вкус
+                      <td data-tooltip="Однородная консистенция, отсутствие комков, расслоений и осадка.">
+                        Органолептика (внешний вид и консистенция)
                       </td>
                       <td>
-                        <input id="q-12" name="q-taste" value="low" type="radio">
+                        <input name="q-ol" value="1" type="radio" required>
                       </td>
                       <td>
-                        <input id="q-13" name="q-taste" value="mid" type="radio">
+                        <input name="q-ol" value="2" type="radio" required>
                       </td>
                       <td>
-                        <input id="q-14" name="q-taste" value="high" type="radio">
+                        <input name="q-ol" value="3" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-ol" value="4" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-ol" value="5" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-ol" value="6" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-ol" value="7" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-ol" value="8" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-ol" value="9" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-ol" value="10" type="radio" required>
                       </td>
                     </tr>
                     <tr>
-                      <td>
+                      <td data-tooltip="Белый или кремовый оттенок, характерный для продукта.">
                         Цвет
                       </td>
                       <td>
-                        <input id="q-15" name="q-color" value="low" type="radio">
+                        <input name="q-color" value="1" type="radio" required>
                       </td>
                       <td>
-                        <input id="q-16" name="q-color" value="mid" type="radio">
+                        <input name="q-color" value="2" type="radio" required>
                       </td>
                       <td>
-                        <input id="q-17" name="q-color" value="high" type="radio">
+                        <input name="q-color" value="3" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-color" value="4" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-color" value="5" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-color" value="6" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-color" value="7" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-color" value="8" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-color" value="9" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-color" value="10" type="radio" required>
                       </td>
                     </tr>
                     <tr>
-                      <td>
-                        Кислотность
+                      <td data-tooltip="Чистый молочный аромат без посторонних запахов.">
+                        Запах
                       </td>
                       <td>
-                        <input id="q-18" name="q-acidity" value="low" type="radio">
+                        <input name="q-smell" value="1" type="radio" required>
                       </td>
                       <td>
-                        <input id="q-19" name="q-acidity" value="mid" type="radio">
+                        <input name="q-smell" value="2" type="radio" required>
                       </td>
                       <td>
-                        <input id="q-20" name="q-acidity" value="high" type="radio">
+                        <input name="q-smell" value="3" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-smell" value="4" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-smell" value="5" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-smell" value="6" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-smell" value="7" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-smell" value="8" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-smell" value="9" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-smell" value="10" type="radio" required>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-tooltip="Свойственный продукту вкус без горечи и постороннего привкуса.">
+                        Вкус
+                      </td>
+                      <td>
+                        <input name="q-taste" value="1" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-taste" value="2" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-taste" value="3" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-taste" value="4" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-taste" value="5" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-taste" value="6" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-taste" value="7" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-taste" value="8" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-taste" value="9" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-taste" value="10" type="radio" required>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-tooltip="Герметичность, отсутствие повреждений, читаемая маркировка.">
+                        Упаковка и целостность
+                      </td>
+                      <td>
+                        <input name="q-save" value="1" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-save" value="2" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-save" value="3" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-save" value="4" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-save" value="5" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-save" value="6" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-save" value="7" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-save" value="8" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-save" value="9" type="radio" required>
+                      </td>
+                      <td>
+                        <input name="q-save" value="10" type="radio" required>
                       </td>
                     </tr>
                   </tbody>
                 </table>
+              </div>
+              <div class="quality__item">
+                <div class="quality__item-wrap">
+                  <div class="quality__body-title">
+                    <h3>
+                      Комментарий:
+                    </h3>
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-textarea auto-textarea" name="comments" rows="1" placeholder="Расскажите подробнее о продукции"></textarea>
+                  </div>
+                </div>
               </div>
               <div class="quality__item">
                 <div class="quality__item-wrap">
@@ -210,9 +383,13 @@
                     <input class="form-input" name="mail" type="email" placeholder="Эл. почта">
                   </div>
                   <div class="form-group">
+                    <i class="icon-tel"></i>
+                    <input class="form-input" name="tel" type="tel" placeholder="Номер телефона">
+                  </div>
+                  <!-- <div class="form-group">
                     <i class="icon-person"></i>
                     <input class="form-input" name="company-name" type="text" placeholder="Название компании">
-                  </div>
+                  </div> -->
                   <button class="callback__btn btn btn-yellow">
                     Отправить
                   </button>

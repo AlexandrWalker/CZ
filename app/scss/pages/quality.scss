@@ -156,29 +156,117 @@
 
   &__table {
     margin-top: -1.5rem;
-    max-width: 50rem;
+    // max-width: 50rem;
+    width: 100%;
+
+    table-layout: fixed;
+    border-collapse: collapse;
 
     th,
     td {
+      width: 7%;
+      padding: 1.5rem 0;
+
       font-weight: 400;
       font-size: 1.6rem;
       line-height: 150%;
       text-align: center;
-      padding: 1.5rem 0;
 
       input {
         width: 1.5rem;
         height: 1.5rem;
+        cursor: pointer;
+      }
+    }
+
+    th {
+      font-weight: 700;
+
+      &:first-child {
+        width: 30%;
+        text-align: left;
       }
     }
 
     tr td:first-child {
+      width: 30%;
       text-align: left;
+      pointer-events: none;
+      position: relative;
+
+      &:hover {
+
+        &::before {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      &::before {
+        content: attr(data-tooltip);
+        background-color: #333;
+        padding: 0.6rem 1rem;
+        border-radius: 0.4rem;
+
+        font-size: 1.2rem;
+        white-space: nowrap;
+        color: var(--white);
+
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+
+        position: absolute;
+        top: calc(100% - 1.5rem);
+        left: 0;
+        z-index: 10;
+      }
+
+      &::after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 1.6rem;
+        height: 1.6rem;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCI+ICAgIDxwYXRoIGQ9Ik0gMTIgMiBDIDYuNDg4OTk3MSAyIDIgNi40ODg5OTcxIDIgMTIgQyAyIDE3LjUxMTAwMyA2LjQ4ODk5NzEgMjIgMTIgMjIgQyAxNy41MTEwMDMgMjIgMjIgMTcuNTExMDAzIDIyIDEyIEMgMjIgNi40ODg5OTcxIDE3LjUxMTAwMyAyIDEyIDIgeiBNIDEyIDQgQyAxNi40MzAxMjMgNCAyMCA3LjU2OTg3NzQgMjAgMTIgQyAyMCAxNi40MzAxMjMgMTYuNDMwMTIzIDIwIDEyIDIwIEMgNy41Njk4Nzc0IDIwIDQgMTYuNDMwMTIzIDQgMTIgQyA0IDcuNTY5ODc3NCA3LjU2OTg3NzQgNCAxMiA0IHogTSAxMSA3IEwgMTEgOSBMIDEzIDkgTCAxMyA3IEwgMTEgNyB6IE0gMTEgMTEgTCAxMSAxNyBMIDEzIDE3IEwgMTMgMTEgTCAxMSAxMSB6Ii8+PC9zdmc+);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        opacity: 0.6;
+        cursor: help;
+        pointer-events: all;
+      }
+    }
+
+    caption {
+      caption-side: bottom;
+      text-align: left;
+      padding-top: 1rem;
+
+      div {
+        margin-bottom: 1rem;
+
+        font-size: 1.4rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 
   .form-input {
     margin-bottom: 0;
+  }
+
+  .form-textarea {
+    padding: 0.2rem 2rem 2rem 2rem;
+    margin-bottom: 0;
+    width: 100%;
+    min-height: 4.3rem;
+    max-height: 30rem;
+    resize: none;
+    overflow-y: hidden;
   }
 
   .callback__btn {
